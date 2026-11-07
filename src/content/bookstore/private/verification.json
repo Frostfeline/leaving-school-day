@@ -25,7 +25,7 @@
       "questionId": "two",
       "label": "其二",
       "riddleText": "一人寄岁，一人借命。",
-      "promptText": "寄岁所补的年寿，相差多少年岁？",
+      "promptText": "寄岁所补的年寿，至借命开始共多少年岁？",
       "evidenceRefs": [
         "memory-archive",
         "hermitage-history"

@@ -2,10 +2,14 @@
   "schemaVersion": 1,
   "title": "CAST",
   "pixelsPerSecond": 32,
+  "durationMs": 73848.163,
+  "audioSrc": "assets/audio/te-credits-rubia.mp3",
+  "resumeMusic": "点击继续播放片尾",
+  "continueSilent": "音乐加载失败，点击继续片尾",
   "holdMs": 3500,
   "groups": [
     {
-      "title": "出品人",
+      "title": "导演",
       "people": [
         {
           "name": "媛媛",

@@ -12,7 +12,7 @@
       "images": [
         {
           "id": "checkup-2020",
-          "src": "assets/images/memoryArchive/checkup-report.jpg",
+          "src": "assets/images/memoryArchive/checkup-report-web.webp",
           "alt": "复查报告",
           "placeholder": false
         }
@@ -31,7 +31,7 @@
       "images": [
         {
           "id": "receipt",
-          "src": "assets/images/memoryArchive/outpatient-medication-receipt-20210105.png",
+          "src": "assets/images/memoryArchive/outpatient-medication-receipt-20210105-web.webp",
           "alt": "2021年1月5日门诊取药凭证",
           "placeholder": false
         }
@@ -59,7 +59,7 @@
       "images": [
         {
           "id": "cake",
-          "src": "assets/images/memoryArchive/birthday-cake.png",
+          "src": "assets/images/memoryArchive/birthday-cake-web.webp",
           "alt": "生日蛋糕",
           "placeholder": false
         }
@@ -78,7 +78,7 @@
       "images": [
         {
           "id": "coin",
-          "src": "assets/images/memoryArchive/birthday-gift.png",
+          "src": "assets/images/memoryArchive/birthday-gift-web.webp",
           "alt": "生日礼物",
           "placeholder": false
         }
@@ -97,7 +97,7 @@
       "images": [
         {
           "id": "echo-2021",
-          "src": "assets/images/memoryArchive/echocardiography-report-20210611.png",
+          "src": "assets/images/memoryArchive/echocardiography-report-20210611-web.webp",
           "alt": "2021年6月11日超声心动图检查报告",
           "placeholder": false
         }
@@ -175,7 +175,7 @@
       "images": [
         {
           "id": "flight-ticket",
-          "src": "assets/images/memoryArchive/luoyao-flight-ticket.png",
+          "src": "assets/images/memoryArchive/luoyao-flight-ticket-web.webp",
           "alt": "罗尧机票",
           "placeholder": false
         }

@@ -2,7 +2,7 @@
   "attachments": [
     {
       "id": "police-notice",
-      "src": "assets/images/wechat/police-notice.png"
+      "src": "assets/images/wechat/police-notice-web.webp"
     }
   ],
   "messages": [
@@ -148,6 +148,34 @@
       "timestamp": "2024-07-23T15:46:00+08:00",
       "type": "text",
       "text": "没事。"
+    },
+    {
+      "id": "litianming-2024-07-23-07",
+      "senderId": "linchen",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "天明和青城观的人也很熟？"
+    },
+    {
+      "id": "litianming-2024-07-23-08",
+      "senderId": "litianming",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "其实我主要还是因为家里长辈信这个，从小跟着去，才认得这些师兄。罗尧哥不一样，他家里本来就有道门渊源，后来自己也正经拜了师的。"
+    },
+    {
+      "id": "litianming-2024-07-23-09",
+      "senderId": "linchen",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "原来是这样。"
+    },
+    {
+      "id": "litianming-2024-07-23-10",
+      "senderId": "litianming",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "以后你如果愿意见见他们，我也可以帮忙搭个线。"
     },
     {
       "id": "litianming-2025-01-15-01",

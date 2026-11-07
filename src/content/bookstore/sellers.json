@@ -3,7 +3,7 @@
     {
       "id": "hermitage",
       "name": "Hermitage",
-      "avatar": "assets/images/bookstore/hermitage-avatar.jpg",
+      "avatar": "assets/images/bookstore/hermitage-avatar-web.webp",
       "avatarAlt": "Hermitage店铺头像",
       "paragraphs": [
         "店铺介绍待作者提供。"
@@ -20,9 +20,9 @@
     },
     {
       "id": "yulinzhai",
-      "name": "雨林斋",
-      "avatar": "assets/images/bookstore/yulinzhai-avatar.jpg",
-      "avatarAlt": "雨林斋店铺头像",
+      "name": "雨沐斋",
+      "avatar": "assets/images/bookstore/yulinzhai-avatar-web.webp",
+      "avatarAlt": "雨沐斋店铺头像",
       "paragraphs": [],
       "staffIds": [],
       "accountStatus": "closed",

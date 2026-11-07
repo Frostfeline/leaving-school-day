@@ -23,6 +23,17 @@ export function TEEndingScreen(mode:'play'|'review'|'cast'='play') {
 
   let disposed=false;
   let animation:Animation|undefined;
+  let audio:HTMLAudioElement|undefined;
+  let frame=0;
+  let stageOffset=0;
+  let silent=false;
+  const fadeMs=850;
+  const closingDuration=cast.holdMs+2*fadeMs;
+  const rollDuration=cast.durationMs-closingDuration;
+  function stopAudio(){
+    cancelAnimationFrame(frame);
+    if(audio){audio.pause();audio.removeAttribute('src');audio.load();audio=undefined;}
+  }
   const progress=review?null:getGameState().privateCommission.te;
   function startCast(){
     if(disposed||main.dataset.cast)return;
@@ -33,6 +44,7 @@ export function TEEndingScreen(mode:'play'|'review'|'cast'='play') {
     main.replaceChildren(viewport);
     function showHome(){
       main.dataset.cast='finished';
+      stopAudio();
       const home=el('a','te-cast-home',ending.returnHome);
       home.href='#/';
       viewport.replaceChildren(home);
@@ -53,25 +65,60 @@ export function TEEndingScreen(mode:'play'|'review'|'cast'='play') {
     }
     viewport.append(credits);
     const elapsed=progress?.castStartedAt?Date.now()-progress.castStartedAt:0;
+    audio=new Audio(cast.audioSrc);
+    audio.preload='auto';
+    const prompt=el('button','te-cast-home',cast.resumeMusic);
+    function offerResume(failed=false){
+      if(disposed||main.dataset.cast==='finished')return;
+      prompt.textContent=failed?cast.continueSilent:cast.resumeMusic;
+      prompt.onclick=()=>{
+        if(failed){silent=true;stopAudio();prompt.remove();animation?.play();}
+        else void audio?.play().catch(()=>offerResume());
+      };
+      viewport.append(prompt);
+    }
+    audio.addEventListener('loadedmetadata',()=>{
+      if(audio)audio.currentTime=Math.min(elapsed/1000,cast.durationMs/1000);
+    },{once:true});
+    audio.addEventListener('playing',()=>{prompt.remove();});
+    audio.addEventListener('ended',()=>{
+      if(animation)animation.finish();
+    });
+    audio.addEventListener('error',()=>offerResume(true));
+    function syncMusic(){
+      if(disposed||!audio)return;
+      const time=Math.min(audio.currentTime*1000,cast.durationMs);
+      audio.volume=Math.max(0,Math.min(1,(cast.durationMs-time)/fadeMs));
+      if(animation){
+        animation.currentTime=Math.max(0,time-stageOffset);
+        if(time>=stageOffset+Number(animation.effect?.getTiming().duration))animation.finish();
+      }
+      frame=requestAnimationFrame(syncMusic);
+    }
+    // Starting playback here retains the user's click activation. A refreshed tab
+    // can request another click; neither the credits nor audio advance silently.
+    void audio.play().catch(()=>{if(audio?.error)offerResume(true);else offerResume();});
     requestAnimationFrame(()=>{
       if(disposed||!main.isConnected)return;
       const start=viewport.clientHeight;
       const finish=-credits.offsetHeight;
-      const duration=(start-finish)/cast.pixelsPerSecond*1000;
+      const duration=rollDuration;
       animation=credits.animate([{transform:`translateY(${start}px)`},{transform:`translateY(${finish}px)`}],{duration,fill:'both',easing:'linear'});
+      animation.pause();
       animation.currentTime=Math.min(elapsed,duration);
+      frame=requestAnimationFrame(syncMusic);
       void animation.finished.then(()=>{
         if(disposed)return;
         const closing=el('p','te-cast-closing',cast.closing);
         viewport.replaceChildren(closing);
-        const fadeMs=850;
-        const closingDuration=cast.holdMs+2*fadeMs;
+        stageOffset=rollDuration;
         animation=closing.animate([
           {opacity:0},
           {opacity:1,offset:fadeMs/closingDuration},
           {opacity:1,offset:1-fadeMs/closingDuration},
           {opacity:0}
         ],{duration:closingDuration,fill:'both'});
+        if(!silent)animation.pause();
         animation.currentTime=Math.max(0,Math.min(closingDuration,elapsed-duration));
         return animation.finished.then(()=>{
           if(disposed)return;
@@ -83,6 +130,7 @@ export function TEEndingScreen(mode:'play'|'review'|'cast'='play') {
   }
   main.addEventListener('screen-dispose',()=>{
     disposed=true;
+    stopAudio();
     animation?.cancel();
   });
   if(castOnly||progress?.castStartedAt)queueMicrotask(startCast);

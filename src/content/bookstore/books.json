@@ -19,19 +19,19 @@
       "images": [
         {
           "id": "cover",
-          "src": "assets/images/bookstore/daojiao-cover.png",
+          "src": "assets/images/bookstore/daojiao-cover-web.webp",
           "alt": "书籍封面",
           "placeholder": false
         },
         {
           "id": "page-01",
-          "src": "assets/images/bookstore/daojiao-interior.png",
+          "src": "assets/images/bookstore/daojiao-interior-web.webp",
           "alt": "书籍内页",
           "placeholder": false
         },
         {
           "id": "page-02",
-          "src": "assets/images/bookstore/daojiao-back.jpg",
+          "src": "assets/images/bookstore/daojiao-back-web.webp",
           "alt": "书籍封底",
           "placeholder": false
         }

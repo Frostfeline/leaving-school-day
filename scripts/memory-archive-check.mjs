@@ -4,8 +4,11 @@ import {readFileSync,mkdirSync} from 'node:fs';
 import {validateArchiveFiles} from './validate-memory-archive.mjs';
 import {validateArchive,normalizeArchiveProgress,placeArchiveItem} from './memory-archive-model.mjs';
 const data=validateArchiveFiles(),ui=data.ui,pairs=data.puzzle.pairs,KEY='leaving-school-day:state:v1';
-assert.equal(data.chats.groups.length,7);
-assert.equal(data.chats.messages.filter(m=>m.timestamp==='2021-06-30'&&m.chatGroupId==='M02-3').length,3);
+assert.equal(data.chats.groups.length,8);
+assert.equal(data.chats.messages.filter(m=>m.timestamp==='2021-06-30').length,0);
+assert.equal(data.chats.messages.filter(m=>m.chatGroupId==='final-20210628').length,6);
+assert.equal(data.chats.messages.filter(m=>m.chatGroupId==='final-20210628'&&m.type==='call'&&m.text==='未接听'&&m.speakerId==='linchen').length,3);
+assert(normalizeArchiveProgress({matchedPairIds:pairs.map(p=>p.id)},data.puzzle).archivePuzzleCompleted);
 assert.deepEqual(data['archive-meta'].dates,{anniversary:'2020-12-18',linchenBirthday:'1997-05-22',luoyaoBirthday:'1993-05-08'});
 for(const mutation of [d=>d.chats.messages.push(d.chats.messages[0]),d=>d.puzzle.pairs[0].attachmentId='missing',d=>d.puzzle.pairs[0].chatGroupId='missing',d=>d.puzzle.pairs[0].attachmentId=d.puzzle.pairs[1].attachmentId,d=>d.chats.messages[0].speakerId='missing',d=>d.chats.messages[0].sourceId='missing',d=>d.attachments.items[0].images[0].src='../../private.png',d=>d['archive-meta'].schemaVersion=2]){const copy=structuredClone(data);mutation(copy);assert.throws(()=>validateArchive(copy));}
 const migrated=normalizeArchiveProgress({matchedPairIds:['removed','P01']},data.puzzle);
@@ -42,7 +45,8 @@ try{
   assert.equal(await notice.locator('.wc-bubble').innerText(),'');
   const thumbnail=notice.getByAltText('情况通报',{exact:true});
   await thumbnail.evaluate(image=>image.decode());
-  assert((await thumbnail.getAttribute('src')).endsWith('/police-notice.png'));
+  const noticeSource=JSON.parse(readFileSync('src/content/wechat/chats/li-tian-ming.json','utf8')).attachments.find(item=>item.id==='police-notice').src;
+  assert((await thumbnail.getAttribute('src')).endsWith(noticeSource));
   await notice.getByRole('button').click();
   const preview=page.getByRole('dialog',{name:'情况通报',exact:true});
   assert(await preview.isVisible());
@@ -56,6 +60,11 @@ try{
   assert.equal(await memory.locator('.ma-chat-group').getAttribute('data-group-id'),'M01-1');
   assert.equal(await memory.locator('.ma-header').innerText(),data['archive-meta'].title);
   assert.equal(await memory.locator('.ma-page a').count(),0);
+  assert.equal(await memory.locator('[data-archive-group=final-20210628]').count(),0);
+  assert.equal(await memory.getByText('PASSWORD：20201218',{exact:true}).count(),0);
+  await memory.locator('[data-archive-group=C01]').click();
+  await memory.getByText('你直接登我账号买吧，余额还多。',{exact:true}).locator('xpath=self::strong').waitFor();
+  assert.equal(await memory.getByText('所有密码都改成纪念日了。',{exact:true}).count(),0);
   assert.equal(await memory.locator('.ma-description,.ma-toolbar input,.ma-months select,.ma-chat-message button').count(),0);
   await memory.locator('[data-archive-group=M02-3]').click();
   const june=memory.locator('[data-group-id=M02-3]');
@@ -106,7 +115,16 @@ try{
   assert.equal(await attachmentSlot(0).getAttribute('aria-label'),'复查报告');
   for(const [i,pair] of pairs.entries()){if(i<2)continue;await selectAttachment(page,pair.attachmentId);await attachmentSlot(i).click();}
   await page.getByText(ui.complete,{exact:true}).waitFor();
-  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','PASSWORD：20201218']);
+  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','可查看最后一份聊天记录','PASSWORD：20201218']);
+  assert.equal(await page.locator('.ma-complete strong').count(),2);
+  await page.getByRole('tab',{name:ui.tabs.chats,exact:true}).click();
+  assert.notEqual(await page.locator('.ma-chat-group').getAttribute('data-group-id'),'final-20210628');
+  await page.locator('[data-archive-group=final-20210628]').click();
+  assert.equal(await page.locator('.ma-chat-group h3').innerText(),'2021年6月28日');
+  assert.equal(await page.locator('.ma-chat-self').count(),6);
+  assert.deepEqual((await page.locator('.ma-chat-bubble').allTextContents()).slice(-3),['☎ 未接听','☎ 未接听','☎ 未接听']);
+  assert.equal(await page.locator('.ma-pair').count(),7);
+  await page.getByRole('tab',{name:ui.tabs.attachments,exact:true}).click();
   await page.reload();await page.getByText(ui.complete,{exact:true}).waitFor();
   await page.getByRole('button',{name:ui.viewProgress,exact:true}).click();
   await page.getByText('已整理 7 / 7 份时间线，已关联 7 / 7 份附件。',{exact:true}).waitFor();
@@ -117,6 +135,13 @@ try{
   await selectAttachment(page,'checkup-2020');await attachmentSlot(0).click();
   await page.getByText(ui.complete,{exact:true}).waitFor();
   assert.equal(await page.locator('.ma-page a').count(),0);
+  // A pre-V2.3 complete legacy save unlocks the reward without a new storage field.
+  await page.evaluate(({KEY,pairIds})=>{const s=JSON.parse(localStorage.getItem(KEY));s.archive={matchedPairIds:pairIds,visitedArchive:true,lastOpenedArchiveTab:'chats'};localStorage.setItem(KEY,JSON.stringify(s));},{KEY,pairIds:pairs.map(p=>p.id)});
+  await page.reload();
+  await page.locator('[data-archive-group=final-20210628]').click();
+  await page.reload();
+  assert.equal(await page.locator('.ma-chat-group').getAttribute('data-group-id'),'final-20210628');
+  await page.getByRole('button',{name:ui.viewProgress,exact:true}).click();
   await page.goto(base+'#/memory-archive?chat=litianming&source=litianming-2022-08-03-01');await page.setViewportSize({width:390,height:844});await page.locator('.ma-page').waitFor();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));accept(page);await page.getByRole('button',{name:ui.reset,exact:true}).click();await page.getByText('已整理 0 / 7 份时间线，已关联 0 / 7 份附件。',{exact:true}).waitFor();await page.screenshot({path:`test-results/memory-archive-${port}-390.png`,fullPage:true});await c.close();console.log('PASS',port,'both friend searches, archive link, merged June dates, isolated date groups and puzzle navigation, free bookstore login, shuffled sources, all seven timeline slots and matches, drag and click swaps, undo, image previews, persisted state, no outbound links, mobile');
  }
  assert.deepEqual(errors,[]);console.log('PASS schema/references/IDs/version/date checks, removed pair filtering; no browser/resource errors');

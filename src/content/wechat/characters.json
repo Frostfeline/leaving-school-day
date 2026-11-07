@@ -56,7 +56,7 @@
   },
   "market-luna": {
     "name": "Luna",
-    "avatar": "assets/images/avatars/wechat-market-sugar.png"
+    "avatar": "assets/images/avatars/wechat-market-sugar-web.webp"
   },
   "market-calpis": {
     "name": "可尔必思^",
@@ -76,7 +76,7 @@
   },
   "litianming": {
     "name": "李天明",
-    "wechatNickname": "天色将明",
+    "wechatNickname": "青山-",
     "remark": "李天明",
     "relationship": "friend",
     "avatar": "assets/images/avatars/wechat-litianming.jpg"

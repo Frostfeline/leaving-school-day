@@ -11,7 +11,8 @@ export function MemoryArchiveScreen(options:{bundle?:ArchiveBundle;preview?:bool
  const button=(label:string,fn:()=>void,cls='')=>{const b=el('button',cls,label);b.type='button';b.onclick=fn;return b;};
  const format=(text:string,values:Record<string,string|number>)=>Object.entries(values).reduce((s,[k,v])=>s.replaceAll('{'+k+'}',String(v)),text);
  const stamp=(item:any)=>archiveDate(item,meta) as string;
- const sortedGroups=()=>[...data.chats.groups].sort((a,b)=>stamp(a).localeCompare(stamp(b)));
+ const sortedGroups=()=>data.chats.groups.filter(g=>!g.requiresCompletion||progress.archivePuzzleCompleted).sort((a,b)=>stamp(a).localeCompare(stamp(b)));
+ let renderedCompletion=progress.archivePuzzleCompleted;
  const rowsFor=(id:string)=>data.chats.messages.filter(m=>m.chatGroupId===id).sort((a,b)=>stamp(a).localeCompare(stamp(b)));
  const pretty=(value:string)=>new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'long',day:'numeric',timeZone:'Asia/Shanghai'}).format(new Date(value))+(value.includes('T')?' '+value.slice(11,16):'');
  const label=(id:string)=>{const g=data.chats.groups.find(g=>g.id===id);return g?pretty(stamp(g)):id;};
@@ -40,14 +41,19 @@ export function MemoryArchiveScreen(options:{bundle?:ArchiveBundle;preview?:bool
   page.append(dialog);dialog.onclose=()=>dialog.remove();dialog.onclick=e=>{if(e.target===dialog)dialog.close();};dialog.showModal();
  }
  function renderChatGroup(feed:HTMLElement){
-  const g=data.chats.groups.find(item=>item.id===group)??sortedGroups()[0];
+  const g=sortedGroups().find(item=>item.id===group)??sortedGroups()[0];
   feed.replaceChildren();feed.scrollTop=0;
   if(!g)return;
   const section=el('section','ma-chat-group');section.dataset.groupId=g.id;section.append(el('h3','',label(g.id)));
   for(const m of rowsFor(g.id)){
    const row=el('article','ma-chat-message'+(m.speakerId===meta.ownerId?' ma-chat-self':''));
    row.dataset.messageId=m.id;
-   const content=el('div');content.append(el('small','',characterName(m.speakerId)),el('p','ma-chat-bubble',m.text));
+   const content=el('div'),bubble=el('p','ma-chat-bubble');
+   if(m.type==='call'){
+    const icon=el('span','','☎ ');icon.setAttribute('aria-hidden','true');
+    bubble.append(icon,el('span','',m.text));
+   }else bubble.append(el('span','',m.text));
+   content.append(el('small','',characterName(m.speakerId)),bubble);
    const date=stamp(m);if(date.includes('T')){const time=el('time','',date.slice(11,16));time.dateTime=date;content.append(time);}
    row.append(content);section.append(row);
   }
@@ -77,7 +83,8 @@ export function MemoryArchiveScreen(options:{bundle?:ArchiveBundle;preview?:bool
    browser.append(grid);return;
   }
   const nav=el('aside','ma-months');const feed=el('section','ma-chat-feed');feed.tabIndex=0;
-  for(const g of scramble(sortedGroups())){
+  const visibleGroups=sortedGroups();
+  for(const g of [...scramble(visibleGroups.filter(g=>!g.requiresCompletion)),...visibleGroups.filter(g=>g.requiresCompletion)]){
    const date=button(label(g.id),()=>{
     if(data.puzzle.pairs.some(pair=>pair.chatGroupId===g.id))selectDate(g.id);
     showChat(g.id);
@@ -139,6 +146,7 @@ export function MemoryArchiveScreen(options:{bundle?:ArchiveBundle;preview?:bool
   };
  }
  function renderPuzzle(){
+  if(renderedCompletion!==progress.archivePuzzleCompleted){renderedCompletion=progress.archivePuzzleCompleted;renderDocuments();}
   pairs.replaceChildren();done.replaceChildren();
   info.textContent=format(ui.progressDetail,{ordered:progress.orderedCount,matched:progress.matchedCount,total:data.puzzle.pairs.length});
   for(const [index,pair] of data.puzzle.pairs.entries()){

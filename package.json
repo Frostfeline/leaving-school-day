@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build --configLoader native",
     "preview": "vite preview --configLoader native --host 127.0.0.1",
     "test": "node scripts/check-content.mjs",
-    "test:release": "node scripts/bookstore-data-check.mjs && node scripts/sister-confrontation-check.mjs && node scripts/hermitage-2025-check.mjs && node scripts/private-commission-check.mjs",
+    "test:release": "node scripts/bookstore-data-check.mjs && node scripts/sister-confrontation-check.mjs && node scripts/hermitage-2025-check.mjs && node scripts/private-commission-check.mjs && node scripts/v23-content-check.mjs",
     "test:pages": "node scripts/pages-check.mjs"
   },
   "devDependencies": {

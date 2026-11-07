@@ -89,7 +89,7 @@
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210604",
       "senderId": "hermitage",
-      "text": "您是指搜到的雨林斋那份残卷？"
+      "text": "您是指搜到的雨沐斋那份残卷？"
     },
     {
       "id": "hermitage-20210604-16",
@@ -103,7 +103,7 @@
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210604",
       "senderId": "hermitage",
-      "text": "雨林斋主人是我店老朋友，这份残卷我们可以帮您借到。"
+      "text": "雨沐斋主人是我店老朋友，这份残卷我们可以帮您借到。"
     },
     {
       "id": "hermitage-20210604-18",
@@ -141,60 +141,67 @@
       "text": "这两个是同一种方法吗？"
     },
     {
-      "id": "hermitage-20210611-05",
+      "id": "hermitage-20210611-v23-1",
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210611",
       "senderId": "hermitage",
-      "text": "不是。按《杂录》和《玄君经》里的说法，寄岁补年是补足年岁，借命续途则是更改命籍，不能混为一谈。"
+      "text": "不是。按《续算杂录》里的说法，寄岁补年是续上短暂年岁，借命续途则是更改完整命籍，不能混为一谈。"
     },
     {
-      "id": "hermitage-20210611-06",
+      "id": "hermitage-20210611-v23-2",
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210611",
       "senderId": "luoyao-bookstore",
-      "text": "那寄岁的年数是怎么计算的？"
+      "text": "但两者似乎可以同时使用。"
     },
     {
-      "id": "hermitage-20210611-07",
+      "id": "hermitage-20210611-v23-3",
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210611",
       "senderId": "hermitage",
-      "text": "按双方实足年龄之差核算。不是按虚岁，也不能只看周岁的整数。"
+      "text": "……"
     },
     {
-      "id": "hermitage-20210611-08",
-      "threadId": "hermitage-history",
-      "groupId": "hermitage-20210611",
-      "senderId": "luoyao-bookstore",
-      "text": "比如一个人二十八岁，另一个人二十四岁，也不一定正好差四年？"
-    },
-    {
-      "id": "hermitage-20210611-09",
+      "id": "hermitage-20210611-v23-4",
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210611",
       "senderId": "hermitage",
-      "text": "对。具体还得精确到出生*年月日*。"
+      "text": "您的意思是？"
     },
     {
-      "id": "hermitage-20210611-10",
+      "id": "hermitage-20210611-v23-5",
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210611",
       "senderId": "luoyao-bookstore",
-      "text": "明白了。"
+      "text": "如果补足了年岁，之后是不是还需要借命续途？"
     },
     {
-      "id": "hermitage-20210611-11",
-      "threadId": "hermitage-history",
-      "groupId": "hermitage-20210611",
-      "senderId": "luoyao-bookstore",
-      "text": "那如果补足了年岁，之后是不是还需要借命续途？"
-    },
-    {
-      "id": "hermitage-20210611-12",
+      "id": "hermitage-20210611-v23-6",
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210611",
       "senderId": "hermitage",
       "text": "这个我不敢确定。目前能找到的引文不完整，两者具体是什么关系，还得核对原书。"
+    },
+    {
+      "id": "hermitage-20210611-v23-7",
+      "threadId": "hermitage-history",
+      "groupId": "hermitage-20210611",
+      "senderId": "luoyao-bookstore",
+      "text": "我只是做理论上的假设，而且寄岁与借命若是结合在一起，恐怕需要按双方实足年龄之差核算。不是按虚岁，也不能只看周岁的整数。"
+    },
+    {
+      "id": "hermitage-20210611-v23-8",
+      "threadId": "hermitage-history",
+      "groupId": "hermitage-20210611",
+      "senderId": "hermitage",
+      "text": "对，神秘学上的仪式必须精确到出生年月日。"
+    },
+    {
+      "id": "hermitage-20210611-v23-9",
+      "threadId": "hermitage-history",
+      "groupId": "hermitage-20210611",
+      "senderId": "luoyao-bookstore",
+      "text": "明白了。"
     },
     {
       "id": "hermitage-20210611-13",
@@ -264,7 +271,7 @@
       "threadId": "hermitage-history",
       "groupId": "hermitage-20210618",
       "senderId": "hermitage",
-      "text": "不是全本，只有部分章节，原书并不在国内，是雨林斋主人托人扫描来的复印版。具体抄写年代店主还在核对，但是已经足够解答您想问的问题了。"
+      "text": "不是全本，只有部分章节，原书并不在国内，是雨沐斋主人托人扫描来的复印版。具体抄写年代店主还在核对，但是已经足够解答您想问的问题了。"
     },
     {
       "id": "hermitage-20210618-06",
