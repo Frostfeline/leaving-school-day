@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "threadId": "hermitage-history",
+  "requiredReadMessageIds": [
+    "hermitage-20210618-03",
+    "hermitage-20210618-06",
+    "hermitage-20210618-08",
+    "hermitage-20210618-10"
+  ],
+  "lastRequiredMessageId": "hermitage-20210618-10",
+  "completionEventId": "ning-history-read-completed",
+  "visibleDwellMs": 450
+}

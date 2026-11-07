@@ -1,0 +1,75 @@
+{
+  "title": "{university}图书馆",
+  "subtitle": "智能服务 · 离校事项查询",
+  "conversationLabel": "图书馆智能问答记录",
+  "botName": "图书馆智能服务",
+  "greeting": "您好，已查询到以下未结清的馆藏欠费。",
+  "recordHeading": "馆藏欠费",
+  "questionsHeading": "您可以继续查询",
+  "fullRecordHeading": "完整馆藏及借阅登记信息",
+  "fields": [
+    {
+      "id": "amount",
+      "label": "应缴金额",
+      "valueRef": "amount",
+      "helpId": "overdue-compensation"
+    },
+    {
+      "id": "responsible-person",
+      "label": "当前责任人",
+      "valueRef": "responsiblePerson"
+    },
+    {
+      "id": "original-borrower",
+      "label": "原始借阅人",
+      "valueRef": "originalBorrower"
+    },
+    {
+      "id": "book-title",
+      "label": "书名",
+      "valueRef": "bookTitle"
+    },
+    {
+      "id": "isbn",
+      "label": "ISBN",
+      "valueRef": "isbn"
+    },
+    {
+      "id": "collection-code",
+      "label": "馆藏编码",
+      "valueRef": "collectionCode"
+    },
+    {
+      "id": "borrowed-at",
+      "label": "历史借阅日期",
+      "valueRef": "borrowedAt"
+    }
+  ],
+  "questions": [
+    {
+      "id": "borrower_mismatch",
+      "label": "为什么借阅人不是我？",
+      "paragraphs": [
+        "该书产生的未结清费用非原始借阅人，可能与借阅期间责任人与原始借阅人办理过的转借、责任转接或其他登记手续有关。"
+      ],
+      "showFullRecord": false
+    },
+    {
+      "id": "book_details",
+      "label": "查看完整馆藏信息",
+      "paragraphs": [
+        "以下为该书的馆藏及借阅登记信息。"
+      ],
+      "showFullRecord": true
+    },
+    {
+      "id": "request_review",
+      "label": "我可以申请复核吗？",
+      "paragraphs": [
+        "如您未办理过相关手续或对赔偿责任存在异议，可前往图书馆线下申请人工复核，申请时间：每周五9:00-17:30，地址：图书馆二楼201档案管理办公室。"
+      ],
+      "showFullRecord": false
+    }
+  ],
+  "backSummary": "返回借阅异常"
+}

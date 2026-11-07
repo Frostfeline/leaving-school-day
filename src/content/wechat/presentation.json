@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "storyDate": "2025-06-25",
+  "opening": {
+    "initialDelayMs": 2000,
+    "replyId": "opening-check-class",
+    "replyMessageId": "sister-placeholder-3",
+    "typingIndicator": false
+  },
+  "timeSeparatorMs": 180000,
+  "newMessageIntervalMs": 2600,
+  "animation": {
+    "durationMs": 220,
+    "offsetPx": 10
+  },
+  "typingText": "……",
+  "historyEndText": "——以下暂无新消息——",
+  "pdfPlaceholderText": "附件内容尚未提供。",
+  "pdfPlaceholderClose": "关闭",
+  "unreadCountLabel": "{count}条未读消息",
+  "historyStartText": "——已阅读完所有消息——",
+  "sound": {
+    "enabled": false,
+    "src": null
+  },
+  "choicePauseMs": 750
+}

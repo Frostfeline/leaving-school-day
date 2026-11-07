@@ -1,0 +1,17 @@
+.la-heading { margin: 0 0 28px; }
+.la-heading h1 { font-size: 25px; font-weight: 500; margin: 0 0 10px; }
+.la-heading p { color: #777; font-size: 14px; }
+.la-thread { max-width: 940px; }
+.la-answer { background: white; border: 1px solid #ddd; padding: 24px 30px; line-height: 1.9; }
+.la-answer h2 { font-size: 13px; font-weight: 500; color: #7f2934; margin: 0 0 18px; }
+.la-answer h3 { font-size: 16px; font-weight: 500; margin: 20px 0; }
+.la-answer p { font-size: 14px; }
+.la-answer .oa-record { margin: 18px 0 0; }
+.la-answer dd { user-select: text; overflow-wrap: anywhere; }
+.la-options { margin: 26px 0; }
+.la-options h2 { font-size: 14px; color: #666; font-weight: 400; }
+.la-questions { display: flex; flex-wrap: wrap; gap: 12px; }
+.la-exchange { margin-top: 24px; }
+.la-question { margin: 0 0 12px auto; background: #eeece8; padding: 12px 18px; width: fit-content; max-width: 100%; font-size: 14px; }
+@media(max-width:600px){.la-answer{padding:18px 14px}.la-questions{flex-direction:column}.la-heading h1{font-size:21px}}
+.la-answer .la-record-heading{font-family:"Microsoft YaHei","PingFang SC",sans-serif;text-align:center;color:#9c2831;font-weight:700;font-size:20px}.la-questions [aria-pressed=true]{color:#862c36;border-color:#862c36;background:#faf1f1}

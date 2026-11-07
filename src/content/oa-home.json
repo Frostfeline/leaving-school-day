@@ -1,0 +1,22 @@
+{
+  "homeLabel": "首页",
+  "userLabel": "当前登录用户：{name}",
+  "welcome": "{name} 同学你好！欢迎使用{university}统一身份认证平台",
+  "noticesHeading": "通知公告",
+  "publisher": "发布单位",
+  "dateLabel": "发布日期",
+  "pendingLabel": "待处理",
+  "backHome": "返回首页",
+  "tabs": [
+    {
+      "id": "notices",
+      "label": "通知公告"
+    },
+    {
+      "id": "graduation",
+      "label": "毕业离校"
+    }
+  ],
+  "tabsLabel": "OA事项分类",
+  "backLogin": "返回登录页"
+}

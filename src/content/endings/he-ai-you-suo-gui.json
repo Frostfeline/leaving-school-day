@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "endingId": "he-ai-you-suo-gui",
+  "reviewStatus": "confirmed",
+  "title": "爱有所归",
+  "finalLabel": "Good End｜爱有所归",
+  "paragraphDelayMs": 500,
+  "fadeMs": 700,
+  "returnHome": "返回游戏首页",
+  "continue": "三天后",
+  "assets": [],
+  "scenes": [
+    {
+      "sceneId": "HE_SCENE_01",
+      "type": "narrative",
+      "date": "2025-06-25",
+      "backgroundAssetId": null,
+      "blocks": [
+        {
+          "id": "HE_SCENE_01_BLOCK_01",
+          "type": "narration",
+          "text": "「祝你未来一切顺利。」"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_02",
+          "type": "narration",
+          "text": "林琛看着屏幕上店主发来的最后一条消息，思绪飘忽。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_03",
+          "type": "narration",
+          "text": "他以为已经迈过去的、不愿触碰的往事，竟是以这样的方式将真相展露在了他眼前。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_04",
+          "type": "narration",
+          "text": "在那些反复追问、小心确认的细节中，或许还有一些未曾完整拼出明晰的答案，但他已经明白来龙去脉。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_05",
+          "type": "narration",
+          "text": "林琛回过神，轻点鼠标关掉凌乱的浏览器搜索框和校园网界面，最后，在和林鸢的对话框打下一行字。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_06",
+          "type": "narration",
+          "text": "「姐，我下来了。」"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_07",
+          "type": "narration",
+          "text": "林鸢帮忙拖着一只行李箱，姐弟俩沿着通往校门口的人行步道慢慢走。校园里的古树长得极高，六月的阳光透过葱茏枝叶，光斑细碎地落在二人肩上。",
+          "blankLinesBefore": 2
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_08",
+          "type": "narration",
+          "text": "林琛忽地想起五年前某个似曾相识的场景。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_09",
+          "type": "narration",
+          "text": "那也是一个盛夏，从行政楼到校门口的路面被晒得滚烫。他不太高兴地捏着盖好章的休学申请单，身边罗尧轻轻揽住他肩膀，说：“稍微晚一点也没关系。”"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_10",
+          "type": "narration",
+          "text": "原来真的没关系。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_11",
+          "type": "narration",
+          "text": "他最终还是顺利走到了这里，就像他在病床上幻想过无数次的，像个健康的普通人一样。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_12",
+          "type": "narration",
+          "text": "那是他和罗尧一同度过的唯一一个夏天。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_13",
+          "type": "narration",
+          "text": "慢慢地，某种难以遏制的悲恸从心底席卷而来，将他整个人压迫得无法呼吸。"
+        },
+        {
+          "id": "HE_SCENE_01_BLOCK_14",
+          "type": "narration",
+          "text": "林琛再也忍受不住，捂住脸无声恸哭起来。"
+        }
+      ],
+      "transition": {
+        "fadeMs": 700
+      },
+      "nextSceneId": "HE_SCENE_02"
+    },
+    {
+      "sceneId": "HE_SCENE_02",
+      "type": "narrative",
+      "date": "2025-06-28",
+      "backgroundAssetId": null,
+      "blocks": [
+        {
+          "id": "HE_SCENE_02_BLOCK_01",
+          "type": "narration",
+          "text": "林琛在墓前放下鲜花和毕业照。"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_02",
+          "type": "narration",
+          "text": "山风吹动花束上的包装纸，沙沙作响。他安静地站了一会儿，像从前一样，对罗尧说起毕业前后的琐事，说起未来的一些打算，说起最近的复查结果。"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_03",
+          "type": "narration",
+          "text": "“……今天是和姐姐一起爬山上来的。我现在走这么远的路也没什么问题了，你不要担心。”"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_04",
+          "type": "narration",
+          "text": "他说完这些停了一会儿，似乎在斟酌有些难以启齿的词句。最终，还是开口说道："
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_05",
+          "type": "narration",
+          "text": "“四年前如果我可以，绝对不会允许你这样做。”"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_06",
+          "type": "narration",
+          "text": "“但我也明白，就算再重复千百次，你也会做出相同的选择。”"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_07",
+          "type": "narration",
+          "text": "“所以尧哥，”他望着陶瓷相片上清俊的青年，抬手拂拭掉浅浅的尘埃，“如果我们来生还能再见，不要再这么执拗了，好不好？”"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_08",
+          "type": "narration",
+          "text": "“小琛，该走了。”",
+          "blankLinesBefore": 2
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_09",
+          "type": "narration",
+          "text": "林鸢在不远处唤他。林琛欠身鞠躬，最后向墓碑深深看了一眼。"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_10",
+          "type": "narration",
+          "text": "“那我走啦，下次再来看你。”"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_11",
+          "type": "narration",
+          "text": "他转过身，颈项间落出一块圆圆的铜币，上面“长命百岁”四个字泛着沉甸甸的明光。"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_12",
+          "type": "narration",
+          "text": "往后的日子里，他还会去很多地方，认识许多新的朋友，遇见更多欢乐或悲伤。"
+        },
+        {
+          "id": "HE_SCENE_02_BLOCK_13",
+          "type": "narration",
+          "text": "他会承继所爱之人的命途，好好走下去。"
+        },
+        {
+          "id": "HE_FINAL_LABEL",
+          "type": "endingTitle",
+          "text": "Good End｜爱有所归"
+        }
+      ],
+      "transition": {
+        "fadeMs": 700
+      },
+      "nextSceneId": null,
+      "sceneTitle": "2025年6月28日 · C市"
+    }
+  ]
+}

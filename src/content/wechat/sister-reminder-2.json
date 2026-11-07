@@ -1,0 +1,67 @@
+{
+  "eventId": "sister-reminder-2",
+  "chatId": "linyuan",
+  "messages": [
+    {
+      "id": "sister-reminder-2-1",
+      "senderId": "linyuan",
+      "text": "我准备出发了。中午还能到你们食堂吃吗？"
+    }
+  ],
+  "choicesLabel": "选择回复",
+  "initialReply": {
+    "id": "report_record",
+    "messageId": "sister-report-record",
+    "senderId": "linchen",
+    "text": "没问题啊。但我这边有条没结清的图书记录，感觉不太对劲。我弄清楚就来。"
+  },
+  "question": {
+    "id": "sister-which-record",
+    "senderId": "linyuan",
+    "text": "什么记录没结清？"
+  },
+  "detailReplies": [
+    {
+      "id": "describe_book",
+      "messageId": "sister-describe-book",
+      "senderId": "linchen",
+      "text": "图书馆的一本书，看名字像是*道教*方面的文献。我根本没借过，五百块钱，肯定哪里弄错了。"
+    },
+    {
+      "id": "mention_borrower",
+      "messageId": "sister-mention-borrower",
+      "senderId": "linchen",
+      "text": "图书馆的一本书，但上面写着是*尧哥*四年前借的。奇怪，怎么会算到我头上？"
+    }
+  ],
+  "typingText": "输入中…",
+  "typingDurationMs": 7000,
+  "replyIntervalMs": 2000,
+  "newMessagesLabel": "查看新消息",
+  "commonReplies": [
+    {
+      "id": "sister-hurry",
+      "senderId": "linyuan",
+      "text": "小琛，我们赶时间，要不你就先结了吧。"
+    },
+    {
+      "id": "sister-offer-transfer",
+      "senderId": "linyuan",
+      "text": "多少钱，姐姐转你。"
+    }
+  ],
+  "typingIndicator": true,
+  "questionTypingIndicator": false,
+  "branchReplies": {
+    "mention_borrower": {
+      "id": "sister-reminder-2-campus-card",
+      "senderId": "linyuan",
+      "text": "是不是以前小尧博一的时候用你校园卡借的？"
+    },
+    "describe_book": {
+      "id": "sister-reminder-2-secondhand",
+      "senderId": "linyuan",
+      "text": "原价是多少？找找二手书商，买一本还回去呢。"
+    }
+  }
+}

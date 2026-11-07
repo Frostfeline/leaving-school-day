@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "changdu-borrowed-life",
+      "routeId": "fiction-changdu",
+      "promotionLabel": "热门长篇",
+      "title": "穿越赛博，我凭借命格系统成神",
+      "genre": "科幻 · 赛博朋克 · 都市异能 · 东方玄幻",
+      "detailGenre": "科幻 · 赛博朋克 · 都市异能 · 东方玄幻",
+      "description": "新历2077年，意识上传成为现实，义体改造取代血肉凡躯，超级人工智能接管城市运转。\n\n在这座霓虹永不熄灭的钢铁都市里，人的阶层由基因与算力共同决定。\n\n穿越而来的路梓烨，原以为自己只是个最普通的底层公民，却意外激活了早已被现代科技所抛弃的神秘系统。\n\n别人改造义体，他解析命格；别人购买token，他推演天机。从地下黑市到企业高塔，从意识云端到废弃神庙，路梓烨逐渐发现，这个高度数字化的世界，竟然保留着一套远比人工智能更加古老的规则。\n\n【命格系统更新中……】\n\n【检测到未完成契约。】\n\n【契约双方：数据缺失。你，愿意成为我新的主人吗？】\n\n当机械飞升遇上古老天道，当数字生命触及命数禁区。这一次，他要以凡人之躯，重写自己的天命！",
+      "coverImage": "assets/images/fiction/cyber-fate-system-cover.png",
+      "coverAlt": "《穿越赛博，我凭借命格系统成神》封面",
+      "searchKeywords": [
+        "借命"
+      ],
+      "isSponsored": true,
+      "hasReadableContent": false,
+      "author": "星海摸鱼客",
+      "fanGroupNote": "粉丝值100000以上可联系运营官加粉丝群。",
+      "promotionHeading": "终点小说网热门长篇",
+      "promotionDescription": "新历2077年，意识上传成为现实，义体改造取代血肉凡躯，超级人工智能接管城市……",
+      "coverIncludesTitle": true
+    }
+  ]
+}

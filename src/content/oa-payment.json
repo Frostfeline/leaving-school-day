@@ -1,0 +1,36 @@
+{
+  "title": "{university}校园统一支付平台",
+  "paragraphs": [
+    "本页面为游戏内模拟支付，不涉及真实付款。"
+  ],
+  "fields": [
+    {
+      "id": "project",
+      "label": "缴费项目",
+      "value": "图书馆贵重馆藏借阅异常"
+    },
+    {
+      "id": "person",
+      "label": "责任登记人",
+      "valueRef": "responsiblePerson"
+    },
+    {
+      "id": "amount",
+      "label": "应缴金额",
+      "valueRef": "amount",
+      "emphasis": true
+    },
+    {
+      "id": "method",
+      "label": "支付方式",
+      "value": "已绑定支付方式"
+    }
+  ],
+  "confirmation": "本人确认承担该项责任并支付",
+  "pay": "确认支付 {amount}",
+  "processing": "支付处理中……",
+  "success": "支付成功",
+  "unassignedOutcome": "支付已完成，后续处理状态待确认。",
+  "backSummary": "返回借阅异常",
+  "storageFailure": "无法保存支付状态，请允许本站使用浏览器本地存储后重试。"
+}

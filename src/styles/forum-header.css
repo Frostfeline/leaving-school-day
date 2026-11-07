@@ -1,0 +1,23 @@
+/* Historical snapshot masthead; thread structure and controls are unchanged. */
+.forum-page{background:#eaf0f4;color:#303c46}
+.forum-branding{height:160px;padding:20px 30px;background-color:#eaf1f6;background-position:center;background-size:cover;justify-content:space-between;gap:20px}
+.forum-identity{min-width:0}
+.forum-brand{gap:14px;font:700 46px/1.15 "Songti SC","SimSun",serif;color:#305573;letter-spacing:.08em}
+.forum-logo{width:66px;height:86px;object-fit:contain}
+.forum-wordmark{display:flex;flex-direction:column;align-items:center;text-align:center}
+.forum-wordmark .forum-description{display:block;margin:0;font-size:16px;font-weight:400;letter-spacing:.22em;color:#456880;line-height:1.7}
+.forum-snapshot{text-align:center;flex-shrink:0;color:#456880}
+.forum-snapshot strong{display:inline-block;border:3px double #7894a8;padding:5px 16px;font:400 24px/1.5 "Songti SC","SimSun",serif;letter-spacing:.06em;background:#eaf1f699;outline:1px solid #b4c5d0;outline-offset:3px}
+.forum-snapshot p{font-size:12px;margin:13px 0 0}
+.forum-nav{background:#dceaf4;border-color:#b7cbda;align-items:center;min-height:43px}
+.forum-nav button{padding:8px 20px}
+.forum-nav .forum-accounts{gap:4px;margin-left:auto}
+.forum-nav .forum-accounts button{padding:8px 10px;font-size:12px}
+.forum-closed-notice{background:#fff9df;border-color:#e6d8a7;color:#716444}
+.forum-thread-heading{background:#f7fafc;border-color:#b7cbda}
+.forum-thread-heading h1{color:#305573}
+.forum-profile{background:#eff4f8}
+.forum-post{border-bottom-color:#e5edf3}
+.forum-post-head{border-bottom-style:solid;color:#708598}
+.forum-avatar{padding:3px;background:#f8fafb}
+@media(max-width:700px){.forum-branding{height:auto;min-height:150px;padding:16px 14px;flex-wrap:wrap;gap:17px;background-position:left center}.forum-brand{font-size:32px;gap:8px}.forum-logo{width:45px;height:60px}.forum-wordmark .forum-description{font-size:12px;letter-spacing:.14em}.forum-snapshot{margin-left:auto;text-align:right}.forum-snapshot strong{font-size:16px;padding:2px 9px;outline-offset:2px}.forum-snapshot p{font-size:11px;margin-top:9px}.forum-nav{padding:0 4px;flex-wrap:wrap}.forum-nav button{padding:8px 10px}.forum-nav .forum-accounts{gap:0}.forum-nav .forum-accounts button{padding:8px 7px}.forum-breadcrumb{flex-wrap:wrap}}

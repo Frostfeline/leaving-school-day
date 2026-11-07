@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "endingId": "te-unfinished-pact",
+  "title": "未结之契",
+  "finalLabel": "True End｜未结之契",
+  "reviewStatus": "draft",
+  "continue": "继续阅读",
+  "enterCast": "点击进入CAST界面",
+  "replayCast": "重播片尾",
+  "returnHome": "返回主界面",
+  "paragraphDelayMs": 250,
+  "fadeMs": 700,
+  "assets": [],
+  "scenes": [
+    {
+      "sceneId": "TE_SCENE_01",
+      "type": "narrative",
+      "date": "2025-06-25",
+      "backgroundAssetId": null,
+      "blocks": [
+        {
+          "id": "TE_SCENE_01_BLOCK_01",
+          "type": "narration",
+          "text": "叮——"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_02",
+          "type": "narration",
+          "text": "一声轻微的提示音响起来。林琛移动目光，看见Hermitage账号给他发来了简讯，上面写着一串地址。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_03",
+          "type": "narration",
+          "text": "他深吸一口气，平复稍显混乱的思绪。对话框里陌生文字仍旧静静陈列，无论是「精神污染」还是「廷达罗斯猎犬」，他都没能理解其中含义。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_04",
+          "type": "narration",
+          "text": "如果Hermitage告诉他答案，他会接触到那个罗尧最后短暂探寻过、又无暇完全解明的真相。至于归籍的仪式，反而不是那样重要了。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_05",
+          "type": "narration",
+          "text": "他明白，如果罗尧还活着，绝不会愿意让他承担这些沉重阴影。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_06",
+          "type": "narration",
+          "text": "但他相信罗尧也知道，自己一定会选择追查到真正的终点。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_07",
+          "type": "narration",
+          "text": "“尧哥。”他垂下眼，声音恍若叹息，“我们都是这么执拗的人。”"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_08",
+          "type": "narration",
+          "text": "而爱本身就是极为无私又自私的东西。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_09",
+          "type": "narration",
+          "text": "林琛轻点鼠标关掉浏览器凌乱的搜索框和校园网界面，最后，在和林鸢的对话框打下一行字。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_10",
+          "type": "narration",
+          "text": "「姐，我要去一趟Hermitage，恐怕不能和你一起吃午饭了。尧哥有些东西还留在他们那里。如果你愿意的话，可以和我一起来。」"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_11",
+          "type": "sceneDivider",
+          "text": "午后 · Hermitage店外",
+          "blankLinesBefore": 2
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_12",
+          "type": "narration",
+          "text": "这是开在喧嚷街角一方平凡无奇的老式书店，店如其名宁静，没有招牌没有标志。窗玻璃倒是被人细心擦拭打理过，橱窗里陈列着各式语言的精装旧书，没有简介没有价格。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_13",
+          "type": "narration",
+          "text": "林琛站在店门口的路灯下，低头再度确认了地图导航。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_14",
+          "type": "narration",
+          "text": "夏日炽烈的阳光倾倒进城市，像是能把一切虚伪玄奇暴晒至无所遁形。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_15",
+          "type": "narration",
+          "text": "“小琛。”"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_16",
+          "type": "narration",
+          "text": "他仿佛听见身后有个熟悉的人在温柔地喊。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_17",
+          "type": "narration",
+          "text": "林琛没有回头，收起手机，伸手推开那扇藏于阴影的木门。"
+        },
+        {
+          "id": "TE_SCENE_01_BLOCK_18",
+          "type": "narration",
+          "text": "不管是真实还是幻觉，他所处的世界，已经即将为他展现另一种模样了。"
+        },
+        {
+          "id": "TE_FINAL_LABEL",
+          "type": "endingTitle",
+          "text": "True End｜未结之契"
+        }
+      ],
+      "transition": {
+        "fadeMs": 700
+      },
+      "nextSceneId": null
+    }
+  ],
+  "musicCues": []
+}

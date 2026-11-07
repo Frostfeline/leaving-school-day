@@ -1,0 +1,21 @@
+{
+  "moduleName": "微信",
+  "developmentLabel": "界面原型 · 消息、时间与头像均为开发占位",
+  "identityLabel": "当前身份",
+  "placeholderMessage": "此处将接入林鸢催促林琛完成毕业离校手续的开场对话。当前为接口验证占位，并非正式聊天内容。",
+  "searchPlaceholder": "搜好友",
+  "searchLabel": "搜好友",
+  "chatsLabel": "聊天列表",
+  "messagesLabel": "消息",
+  "historyLabel": "聊天记录",
+  "noResults": "未找到聊天",
+  "inputLabel": "消息输入区",
+  "inputPlaceholder": "当前仅可查看历史消息",
+  "send": "发送",
+  "phaseNote": "静态视觉原型 · 正式内容待提供",
+  "avatarAlt": "{name}的头像",
+  "timeNote": "占位时间",
+  "mobileBack": "聊天列表",
+  "unreadLabel": "未读消息",
+  "showDevelopmentNotes": false
+}

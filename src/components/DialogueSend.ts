@@ -1,0 +1,2 @@
+import {el} from '../utils/dom';import {sendPendingDialogue} from '../state/game-state';
+export function dialogueSend(kind:'sister'|'hermitage'|'owner',p:any,d:any,format=(text:string)=>text){if(!p.waitingMessageId)return null;const m=d.nodes.flatMap((n:any)=>n.messages??[]).find((m:any)=>m.messageId===p.waitingMessageId);if(!m)return null;const b=el('button','dialogue-send',format(m.text));b.type='button';b.dataset.sendDialogue=kind;b.onclick=()=>{b.disabled=true;sendPendingDialogue(kind);};return b;}

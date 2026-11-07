@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "title": "Hermitage · 私人到访邀请",
+  "fields": [
+    {
+      "id": "commission",
+      "label": "委托状态",
+      "text": "待进一步确认"
+    },
+    {
+      "id": "collection",
+      "label": "馆藏状态",
+      "text": "未归还"
+    },
+    {
+      "id": "date",
+      "label": "相关日期",
+      "text": "2025年7月9日"
+    },
+    {
+      "id": "material",
+      "label": "相关材料",
+      "text": "合婚帖"
+    }
+  ],
+  "pendingFields": {
+    "address": null,
+    "contact": null,
+    "document": null,
+    "visitScene": null
+  },
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,96 @@
+{
+  "name": "缘来有数",
+  "subtitle": "传统八字合婚 · 姻缘配对测算",
+  "title": "测测你和TA的前世今生缘",
+  "tagline": "两个人的相遇，是偶然，还是命中注定？",
+  "seal": "合",
+  "navigationLabel": "测算页面导航",
+  "navigation": [
+    {
+      "id": "explanation",
+      "label": "测算说明"
+    }
+  ],
+  "form": {
+    "people": [
+      "第一位",
+      "第二位"
+    ],
+    "name": "姓名",
+    "namePlaceholder": "请输入姓名",
+    "birthDate": "出生日期（公历）",
+    "hour": "出生时辰（选填）",
+    "unknownHour": "不清楚",
+    "submit": "开始合盘",
+    "note": "结果仅供参考",
+    "missingName": "请填写{person}的姓名。",
+    "missingBirthDate": "请填写{person}的出生日期。",
+    "invalidBirthDate": "请填写{person}有效的公历出生日期。"
+  },
+  "hours": [
+    {
+      "id": "zi",
+      "label": "子时"
+    },
+    {
+      "id": "chou",
+      "label": "丑时"
+    },
+    {
+      "id": "yin",
+      "label": "寅时"
+    },
+    {
+      "id": "mao",
+      "label": "卯时"
+    },
+    {
+      "id": "chen",
+      "label": "辰时"
+    },
+    {
+      "id": "si",
+      "label": "巳时"
+    },
+    {
+      "id": "wu",
+      "label": "午时"
+    },
+    {
+      "id": "wei",
+      "label": "未时"
+    },
+    {
+      "id": "shen",
+      "label": "申时"
+    },
+    {
+      "id": "you",
+      "label": "酉时"
+    },
+    {
+      "id": "xu",
+      "label": "戌时"
+    },
+    {
+      "id": "hai",
+      "label": "亥时"
+    }
+  ],
+  "emptyResult": {
+    "title": "八字姻缘测算结果",
+    "emblem": "缘",
+    "text": "填写双方信息，开启缘分测算。"
+  },
+  "resetClearsInputs": false,
+  "explanationTitle": "测算说明",
+  "explanation": "结果仅供传统文化娱乐参考。",
+  "footer": "缘来有数 · 传统文化娱乐测算",
+  "explanationParagraphs": [
+    "合八字，古为换庚帖之俗。取二人出生年、月、日、时四柱干支，排定八字五行，比对天干五合、地支六合、三合、刑冲害、夫妻宫、喜用神，以观先天气场的呼应与牵绊。",
+    "年主渊源，看缘分缘起深浅；日为夫妻宫，主二人朝夕相处之性情、隔阂与吸引；五行相生则多扶持补益，冲刑交战则多磨合考验。",
+    "缘分自有分别：有互为喜用、彼此托举的善缘；有纠葛拉扯、聚散难料的劫缘；亦有萍水相逢、一程过客的浅缘。",
+    "命局为底色，情分终究靠彼此相守经营，不必以此一言定离合。快来测测你和心中那个TA的缘分深浅吧！"
+  ],
+  "explanationClose": "关闭"
+}

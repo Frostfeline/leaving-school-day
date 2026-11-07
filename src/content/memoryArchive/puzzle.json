@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "pairs": [
+    {
+      "id": "P01",
+      "chatGroupId": "M01-1",
+      "attachmentId": "checkup-2020"
+    },
+    {
+      "id": "P07",
+      "chatGroupId": "movie-ticket",
+      "attachmentId": "movie-ticket"
+    },
+    {
+      "id": "P03",
+      "chatGroupId": "C01",
+      "attachmentId": "medication-receipt"
+    },
+    {
+      "id": "P04",
+      "chatGroupId": "C02",
+      "attachmentId": "luoyao-birthday"
+    },
+    {
+      "id": "P05",
+      "chatGroupId": "C03",
+      "attachmentId": "linchen-birthday"
+    },
+    {
+      "id": "P06",
+      "chatGroupId": "M02-2",
+      "attachmentId": "echo-2021"
+    },
+    {
+      "id": "P08",
+      "chatGroupId": "M02-3",
+      "attachmentId": "flight-ticket"
+    }
+  ],
+  "summary": [
+    "PASSWORD：20201218"
+  ]
+}

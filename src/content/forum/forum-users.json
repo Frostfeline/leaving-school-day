@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": "jiuwen",
+      "name": "旧闻求证",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "nanqiao",
+      "name": "南桥旧事",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "shanwai",
+      "name": "山外闲人",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "zhishang",
+      "name": "撒一把糯米",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "banjuan",
+      "name": "妈咪妈咪哄",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "buxin",
+      "name": "不信这些",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "wuming",
+      "name": "无名客",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    },
+    {
+      "id": "fangbei",
+      "name": "访碑人",
+      "avatar": "assets/images/forum/avatar-default.svg",
+      "registeredAt": null,
+      "level": null,
+      "postCount": null
+    }
+  ]
+}

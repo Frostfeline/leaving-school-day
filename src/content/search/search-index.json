@@ -1,0 +1,97 @@
+{
+  "excludedKinds": [
+    "book",
+    "bookstore-product"
+  ],
+  "entries": [
+    {
+      "id": "article-borrow-life",
+      "kind": "wechat-article",
+      "articleId": "borrow-life",
+      "routeId": "wechat-article-borrow-life",
+      "sourceRef": "articleAccount",
+      "keywords": []
+    },
+    {
+      "id": "article-donglan-admission-2017",
+      "kind": "wechat-article",
+      "articleId": "donglan-admission-2017",
+      "routeId": "wechat-article-donglan-admission-2017",
+      "sourceRef": "articleAccount",
+      "keywords": []
+    },
+    {
+      "id": "fiction-changdu-ad",
+      "kind": "fiction-promotion",
+      "novelId": "changdu-borrowed-life",
+      "sourceRef": "fictionSite",
+      "keywords": []
+    },
+    {
+      "id": "book-bibliography",
+      "kind": "book",
+      "bookId": "hermitage-book-001",
+      "source": "书目资料",
+      "summary": "图书版本资料，可查阅作者、出版社、出版时间及ISBN。",
+      "keywords": []
+    },
+    {
+      "id": "book-history",
+      "kind": "bookstore-product",
+      "bookId": "hermitage-book-001",
+      "sourceRef": "bookstoreName",
+      "summary": "同版本图书的历史售出记录，可查阅商品详情与历史留言。这册旧书与大学图书馆未归还的馆藏不是同一本实物。",
+      "keywords": []
+    },
+    {
+      "id": "bookstore-site",
+      "kind": "website",
+      "titleRef": "bookstoreName",
+      "routeId": "bookstore-home",
+      "sourceRef": "bookstoreName",
+      "summary": "老庄旧书网是专业的古旧书交易平台，聚焦二手书与珍贵古籍善本，会员登陆更享折……",
+      "keywords": []
+    },
+    {
+      "id": "forum-jisui",
+      "kind": "forum-thread",
+      "threadId": "jisui-2016",
+      "sourceRef": "forumName",
+      "summary": "莲蓬论坛，灵异志怪同好聚集地。讲述山野异闻、都市诡事、玄秘传说。夜色渐深，慎入楼中…",
+      "keywords": [
+        "寄岁"
+      ]
+    },
+    {
+      "id": "fortune-ad",
+      "kind": "fortune-match",
+      "routeId": "fortune-match",
+      "title": "八字算命_八字命理_八字寄岁_八字命盤查询",
+      "sourceRef": "fortuneName",
+      "summary": "八字命学,是中国传统命理学的重要组成部分,属于东方传统文化中的命运预测体系...",
+      "keywords": [
+        "寄岁",
+        "八字",
+        "合盘"
+      ],
+      "badge": "广告"
+    }
+  ],
+  "pendingTopics": [
+    {
+      "id": "xusuan-zalu",
+      "keywords": [
+        "续算杂录"
+      ],
+      "reason": "仅通过老庄旧书网站内检索，不在微信搜一搜中提供图书结果。"
+    }
+  ],
+  "pendingLinks": [
+    {
+      "id": "luoyao-bookstore-history",
+      "chatId": "luoyao",
+      "routeId": "bookstore-home",
+      "reason": "罗尧历史聊天尚为空，保留链接接入位置，不编造消息。"
+    }
+  ]
+}

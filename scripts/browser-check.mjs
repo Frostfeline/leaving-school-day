@@ -1,0 +1,54 @@
+import { chromium } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
+import assert from 'node:assert/strict';
+const browser = await chromium.launch({ executablePath: process.env.BROWSER_EXECUTABLE || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true });
+const page = await browser.newPage();
+const errors = [];
+page.on('pageerror', e => errors.push(e.message));
+page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
+mkdirSync('test-results', { recursive: true });
+try {
+  for (const [width, height] of [[1920,1080],[1366,768],[390,844],[375,667]]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('http://127.0.0.1:4173/');
+    await page.getByRole('heading', { name: '玩前提醒', exact: true }).waitFor();
+    assert.equal(await page.getByRole('tab', { name: '提醒', exact: true }).getAttribute('aria-selected'), 'true');
+    await page.evaluate(() => { window.__navigationMarker = true; });
+    await page.getByRole('tab', { name: '游戏背景', exact: true }).click();
+    await page.getByText('这原本应该只是一个普通的毕业日。', { exact: true }).waitFor();
+    assert.equal(await page.evaluate(() => window.__navigationMarker), true);
+    await page.getByRole('tab', { name: '提醒', exact: true }).click();
+    await page.getByRole('heading', { name: '玩前提醒', exact: true }).waitFor();
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    const button = await page.getByRole('button', { name: '开始游戏' }).boundingBox();
+    assert(button && button.y >= 0 && button.y + button.height <= height, 'start visible');
+    await page.screenshot({ path: `test-results/intro-${width}.png`, fullPage: true });
+    await page.getByRole('button', { name: '开始游戏' }).click();
+    await page.getByRole('heading', { name: '姐姐', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).hash, '#/game/wechat/linyuan');
+    await page.reload();
+    await page.getByRole('heading', { name: '姐姐', exact: true }).waitFor();
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.getByRole('link', { name: '返回介绍' }).click();
+    await page.getByRole('heading', { name: '玩前提醒', exact: true }).waitFor();
+    console.log(`PASS viewport ${width}x${height}, tabs, start, refresh, return, overflow, assets`);
+  }
+  await page.getByRole('tab', { name: '提醒', exact: true }).focus();
+  await page.keyboard.press('ArrowRight');
+  assert.equal(await page.getByRole('tab', { name: '游戏背景', exact: true }).getAttribute('aria-selected'), 'true');
+  await page.keyboard.press('Home');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  assert.equal(await page.evaluate(() => document.activeElement.dataset.action), 'start-game');
+  await page.keyboard.press('Space');
+  await page.getByRole('heading', { name: '姐姐', exact: true }).waitFor();
+  await page.goBack();
+  await page.getByRole('button', { name: '开始游戏' }).focus();
+  await page.keyboard.press('Enter');
+  await page.getByRole('heading', { name: '姐姐', exact: true }).waitFor();
+  await page.goto('http://127.0.0.1:4173/#/invalid');
+  await page.getByRole('heading', { name: '玩前提醒', exact: true }).waitFor();
+  assert.deepEqual(errors, []);
+  console.log('PASS keyboard, unknown route, console/network');
+} finally { await browser.close(); }

@@ -1,0 +1,9 @@
+{
+  "gameId": "leaving-school-day",
+  "startActionId": "start-game",
+  "initialModule": "wechat",
+  "initialConversationId": "linyuan",
+  "playerId": "linchen",
+  "enableDevelopmentPlaceholder": true,
+  "characters": { "linyuan": { "name": "林鸢" }, "linchen": { "name": "林琛" } }
+}

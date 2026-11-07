@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "verificationId": "private-commission",
+  "recordId": "2021-HM-0625",
+  "title": "Hermitage委托核验",
+  "description": [
+    "该委托包含非公开资料。",
+    "为保护委托人及相关人员的隐私，请根据您已掌握的信息回答以下三个问题。",
+    "请在每个输入框填写数字。"
+  ],
+  "questions": [
+    {
+      "questionId": "one",
+      "label": "其一",
+      "riddleText": "借者未归，还者无借。",
+      "promptText": "完成仪式，共涉及修改几个人的命籍？",
+      "answer": "3",
+      "evidenceRefs": [
+        "oa-library-record",
+        "sister-confrontation-3"
+      ],
+      "reviewStatus": "draft"
+    },
+    {
+      "questionId": "two",
+      "label": "其二",
+      "riddleText": "一人寄岁，一人借命。",
+      "promptText": "寄岁所补的年寿，相差多少年岁？",
+      "evidenceRefs": [
+        "memory-archive",
+        "hermitage-history"
+      ],
+      "reviewStatus": "draft",
+      "answerParts": [
+        {
+          "answer": "4",
+          "unit": "年"
+        },
+        {
+          "answer": "14",
+          "unit": "天"
+        }
+      ]
+    },
+    {
+      "questionId": "three",
+      "label": "其三",
+      "riddleText": "阳契已显受命者之名，阴契却仍未归籍。",
+      "promptText": "借命除受命者本人外，有几个人可以代他完成归籍？",
+      "answer": "0",
+      "evidenceRefs": [
+        "sister-manuscript"
+      ],
+      "reviewStatus": "draft"
+    }
+  ],
+  "successMessages": [
+    "私人委托核验通过。",
+    "相关历史记录已开放。"
+  ],
+  "failureMessage": "核验未通过，请重新核对委托信息。",
+  "nextRoute": "#/bookstore/private/owner"
+}

@@ -1,0 +1,24 @@
+import {readFileSync,existsSync} from 'node:fs';
+export function readForumFiles(){const read=name=>{try{return JSON.parse(readFileSync(`src/content/forum/${name}.json`,'utf8'));}catch(e){throw Error(`src/content/forum/${name}.json: ${e}`)}};return {site:read('forum-site'),users:read('forum-users'),thread:read('forum-thread')};}
+export function validateForum({site,users,thread},checkAssets=false){
+ const fail=(path,why)=>{throw Error(`[content] src/content/forum/${path}: ${why}`)};
+ const text=(value,path)=>{if(typeof value!=='string'||!value.trim())fail(path,'必须填写文字');};
+ const id=(value,path)=>{if(typeof value!=='string'||!/^[-a-z0-9]+$/.test(value))fail(path,'需要稳定的英文ID');};
+ const list=(items,path)=>{if(!Array.isArray(items))fail(path,'必须为数组');const ids=new Set();for(const item of items){id(item?.id,path+'.id');if(ids.has(item.id))fail(path+'.id','重复ID '+item.id);ids.add(item.id);}};
+ const asset=(path,field)=>{if(typeof path!=='string'||!/^assets\/[a-zA-Z0-9/_-]+\.svg$/.test(path)||path.includes('..')||(checkAssets&&!existsSync('public/'+path)))fail(field,'需要存在的站内SVG资源路径');};
+ for(const key of ['name','description','logoAlt','closedNotice','navigationLabel'])text(site[key],'forum-site.json.'+key);asset(site.logo,'forum-site.json.logo');if(site.closedAt!==null&&!Number.isFinite(Date.parse(site.closedAt)))fail('forum-site.json.closedAt','关闭日期须为null或有效日期');
+ for(const key of ['navigation','accountActions','threadActions']){list(site[key],'forum-site.json.'+key);for(const action of site[key])text(action.label,'forum-site.json.'+key+'.label');}
+ for(const key of ['author','postedAt','views','replies','starter','floor','jump','registered','level','postCount','avatar','footer','notFound'])text(site.labels?.[key],'forum-site.json.labels.'+key);
+ for(const key of ['title','placeholder','openLabel','submit'])text(site.quickReply?.[key],'forum-site.json.quickReply.'+key);
+ for(const key of ['title','confirm','close'])text(site.closedDialog?.[key],'forum-site.json.closedDialog.'+key);
+ if(!Array.isArray(site.closedDialog.paragraphs)||!site.closedDialog.paragraphs.length)fail('forum-site.json.closedDialog.paragraphs','需要提示正文');site.closedDialog.paragraphs.forEach(p=>text(p,'forum-site.json.closedDialog.paragraphs'));
+ for(const [key,token]of [['author','{name}'],['postedAt','{time}'],['views','{count}'],['replies','{count}'],['floor','{floor}'],['avatar','{name}']])if(!site.labels[key].includes(token))fail('forum-site.json.labels.'+key,'缺少变量 '+token);
+ list(users.users,'forum-users.json.users');for(const user of users.users){text(user.name,'forum-users.json.'+user.id+'.name');asset(user.avatar,'forum-users.json.'+user.id+'.avatar');for(const key of ['registeredAt','level'])if(user[key]!==null)text(user[key],'forum-users.json.'+user.id+'.'+key);if(user.postCount!==null&&(!Number.isSafeInteger(user.postCount)||user.postCount<0))fail('forum-users.json.'+user.id+'.postCount','需要非负整数或null');}
+ id(thread.id,'forum-thread.json.id');text(thread.title,'forum-thread.json.title');id(thread.board?.id,'forum-thread.json.board.id');text(thread.board?.name,'forum-thread.json.board.name');if(!users.users.some(u=>u.id===thread.authorId))fail('forum-thread.json.authorId','楼主ID无效');
+ if(thread.views!==null&&(!Number.isSafeInteger(thread.views)||thread.views<0))fail('forum-thread.json.views','需要非负整数或null');list(thread.posts,'forum-thread.json.posts');if(!thread.posts.length)fail('forum-thread.json.posts','至少需要一楼');
+ const floors=new Set();for(const post of thread.posts){const path='forum-thread.json.'+post.id;if(!Number.isSafeInteger(post.floor)||post.floor<1||floors.has(post.floor))fail(path+'.floor','楼层必须唯一且为正整数');floors.add(post.floor);if(!users.users.some(u=>u.id===post.authorId))fail(path+'.authorId','用户ID不存在');if(typeof post.timestamp!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(post.timestamp)||!Number.isFinite(Date.parse(post.timestamp)))fail(path+'.timestamp','需要带+08:00时区的完整日期时间');
+  if(!Array.isArray(post.content)||!post.content.length)fail(path+'.content','正文不能为空');for(const block of post.content){if(typeof block==='string')text(block,path+'.content');else if(block?.type==='quote'){if(block.postId){if(!thread.posts.some(p=>p.id===block.postId&&p.floor<post.floor))fail(path+'.content.quote','引用楼层不存在或顺序无效');}else text(block.text,path+'.content.quote');}else if(block?.type==='link'){text(block.label,path+'.content.link.label');if(!['bookstore-home','oa-login'].includes(block.targetId))fail(path+'.content.link.targetId','未注册的游戏资料目标');}else fail(path+'.content','只支持段落、引用和已注册的游戏资料链接');}
+ }
+ const starter=thread.posts.find(p=>p.id===thread.starterPostId);if(!starter||starter.authorId!==thread.authorId)fail('forum-thread.json.starterPostId','原帖ID或楼主关联无效');
+}
+export function validateForumFiles(){validateForum(readForumFiles(),true);}

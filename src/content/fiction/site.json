@@ -1,0 +1,10 @@
+{
+  "name": "终点小说网",
+  "subtitle": "长篇故事 · 在线阅读",
+  "promotionBadge": "推广",
+  "promotionFormat": "{site} · {column}",
+  "searchTitleFormat": "《{title}》",
+  "pageTitleFormat": "{title} - {site}",
+  "descriptionHeading": "作品简介",
+  "viewWork": "查看作品"
+}

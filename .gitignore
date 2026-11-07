@@ -1,0 +1,35 @@
+node_modules/
+dist/
+.tools/
+test-results/
+output/
+outputs/
+
+# Local credentials, tool settings, caches and temporary files
+.env
+.env.*
+!.env.example
+.npmrc
+.codex/
+.agents/
+.vscode/
+.idea/
+.cache/
+coverage/
+playwright-report/
+blob-report/
+*.log
+*.tmp
+*.bak
+*.swp
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+*.p12
+
+# Retain historical development notes locally, outside the public repository.
+/*.md
+!/README.md
+/src/content/**/README.md

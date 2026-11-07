@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": "public-question-placeholder",
+      "productId": "hermitage-book-001",
+      "authorId": "luoyao",
+      "timestamp": null,
+      "displayTime": "10:24",
+      "order": 1,
+      "text": "老板你好，想请教一下，这本书里有引用观复道人*《续算杂录》*，请问您这边有这本书的资料吗？主要想找里面关于*寄岁*的记载。",
+      "replyTo": null,
+      "relativeTimeRef": "publicRelativeTime"
+    },
+    {
+      "id": "public-reply-placeholder",
+      "productId": "hermitage-book-001",
+      "authorId": "ning",
+      "timestamp": null,
+      "displayTime": "11:08",
+      "order": 2,
+      "text": "《续算杂录》流传不广，散佚颇多，目前店里没有完整抄本。你问的这部分比较特别，详细的情况不方便在这里谈，可以私信联系。",
+      "replyTo": "public-question-placeholder",
+      "relativeTimeRef": "publicRelativeTime"
+    },
+    {
+      "id": "public-question-followup",
+      "productId": "hermitage-book-001",
+      "authorId": "luoyao",
+      "timestamp": null,
+      "displayTime": "11:16",
+      "order": 3,
+      "text": "谢谢，已发站内信。",
+      "replyTo": "public-reply-placeholder",
+      "relativeTimeRef": "publicRelativeTime"
+    }
+  ]
+}

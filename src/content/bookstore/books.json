@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "hermitage-book-001",
+      "enabled": true,
+      "dataStatus": "confirmed",
+      "title": "道教命籍与民间禳解文化研究",
+      "isbn": "7806711865",
+      "author": "周景衡",
+      "publisher": "栖云古籍出版社",
+      "publishYear": 2003,
+      "binding": "精装",
+      "condition": "九品",
+      "price": 600,
+      "status": "sold",
+      "sellerId": "hermitage",
+      "listedAt": null,
+      "searchKeywords": [],
+      "images": [
+        {
+          "id": "cover",
+          "src": "assets/images/bookstore/daojiao-cover.png",
+          "alt": "书籍封面",
+          "placeholder": false
+        },
+        {
+          "id": "page-01",
+          "src": "assets/images/bookstore/daojiao-interior.png",
+          "alt": "书籍内页",
+          "placeholder": false
+        },
+        {
+          "id": "page-02",
+          "src": "assets/images/bookstore/daojiao-back.jpg",
+          "alt": "书籍封底",
+          "placeholder": false
+        }
+      ],
+      "description": [
+        "本书以道教命籍、寿算观念及民间禳解文化为研究对象，结合经典地方志及民俗调查资料，考察传统社会中有关延寿、消灾及命数登记的信仰及其实践，并对部分流传稀少的地方抄本进行考辩。"
+      ],
+      "conditionParagraphs": [],
+      "versionParagraphs": [
+        "2003年11月第1版第1次印刷。精装，32开本。",
+        "本册为旧藏书，封面级书籍由轻微自然磨损出口略有泛黄，内页完整无明显缺页、污损及涂写，整体保存状况良好，具体品相与实物图片为准。"
+      ],
+      "publishDate": "2003年11月",
+      "listPrice": 25,
+      "classification": "B958",
+      "edition": "第1版第1次印刷",
+      "era": "2003年11月",
+      "category": "宗教",
+      "authorReviewStatus": "needs-review"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "he-payment-cg",
+  "targetEndingId": "he-ai-you-suo-gui",
+  "amountRef": "amount",
+  "fadeMs": 600,
+  "settledStatus": "已办结",
+  "scenes": [
+    {
+      "id": "CG_HE_PAYMENT_01",
+      "view": "record",
+      "durationMs": 2400,
+      "text": "图书馆借阅异常",
+      "backgroundSrc": "",
+      "eventId": null,
+      "fieldRefs": [
+        "collectionCode",
+        "bookTitle",
+        "isbn",
+        "responsiblePerson",
+        "amount",
+        "status"
+      ]
+    },
+    {
+      "id": "CG_HE_PAYMENT_02",
+      "view": "acknowledge",
+      "durationMs": 2200,
+      "text": "本人确认承担该项借阅责任并申请结清",
+      "backgroundSrc": "",
+      "eventId": "acknowledge-liability",
+      "fieldRefs": [
+        "responsiblePerson",
+        "amount",
+        "status"
+      ]
+    },
+    {
+      "id": "CG_HE_PAYMENT_03",
+      "view": "payment",
+      "durationMs": 2500,
+      "text": "支付中……",
+      "backgroundSrc": "",
+      "eventId": null
+    },
+    {
+      "id": "CG_HE_PAYMENT_04",
+      "view": "success",
+      "durationMs": 2200,
+      "text": "扣费成功",
+      "paragraphs": [
+        "该借阅异常事项已结清。"
+      ],
+      "backgroundSrc": "",
+      "eventId": "settle-library"
+    },
+    {
+      "id": "CG_HE_PAYMENT_05",
+      "view": "receipt",
+      "durationMs": 3200,
+      "text": "毕业离校手续已全部办结",
+      "backgroundSrc": "",
+      "eventId": null
+    }
+  ]
+}

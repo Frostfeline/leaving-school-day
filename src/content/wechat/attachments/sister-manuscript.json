@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "xusuan-manuscript-excerpt",
+      "fileName": "续算杂录_抄录残页.png",
+      "title": "《续算杂录》抄录残页",
+      "src": "assets/images/wechat/xusuan-manuscript-excerpt.png",
+      "alt": "《续算杂录》抄录残页",
+      "placeholder": false,
+      "paragraphs": [
+        "「凡寄岁者，所假之年终有尽时，惟借命可解。归籍之事，须受者亲认，虽至亲不可代署。」"
+      ]
+    }
+  ]
+}

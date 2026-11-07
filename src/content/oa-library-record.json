@@ -1,0 +1,126 @@
+{
+  "title": "图书馆借阅异常",
+  "paragraphs": [
+    "本事项登记信息如下，请核对。"
+  ],
+  "data": {
+    "matterType": "贵重馆藏图书逾期未还",
+    "collectionCode": {
+      "value": "200400080612",
+      "candidate": null,
+      "status": "confirmed"
+    },
+    "borrowedAt": "2021-05-30",
+    "originalBorrowerId": "luoyao",
+    "responsiblePersonId": "linchen",
+    "amount": "¥500.00",
+    "status": "待处理",
+    "bookId": "hermitage-book-001"
+  },
+  "pendingValue": "待配置",
+  "pendingConfirmation": "待确认",
+  "fields": [
+    {
+      "id": "matter-type",
+      "label": "事项类型",
+      "valueRef": "matterType"
+    },
+    {
+      "id": "collection-code",
+      "label": "馆藏条码",
+      "valueRef": "collectionCode"
+    },
+    {
+      "id": "responsible-person",
+      "label": "当前责任登记人",
+      "valueRef": "responsiblePerson"
+    },
+    {
+      "id": "amount",
+      "label": "遗失金额",
+      "valueRef": "amount",
+      "emphasis": true
+    },
+    {
+      "id": "status",
+      "label": "当前状态",
+      "valueRef": "status"
+    }
+  ],
+  "actions": {
+    "investigate": "我有疑问",
+    "pay": "立即缴费",
+    "backSummary": "返回借阅异常"
+  },
+  "investigation": {
+    "title": "馆藏借阅记录详情",
+    "paragraphs": [
+      "馆藏借阅登记信息如下。"
+    ],
+    "fields": [
+      {
+        "id": "collection-code",
+        "label": "馆藏条码",
+        "valueRef": "collectionCode"
+      },
+      {
+        "id": "book-title",
+        "label": "书名",
+        "valueRef": "bookTitle"
+      },
+      {
+        "id": "isbn",
+        "label": "ISBN",
+        "valueRef": "isbn"
+      },
+      {
+        "id": "publisher",
+        "label": "出版社",
+        "valueRef": "publisher"
+      },
+      {
+        "id": "publish-date",
+        "label": "出版时间",
+        "valueRef": "publishDate"
+      },
+      {
+        "id": "list-price",
+        "label": "图书定价",
+        "valueRef": "listPrice"
+      },
+      {
+        "id": "classification",
+        "label": "馆藏性质",
+        "value": "孤本"
+      },
+      {
+        "id": "borrowed-at",
+        "label": "借阅日期",
+        "valueRef": "borrowedAt"
+      },
+      {
+        "id": "original-borrower",
+        "label": "原始借阅人",
+        "valueRef": "originalBorrower"
+      },
+      {
+        "id": "responsible-person",
+        "label": "当前责任登记人",
+        "valueRef": "responsiblePerson"
+      },
+      {
+        "id": "compensation",
+        "label": "应缴金额",
+        "valueRef": "amount",
+        "emphasis": true,
+        "helpId": "overdue-compensation"
+      },
+      {
+        "id": "status",
+        "label": "当前赔偿状态",
+        "valueRef": "status"
+      }
+    ]
+  },
+  "publisher": "东澜大学图书馆"
+}

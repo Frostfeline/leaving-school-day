@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "endingId": "be-unauthorized-tomorrow",
+  "title": "此生有涯",
+  "finalLabel": "Bad End｜此生有涯",
+  "reviewStatus": "draft",
+  "continue": "继续阅读",
+  "returnHome": "返回游戏首页",
+  "paragraphDelayMs": 250,
+  "fadeMs": 700,
+  "assets": [],
+  "scenes": [
+    {
+      "sceneId": "BE_SCENE_01",
+      "type": "narrative",
+      "date": "2025-06-25",
+      "backgroundAssetId": null,
+      "blocks": [
+        {
+          "id": "BE_SCENE_01_BLOCK_01",
+          "type": "narration",
+          "text": "林琛退出和店主先生的私聊窗口，重新翻到最上面，看着四年前罗尧留下的那些消息。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_02",
+          "type": "narration",
+          "text": "他一直知道罗尧是个很细心和固执的人。一起生活的时候，罗尧总会替他考虑很多事情，哪怕他只是随口抱怨一句，第二天便能发现罗尧已经认真想好了解决办法。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_03",
+          "type": "narration",
+          "text": "以前他觉得这很好。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_04",
+          "type": "narration",
+          "text": "可现在想来，罗尧似乎从来没有考虑过有些事情是他不愿意接受的。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_05",
+          "type": "narration",
+          "text": "林琛忽然有些生气。可这点怒意才刚刚浮上来，就被另一种情绪淹没了。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_06",
+          "type": "narration",
+          "text": "罗尧已经死了，他还能向谁生气呢？"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_07",
+          "type": "narration",
+          "text": "他又怎么能够责怪一个为了自己付出生命的人？"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_08",
+          "type": "narration",
+          "text": "林鸢找到弟弟时，林琛正坐在逸夫楼外的长椅上怔怔出神。",
+          "blankLinesBefore": 1
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_09",
+          "type": "narration",
+          "text": "不远处，校学生会的成员正在情人坡布置音乐会场地，还有三三两两穿着学士服的同级生抱着鲜花互相拍照。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_10",
+          "type": "narration",
+          "text": "林鸢安静地在他身边坐下。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_11",
+          "type": "narration",
+          "text": "“……姐。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_12",
+          "type": "narration",
+          "text": "“跟那边联系过了？”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_13",
+          "type": "narration",
+          "text": "“嗯。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_14",
+          "type": "narration",
+          "text": "“他们怎么说？”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_15",
+          "type": "narration",
+          "text": "“都告诉我了，尧哥最后做的那些事。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_16",
+          "type": "narration",
+          "text": "“姐，你说……”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_17",
+          "type": "narration",
+          "text": "他停顿了很久，像是花了很大力气才说出接下来的话。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_18",
+          "type": "narration",
+          "text": "“你说，他是不是有点自私啊？”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_19",
+          "type": "narration",
+          "text": "“我知道是为了我好，我都知道，但他明明清楚我不可能接受这种事。他说，最后还是要我来选择——可他早就帮我选好了，不是吗？”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_20",
+          "type": "narration",
+          "text": "“我现在觉得自己都没资格生他的气，可我真的很生气。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_21",
+          "type": "narration",
+          "text": "“……也真的很想很想他。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_22",
+          "type": "narration",
+          "text": "草坪上传来喧嚷嘹亮的笑闹声，有人的氢气球道具断了线，轻飘飘一路往天上升。林琛望着那群人，忽地笑了一下。",
+          "blankLinesBefore": 1
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_23",
+          "type": "narration",
+          "text": "“这几年，我真的过得挺好的。可是姐，我现在一想到自己过得这么好，就会想到，他本来也可以过得很好的。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_24",
+          "type": "narration",
+          "text": "“他瞒着我在生命的末尾匆匆回到C市，是因为他也有重要的、需要告别的亲人朋友。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_25",
+          "type": "narration",
+          "text": "“如果没有认识我，他就不会借命。如果他还活着，现在也才三十二岁，已经从东澜大学博士毕业，前途无量。”"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_26",
+          "type": "narration",
+          "text": "林鸢没有说话。她知道，自己没有办法替弟弟找到答案，就像四年前她无法阻止罗尧作出那个决定一样。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_27",
+          "type": "narration",
+          "text": "林琛曾经以为，失去一个人最痛苦的时候是得知对方再也不会回来的那一天。",
+          "blankLinesBefore": 1
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_28",
+          "type": "narration",
+          "text": "现在他才知道，并不是所有悲伤都会随时间彻底淡去。有些事会在许多年后，以另一种更加残酷的方式，重新剖白在眼前。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_29",
+          "type": "narration",
+          "text": "他明白这份爱有多么赤诚，可是理解并不能让一切变得容易。恰恰相反，他活下来的每一天，都有了另一种无法忽视的重量。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_30",
+          "type": "narration",
+          "text": "生命既不像无涯之爱一样无所穷尽，也不是能随意转赠的礼物。"
+        },
+        {
+          "id": "BE_SCENE_01_BLOCK_31",
+          "type": "narration",
+          "text": "他无法接受这个未经自己许可的明天。"
+        },
+        {
+          "id": "BE_FINAL_LABEL",
+          "type": "endingTitle",
+          "text": "Bad End｜此生有涯"
+        }
+      ],
+      "transition": {
+        "fadeMs": 700
+      },
+      "nextSceneId": null
+    }
+  ],
+  "musicCues": []
+}

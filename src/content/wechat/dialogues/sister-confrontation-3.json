@@ -1,0 +1,675 @@
+{
+  "schemaVersion": 1,
+  "id": "sister-confrontation-3",
+  "title": "林鸢第三次对质",
+  "startNodeId": "S3_INTRO",
+  "endNodeId": "S3_COMPLETE",
+  "attachmentGateNodeId": "S3_MANUSCRIPT",
+  "messageIntervalMs": 2600,
+  "queueDelayMs": 2000,
+  "trigger": {
+    "historyCompletionEventId": "ning-history-read-completed",
+    "secondReminderEventId": "sister-reminder-2-completed-read"
+  },
+  "nodes": [
+    {
+      "id": "S3_INTRO",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_intro-01",
+          "speakerId": "linyuan",
+          "text": "小琛，我快到学校了。"
+        },
+        {
+          "messageId": "s3_intro-02",
+          "speakerId": "linyuan",
+          "text": "你那边还没处理好吗？"
+        }
+      ],
+      "nextNodeId": "S3_CHOICE_1",
+      "legacyMessages": []
+    },
+    {
+      "id": "S3_CHOICE_1",
+      "type": "choice",
+      "options": [
+        {
+          "id": "s3_choice_1-a",
+          "messageId": "s3_choice_1-reply-a",
+          "speakerId": "linchen",
+          "text": "姐，你是不是早就知道那本书的事？为什么一直催我把钱结清？",
+          "nextNodeId": "S3_BRANCH_1A",
+          "disabled": false
+        },
+        {
+          "id": "s3_choice_1-b",
+          "messageId": "s3_choice_1-reply-b",
+          "speakerId": "linchen",
+          "text": "姐，我查到了一些四年前的事。尧哥当年回C市，真的只是去处理家事吗？",
+          "nextNodeId": "S3_BRANCH_1B",
+          "disabled": false
+        },
+        {
+          "id": "s3_choice_1-c",
+          "messageId": "s3_choice_1-reply-c",
+          "speakerId": "linchen",
+          "text": "我现在脑子很乱。四年前的6月25日到底发生了什么？我想听你亲口说。",
+          "nextNodeId": "S3_BRANCH_1C",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_1A",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_branch_1a-01",
+          "speakerId": "linyuan",
+          "text": "那本书？"
+        },
+        {
+          "messageId": "s3_branch_1a-03",
+          "speakerId": "linchen",
+          "text": "《道教命籍与民间禳解文化研究》……我查过了，确实是尧哥四年前借的。可现在，借阅责任却落到了我身上。这是不是和寄岁有关？"
+        },
+        {
+          "messageId": "s3_branch_1a-02",
+          "speakerId": "linyuan",
+          "text": "这个我真的不知道。"
+        },
+        {
+          "messageId": "s3_branch_1a-04",
+          "speakerId": "linchen",
+          "text": "姐，我本来不想怀疑你。可你今天一直催我结清这笔钱，实在有些反常。你是不是有事瞒着我？"
+        },
+        {
+          "messageId": "s3_branch_1a-06",
+          "speakerId": "linyuan",
+          "text": "……"
+        },
+        {
+          "messageId": "s3_branch_1a-07",
+          "speakerId": "linyuan",
+          "text": "是。"
+        }
+      ],
+      "nextNodeId": "S3_COMMON_1",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_1a-05",
+          "speakerId": "linchen",
+          "text": "你是不是知道他在找什么？"
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_1B",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_branch_1b-01",
+          "speakerId": "linyuan",
+          "text": "怎么突然问起这个？"
+        },
+        {
+          "messageId": "s3_branch_1b-02",
+          "speakerId": "linchen",
+          "text": "我看到了他在旧书店的聊天记录。他当时一直在找一本叫《续算杂录》的书。"
+        },
+        {
+          "messageId": "s3_branch_1b-03",
+          "speakerId": "linchen",
+          "text": "四年前那段日子太痛苦了。我重病住院，尧哥又突然去世……后来，我一直不敢仔细回想。"
+        },
+        {
+          "messageId": "s3_branch_1b-06",
+          "speakerId": "linchen",
+          "text": "可现在按时间来看，他是在旧书店找到《续算杂录》相关抄本之后，才动身回C市的。"
+        },
+        {
+          "messageId": "s3_branch_1b-v21-05",
+          "speakerId": "linchen",
+          "text": "姐，你是不是知道他为什么回去？"
+        },
+        {
+          "messageId": "s3_branch_1b-04",
+          "speakerId": "linyuan",
+          "text": "没想到你会查到这些。"
+        }
+      ],
+      "nextNodeId": "S3_COMMON_1",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_1b-07",
+          "speakerId": "linyuan",
+          "text": "……"
+        },
+        {
+          "messageId": "s3_branch_1b-08",
+          "speakerId": "linyuan",
+          "text": "是。"
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_1C",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_branch_1c-01",
+          "speakerId": "linyuan",
+          "text": "小琛，为什么突然问这些？"
+        },
+        {
+          "messageId": "s3_branch_1c-02",
+          "speakerId": "linchen",
+          "text": "我查了2021年的病历，也看了尧哥以前和旧书店的消息。"
+        },
+        {
+          "messageId": "s3_branch_1c-03",
+          "speakerId": "linchen",
+          "text": "我的出院记录里写着，我从6月25日开始好转。"
+        },
+        {
+          "messageId": "s3_branch_1c-04",
+          "speakerId": "linchen",
+          "text": "可尧哥偏偏也是那天去世的。"
+        },
+        {
+          "messageId": "s3_branch_1c-05",
+          "speakerId": "linchen",
+          "text": "以前我不敢想，现在却没办法再告诉自己，这只是个巧合。"
+        },
+        {
+          "messageId": "s3_branch_1c-06",
+          "speakerId": "linyuan",
+          "text": "……"
+        },
+        {
+          "messageId": "s3_branch_1c-07",
+          "speakerId": "linyuan",
+          "text": "那个时间，确实不是巧合。"
+        }
+      ],
+      "nextNodeId": "S3_COMMON_1",
+      "legacyMessages": []
+    },
+    {
+      "id": "S3_COMMON_1",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_common_1-01",
+          "speakerId": "linyuan",
+          "text": "小琛，有些事我一直不知道该怎么开口。"
+        },
+        {
+          "messageId": "s3_common_1-02",
+          "speakerId": "linyuan",
+          "text": "那年你住院以后，情况越来越不好。我签病危通知书时，医生已经让我们做好最坏的打算，说你可能熬不过那个月底。"
+        },
+        {
+          "messageId": "s3_common_1-03",
+          "speakerId": "linyuan",
+          "text": "我那时候真的很害怕，罗尧也一样。"
+        },
+        {
+          "messageId": "s3_common_1-05",
+          "speakerId": "linchen",
+          "text": "所以……你们当时想到了寄岁？"
+        },
+        {
+          "messageId": "s3_common_1-06",
+          "speakerId": "linyuan",
+          "text": "嗯。"
+        },
+        {
+          "messageId": "s3_common_1-04",
+          "speakerId": "linyuan",
+          "text": "起初他只是偶然找到了一些线索，或许能让你撑过这一关。后来他告诉我，旧书里记着一种叫“寄岁补年”的秘术，可以把别人的一段年岁暂时寄给你，让你继续活下去。"
+        },
+        {
+          "messageId": "s3_common_1-10",
+          "speakerId": "linchen",
+          "text": "但寄给我的，不是尧哥的年岁，对吗？"
+        },
+        {
+          "messageId": "s3_common_1-07",
+          "speakerId": "linyuan",
+          "text": "是我的。"
+        },
+        {
+          "messageId": "s3_common_1-08",
+          "speakerId": "linyuan",
+          "text": "我把自己的年岁寄给了你。"
+        },
+        {
+          "messageId": "s3_common_1-09",
+          "speakerId": "linyuan",
+          "text": "那时候我只想先让你活下来。至于以后会怎么样，我根本顾不上想。"
+        },
+        {
+          "messageId": "s3_common_1-v21-11",
+          "speakerId": "linchen",
+          "text": "可是寄来的年岁总会用完。"
+        },
+        {
+          "messageId": "s3_common_1-v21-12",
+          "speakerId": "linyuan",
+          "text": "对。寄来的年岁终究有尽头。"
+        },
+        {
+          "messageId": "s3_common_1-v21-13",
+          "speakerId": "linyuan",
+          "text": "他说，他还在找另一种办法。如果能找到，也许就不只是让你多活几年，而是能让你真正继续走下去。"
+        },
+        {
+          "messageId": "s3_common_1-v21-14",
+          "speakerId": "linchen",
+          "text": "所以寄岁之后，还有借命。"
+        },
+        {
+          "messageId": "s3_common_1-v21-15",
+          "speakerId": "linyuan",
+          "text": "小尧没有把具体的方法告诉我。他只说，那和寄岁不是一回事。如果真的要做，他可能得付出自己的余生。"
+        },
+        {
+          "messageId": "s3_common_1-v21-16",
+          "speakerId": "linchen",
+          "text": "你当时就知道了？"
+        },
+        {
+          "messageId": "s3_common_1-v21-17",
+          "speakerId": "linyuan",
+          "text": "我知道有这个可能。我劝过他，可他那时候已经下定决心了。"
+        },
+        {
+          "messageId": "s3_common_1-v21-18",
+          "speakerId": "linyuan",
+          "text": "后来他回了C市，说要去见一些从前认识的人。再之后，你的情况开始好转，他却在山洪里出了事，再也没回来。"
+        }
+      ],
+      "nextNodeId": "S3_CHOICE_2",
+      "legacyMessages": []
+    },
+    {
+      "id": "S3_CHOICE_2",
+      "type": "choice",
+      "options": [
+        {
+          "id": "s3_choice_2-a",
+          "messageId": "s3_choice_2-reply-a",
+          "speakerId": "linchen",
+          "text": "所以，他根本不是普通的因为山洪意外去世。",
+          "nextNodeId": "S3_BRANCH_2A",
+          "disabled": false
+        },
+        {
+          "id": "s3_choice_2-b",
+          "messageId": "s3_choice_2-reply-b",
+          "speakerId": "linchen",
+          "text": "……",
+          "nextNodeId": "S3_BRANCH_2B",
+          "disabled": false
+        },
+        {
+          "id": "s3_choice_2-c",
+          "messageId": "s3_choice_2-reply-c",
+          "speakerId": "linchen",
+          "text": "等等。那尧哥后来又做了什么？",
+          "nextNodeId": "S3_BRANCH_2C",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_2A",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_branch_2a-01",
+          "speakerId": "linyuan",
+          "text": "山里出事的消息是真的。我只是一直没有告诉你，他为什么偏偏要在那时候回去。"
+        },
+        {
+          "messageId": "s3_branch_2a-02",
+          "speakerId": "linyuan",
+          "text": "我也没能见到小尧最后一面。"
+        }
+      ],
+      "nextNodeId": "S3_COMMON_2",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_2a-03",
+          "speakerId": "linyuan",
+          "text": "那时候我只想先让你活下来。"
+        },
+        {
+          "messageId": "s3_branch_2a-04",
+          "speakerId": "linyuan",
+          "text": "至于以后会怎么样，我根本顾不上想。"
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_2B",
+      "type": "messages",
+      "messages": [],
+      "nextNodeId": "S3_COMMON_2",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_2b-01",
+          "speakerId": "linyuan",
+          "text": "对。"
+        },
+        {
+          "messageId": "s3_branch_2b-02",
+          "speakerId": "linyuan",
+          "text": "寄来的年岁终究是有尽头的。"
+        },
+        {
+          "messageId": "s3_branch_2b-03",
+          "speakerId": "linyuan",
+          "text": "我当时也问过罗尧，之后该怎么办。"
+        },
+        {
+          "messageId": "s3_branch_2b-04",
+          "speakerId": "linyuan",
+          "text": "他说他还在找另一种方法。"
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_2C",
+      "type": "messages",
+      "messages": [],
+      "nextNodeId": "S3_COMMON_2",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_2c-01",
+          "speakerId": "linyuan",
+          "text": "他后来找到了另一种法子。"
+        },
+        {
+          "messageId": "s3_branch_2c-02",
+          "speakerId": "linyuan",
+          "text": "我记得他叫它「易命」。"
+        },
+        {
+          "messageId": "s3_branch_2c-03",
+          "speakerId": "linyuan",
+          "text": "他说，那或许能让你不只是多活几年，而是真正继续走下去。"
+        }
+      ]
+    },
+    {
+      "id": "S3_COMMON_2",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_common_2-02",
+          "speakerId": "linyuan",
+          "text": "对不起，小琛。"
+        }
+      ],
+      "nextNodeId": "S3_CHOICE_3",
+      "legacyMessages": [
+        {
+          "messageId": "s3_common_2-01",
+          "speakerId": "linchen",
+          "text": "所以寄岁之后，还有易命？"
+        },
+        {
+          "messageId": "s3_common_2-03",
+          "speakerId": "linyuan",
+          "text": "他跟我说过，那种方法和寄岁不一样。"
+        },
+        {
+          "messageId": "s3_common_2-04",
+          "speakerId": "linyuan",
+          "text": "如果真的要做，他可能得付出自己的余生。"
+        },
+        {
+          "messageId": "s3_common_2-05",
+          "speakerId": "linchen",
+          "text": "……"
+        },
+        {
+          "messageId": "s3_common_2-06",
+          "speakerId": "linchen",
+          "text": "你当时知道？"
+        },
+        {
+          "messageId": "s3_common_2-07",
+          "speakerId": "linyuan",
+          "text": "我知道有这个可能。"
+        },
+        {
+          "messageId": "s3_common_2-08",
+          "speakerId": "linyuan",
+          "text": "我劝过他。可他那时候已经决定了。"
+        },
+        {
+          "messageId": "s3_common_2-09",
+          "speakerId": "linyuan",
+          "text": "后来他回了C市，去见从前认识的人。"
+        },
+        {
+          "messageId": "s3_common_2-10",
+          "speakerId": "linyuan",
+          "text": "再之后，你的情况开始好转。"
+        },
+        {
+          "messageId": "s3_common_2-11",
+          "speakerId": "linyuan",
+          "text": "他却没有回来。"
+        }
+      ]
+    },
+    {
+      "id": "S3_CHOICE_3",
+      "type": "choice",
+      "options": [
+        {
+          "id": "s3_choice_3-a",
+          "messageId": "s3_choice_3-reply-a",
+          "speakerId": "linchen",
+          "text": "所以我现在能活着，是因为他。你为什么一直不告诉我？",
+          "nextNodeId": "S3_BRANCH_3A",
+          "disabled": false
+        },
+        {
+          "id": "s3_choice_3-b",
+          "messageId": "s3_choice_3-reply-b",
+          "speakerId": "linchen",
+          "text": "……",
+          "nextNodeId": "S3_BRANCH_3B",
+          "disabled": false
+        },
+        {
+          "id": "s3_choice_3-c",
+          "messageId": "s3_choice_3-reply-c",
+          "speakerId": "linchen",
+          "text": "你为什么一直不告诉我？",
+          "nextNodeId": "S3_BRANCH_3C",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_3A",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_branch_3a-01",
+          "speakerId": "linyuan",
+          "text": "那时你才刚出院，身体还没恢复。我不知道你能不能承受这些，也不敢再拿你冒险。何况小尧已经……"
+        },
+        {
+          "messageId": "s3_branch_3a-02",
+          "speakerId": "linyuan",
+          "text": "后来拖得越久，就越不知道该从哪里说起了。"
+        }
+      ],
+      "nextNodeId": "S3_COMMON_3",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_3a-03",
+          "speakerId": "linyuan",
+          "text": "我也没见到他最后一面。"
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_3B",
+      "type": "messages",
+      "messages": [],
+      "nextNodeId": "S3_COMMON_3",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_3b-01",
+          "speakerId": "linyuan",
+          "text": "我没有办法向你证明那种法子真的存在。"
+        },
+        {
+          "messageId": "s3_branch_3b-02",
+          "speakerId": "linyuan",
+          "text": "可我知道他为了你去做了什么。"
+        },
+        {
+          "messageId": "s3_branch_3b-03",
+          "speakerId": "linyuan",
+          "text": "还有那天以后发生的事。"
+        }
+      ]
+    },
+    {
+      "id": "S3_BRANCH_3C",
+      "type": "messages",
+      "messages": [],
+      "nextNodeId": "S3_COMMON_3",
+      "legacyMessages": [
+        {
+          "messageId": "s3_branch_3c-01",
+          "speakerId": "linyuan",
+          "text": "对不起，小琛。"
+        },
+        {
+          "messageId": "s3_branch_3c-02",
+          "speakerId": "linyuan",
+          "text": "那时你才刚出院，我不知道你能不能接受这些。"
+        },
+        {
+          "messageId": "s3_branch_3c-03",
+          "speakerId": "linyuan",
+          "text": "后来拖得越久，就越不知道该从哪里说起了。"
+        }
+      ]
+    },
+    {
+      "id": "S3_COMMON_3",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_common_3-01",
+          "speakerId": "linchen",
+          "text": "可如果这些都是真的，那四年以后呢？"
+        },
+        {
+          "messageId": "s3_common_3-03",
+          "speakerId": "linyuan",
+          "text": "他当时还给我看过一段抄下来的文字，我一直留着。"
+        }
+      ],
+      "nextNodeId": "S3_MANUSCRIPT",
+      "legacyMessages": [
+        {
+          "messageId": "s3_common_3-02",
+          "speakerId": "linchen",
+          "text": "寄来的年岁用完了，会怎么样？"
+        },
+        {
+          "messageId": "s3_common_3-04",
+          "speakerId": "linyuan",
+          "text": "我一直留着。"
+        }
+      ]
+    },
+    {
+      "id": "S3_MANUSCRIPT",
+      "type": "attachment",
+      "nextNodeId": "S3_AFTER_MANUSCRIPT",
+      "attachmentId": "xusuan-manuscript-excerpt",
+      "speakerId": "linyuan",
+      "messageId": "s3-manuscript-attachment",
+      "requireOpenBeforeNext": true
+    },
+    {
+      "id": "S3_AFTER_MANUSCRIPT",
+      "type": "messages",
+      "messages": [
+        {
+          "messageId": "s3_after_manuscript-01",
+          "speakerId": "linchen",
+          "text": "归籍？"
+        },
+        {
+          "messageId": "s3_after_manuscript-02",
+          "speakerId": "linyuan",
+          "text": "我当时也问过他这个词。小尧说，借命的最后这一步，只能由你自己完成。我不能替你，他也不能。"
+        },
+        {
+          "messageId": "s3_after_manuscript-05",
+          "speakerId": "linchen",
+          "text": "那究竟要怎么做？"
+        },
+        {
+          "messageId": "s3_after_manuscript-03",
+          "speakerId": "linyuan",
+          "text": "他只是说过，剩下的安排店里有人知道。"
+        },
+        {
+          "messageId": "s3_after_manuscript-04",
+          "speakerId": "linyuan",
+          "text": "小琛，如果你还是想弄清楚，就去问问那家旧书店吧。"
+        },
+        {
+          "messageId": "s3_after_manuscript-11",
+          "speakerId": "linyuan",
+          "text": "我知道的，已经都告诉你了。"
+        }
+      ],
+      "nextNodeId": "S3_END_MESSAGES",
+      "legacyMessages": [
+        {
+          "messageId": "s3_after_manuscript-06",
+          "speakerId": "linyuan",
+          "text": "这件事他没有告诉我。"
+        },
+        {
+          "messageId": "s3_after_manuscript-07",
+          "speakerId": "linyuan",
+          "text": "他只是说，剩下的安排，店里有人知道。"
+        }
+      ]
+    },
+    {
+      "id": "S3_END_MESSAGES",
+      "type": "messages",
+      "messages": [],
+      "nextNodeId": "S3_COMPLETE",
+      "legacyMessages": []
+    },
+    {
+      "id": "S3_COMPLETE",
+      "type": "end",
+      "completionEvents": [
+        "sister_confrontation_3_completed"
+      ]
+    }
+  ],
+  "manualPlayerMessages": true,
+  "npcDelayMultiplier": 1.3
+}

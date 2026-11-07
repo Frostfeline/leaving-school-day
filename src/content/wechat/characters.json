@@ -1,0 +1,84 @@
+{
+  "linyuan": {
+    "nameRef": "linyuan",
+    "avatar": "assets/images/avatars/wechat-linyuan.jpeg"
+  },
+  "linchen": {
+    "nameRef": "linchen",
+    "avatar": "assets/images/avatars/wechat-linchen.jpg"
+  },
+  "class-group": {
+    "name": "班级通知群",
+    "avatar": "assets/images/avatars/class.svg"
+  },
+  "university-service": {
+    "name": "东澜大学服务号",
+    "avatar": "assets/images/oa/donglan-emblem-256.webp"
+  },
+  "flea-market": {
+    "avatar": "assets/images/avatars/market.svg",
+    "chatNameRef": "flea-market"
+  },
+  "class-sender": {
+    "name": "辅导员 陈老师",
+    "avatar": "assets/images/avatars/wechat-class-sender.jpeg"
+  },
+  "market-sender": {
+    "name": "本周末有事不出摊下周预订可私聊",
+    "avatar": "assets/images/avatars/wechat-market-sender.jpg"
+  },
+  "luoyao": {
+    "name": "罗尧",
+    "avatar": "assets/images/avatars/wechat-luoyao.jpg",
+    "remark": "尧哥",
+    "wechatId": "luoyao0508",
+    "relationship": "friend"
+  },
+  "class-monitor": {
+    "name": "班长 邓予安",
+    "avatar": "assets/images/avatars/wechat-class-chenweiwei.jpeg"
+  },
+  "class-zhangyi": {
+    "name": "张怡",
+    "avatar": "assets/images/avatars/wechat-class-zhangyi.jpeg"
+  },
+  "class-liumengning": {
+    "name": "刘梦宁",
+    "avatar": "assets/images/avatars/wechat-class-liumengning.jpeg"
+  },
+  "class-chenweiwei": {
+    "name": "陈薇薇",
+    "avatar": "assets/images/avatars/wechat-class-monitor.jpeg"
+  },
+  "market-ruomu": {
+    "name": "天东有若木",
+    "avatar": "assets/images/avatars/wechat-market-ruomu.jpeg"
+  },
+  "market-luna": {
+    "name": "Luna",
+    "avatar": "assets/images/avatars/wechat-market-sugar.png"
+  },
+  "market-calpis": {
+    "name": "可尔必思^",
+    "avatar": "assets/images/avatars/wechat-market-calpis.jpeg"
+  },
+  "market-sea": {
+    "name": "再看一次海",
+    "avatar": "assets/images/avatars/wechat-market-sea.jpeg"
+  },
+  "market-po": {
+    "name": "珀（锦鲤版）",
+    "avatar": "assets/images/avatars/wechat-market-po.jpeg"
+  },
+  "market-sugar": {
+    "name": "小糖今天吃什么",
+    "avatar": "assets/images/avatars/wechat-market-luna.jpg"
+  },
+  "litianming": {
+    "name": "李天明",
+    "wechatNickname": "天色将明",
+    "remark": "李天明",
+    "relationship": "friend",
+    "avatar": "assets/images/avatars/wechat-litianming.jpg"
+  }
+}

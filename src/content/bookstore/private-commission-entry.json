@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "private-commission-entry",
+  "title": "私人委托核验",
+  "reviewStatus": "awaiting-author",
+  "paragraphs": [],
+  "pending": "私人委托核验内容待作者提供。",
+  "back": "返回Hermitage",
+  "route": "#/bookstore/private-commission",
+  "answerStructure": [
+    2,
+    4,
+    0
+  ]
+}

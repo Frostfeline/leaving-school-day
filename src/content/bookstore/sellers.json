@@ -1,0 +1,45 @@
+{
+  "shops": [
+    {
+      "id": "hermitage",
+      "name": "Hermitage",
+      "avatar": "assets/images/bookstore/hermitage-avatar.jpg",
+      "avatarAlt": "Hermitage店铺头像",
+      "paragraphs": [
+        "店铺介绍待作者提供。"
+      ],
+      "staffIds": [
+        "ning"
+      ],
+      "levelDiamonds": 3,
+      "statistics": [
+        "成功完成 85％（219笔）",
+        "好评率100％",
+        "平均发货时间：48小时以上"
+      ]
+    },
+    {
+      "id": "yulinzhai",
+      "name": "雨林斋",
+      "avatar": "assets/images/bookstore/yulinzhai-avatar.jpg",
+      "avatarAlt": "雨林斋店铺头像",
+      "paragraphs": [],
+      "staffIds": [],
+      "accountStatus": "closed",
+      "statusText": "该卖家已注销"
+    }
+  ],
+  "authors": [
+    {
+      "id": "luoyao",
+      "characterId": "luoyao"
+    },
+    {
+      "id": "ning",
+      "name": "宁先生",
+      "shopId": "hermitage",
+      "role": "Hermitage工作人员",
+      "publicNameRef": "shop"
+    }
+  ]
+}

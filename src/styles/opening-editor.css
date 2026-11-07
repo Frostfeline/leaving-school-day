@@ -1,0 +1,7 @@
+.opening-editor{max-width:1400px;margin:24px auto;padding:24px;color:#333;background:#fff;font-size:14px}
+.opening-editor header p{line-height:1.8;color:#666}.opening-editor nav{display:flex;gap:10px;flex-wrap:wrap;position:sticky;top:0;background:#fff;padding:12px 0;z-index:1}
+.opening-editor button,.opening-editor select{padding:8px 12px;border:1px solid #bbb;border-radius:3px;background:#f6f6f3;color:#333}
+.opening-editor-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px}.opening-editor-layout>*{min-width:0}
+.opening-editor-field{margin:10px 0}.opening-editor textarea{display:block;width:100%;padding:8px;border:1px solid #ccc;font:inherit;line-height:1.7;resize:vertical;min-height:45px}.opening-editor textarea[readonly]{background:#f3f3f3;color:#777}
+.opening-editor fieldset{border:1px solid #ddd;padding:14px;margin:18px 0;min-width:0}.opening-editor aside{overflow-wrap:anywhere;white-space:pre-wrap}.opening-editor aside p{line-height:1.8}
+@media(max-width:700px){.opening-editor-layout{grid-template-columns:1fr}.opening-editor{padding:14px}}

@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "checkup-2020",
+      "title": "复查报告",
+      "category": "医疗文件",
+      "date": "2020-09-18",
+      "summary": "林琛在2020年9月因反复心慌及活动后气促进行复查。",
+      "sourceId": "new-draft",
+      "reviewStatus": "needs-review",
+      "images": [
+        {
+          "id": "checkup-2020",
+          "src": "assets/images/memoryArchive/checkup-report.jpg",
+          "alt": "复查报告",
+          "placeholder": false
+        }
+      ],
+      "fields": [],
+      "sections": []
+    },
+    {
+      "id": "medication-receipt",
+      "title": "门诊取药凭证",
+      "category": "票据",
+      "date": "2021-01-05",
+      "summary": "取药凭证，具体药物、数量及金额待审核。",
+      "sourceId": "new-draft",
+      "reviewStatus": "needs-review",
+      "images": [
+        {
+          "id": "receipt",
+          "src": "assets/images/memoryArchive/outpatient-medication-receipt-20210105.png",
+          "alt": "2021年1月5日门诊取药凭证",
+          "placeholder": false
+        }
+      ],
+      "fields": [
+        {
+          "label": "患者",
+          "valueRef": "linchen"
+        },
+        {
+          "label": "凭证类型",
+          "value": "取药凭证"
+        }
+      ],
+      "sections": []
+    },
+    {
+      "id": "luoyao-birthday",
+      "title": "罗尧生日留念",
+      "category": "照片组",
+      "date": "2021-05-08",
+      "summary": "生日蛋糕照片。",
+      "sourceId": "new-draft",
+      "reviewStatus": "draft",
+      "images": [
+        {
+          "id": "cake",
+          "src": "assets/images/memoryArchive/birthday-cake.png",
+          "alt": "生日蛋糕",
+          "placeholder": false
+        }
+      ],
+      "fields": [],
+      "sections": []
+    },
+    {
+      "id": "linchen-birthday",
+      "title": "林琛生日礼物",
+      "category": "照片",
+      "date": "2021-05-22",
+      "summary": "一枚带有祈福意味的厌胜钱。",
+      "sourceId": "new-draft",
+      "reviewStatus": "draft",
+      "images": [
+        {
+          "id": "coin",
+          "src": "assets/images/memoryArchive/birthday-gift.png",
+          "alt": "生日礼物",
+          "placeholder": false
+        }
+      ],
+      "fields": [],
+      "sections": []
+    },
+    {
+      "id": "echo-2021",
+      "title": "超声心动图检查报告",
+      "category": "医疗文件",
+      "date": "2021-06-11",
+      "summary": "超声心动图检查报告，正式发布前需医学审阅。",
+      "sourceId": "LD-003",
+      "reviewStatus": "needs-review",
+      "images": [
+        {
+          "id": "echo-2021",
+          "src": "assets/images/memoryArchive/echocardiography-report-20210611.png",
+          "alt": "2021年6月11日超声心动图检查报告",
+          "placeholder": false
+        }
+      ],
+      "fields": [
+        {
+          "label": "机构",
+          "value": "青岚医科大学附属医院"
+        },
+        {
+          "label": "姓名",
+          "valueRef": "linchen"
+        },
+        {
+          "label": "性别",
+          "value": "男"
+        },
+        {
+          "label": "年龄",
+          "value": "24岁"
+        },
+        {
+          "label": "住院号",
+          "value": "ZY210529014"
+        },
+        {
+          "label": "申请科室",
+          "value": "心血管内科"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "检查所见",
+          "paragraphs": [
+            "三尖瓣隔瓣叶及后瓣叶附着位置向心尖部移位，前瓣叶形态异常；右心房及房化右心室扩大。彩色多普勒示明显三尖瓣反流；功能右心室收缩功能减低。左心室收缩功能尚可。"
+          ]
+        },
+        {
+          "heading": "超声提示",
+          "paragraphs": [
+            "1. 先天性心脏病：符合埃布斯坦畸形超声表现；",
+            "2. 三尖瓣重度反流；",
+            "3. 右心扩大，右心室收缩功能减低。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "movie-ticket",
+      "title": "电影票",
+      "date": "2020-12-18",
+      "category": "票据",
+      "summary": "2020年12月18日的电影票。",
+      "sourceId": "LD-003",
+      "reviewStatus": "draft",
+      "images": [
+        {
+          "id": "movie-ticket",
+          "src": "assets/images/memoryArchive/movie-ticket.jpg",
+          "alt": "电影票",
+          "placeholder": false
+        }
+      ],
+      "fields": [],
+      "sections": []
+    },
+    {
+      "id": "flight-ticket",
+      "title": "机票",
+      "date": "2021-06-23",
+      "category": "票据",
+      "summary": "罗尧的机票。",
+      "sourceId": "LD-003",
+      "reviewStatus": "draft",
+      "images": [
+        {
+          "id": "flight-ticket",
+          "src": "assets/images/memoryArchive/luoyao-flight-ticket.png",
+          "alt": "罗尧机票",
+          "placeholder": false
+        }
+      ],
+      "fields": [],
+      "sections": []
+    }
+  ]
+}

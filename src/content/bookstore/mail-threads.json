@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "id": "hermitage-history",
+      "accountId": "luoyao-bookstore",
+      "shopId": "hermitage",
+      "staffId": "ning",
+      "titleFormat": "与 {shop} 的历史通信",
+      "timeRange": "2021年",
+      "latestAt": null,
+      "summary": null,
+      "unread": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "hermitage-20210604",
+      "threadId": "hermitage-history",
+      "date": "2021-06-04",
+      "time": "11:21",
+      "messageIds": [
+        "hermitage-20210604-01",
+        "hermitage-20210604-02",
+        "hermitage-20210604-09",
+        "hermitage-20210604-03",
+        "hermitage-20210604-04",
+        "hermitage-20210604-05",
+        "hermitage-20210604-10",
+        "hermitage-20210604-11",
+        "hermitage-20210604-12",
+        "hermitage-20210604-13",
+        "hermitage-20210604-14",
+        "hermitage-20210604-06",
+        "hermitage-20210604-15",
+        "hermitage-20210604-16",
+        "hermitage-20210604-17",
+        "hermitage-20210604-18",
+        "hermitage-20210604-07"
+      ]
+    },
+    {
+      "id": "hermitage-20210611",
+      "threadId": "hermitage-history",
+      "date": "2021-06-11",
+      "time": "20:34",
+      "messageIds": [
+        "hermitage-20210611-01",
+        "hermitage-20210611-03",
+        "hermitage-20210611-04",
+        "hermitage-20210611-05",
+        "hermitage-20210611-06",
+        "hermitage-20210611-07",
+        "hermitage-20210611-08",
+        "hermitage-20210611-09",
+        "hermitage-20210611-10",
+        "hermitage-20210611-11",
+        "hermitage-20210611-12",
+        "hermitage-20210611-13",
+        "hermitage-20210611-15",
+        "hermitage-20210611-16",
+        "hermitage-20210611-17",
+        "hermitage-20210611-18",
+        "hermitage-20210611-19",
+        "hermitage-20210611-14"
+      ]
+    },
+    {
+      "id": "hermitage-20210618",
+      "threadId": "hermitage-history",
+      "date": "2021-06-18",
+      "time": "14:06",
+      "messageIds": [
+        "hermitage-20210618-01",
+        "hermitage-20210618-02",
+        "hermitage-20210618-03",
+        "hermitage-20210618-06",
+        "hermitage-20210618-07",
+        "hermitage-20210618-08",
+        "hermitage-20210618-09",
+        "hermitage-20210618-10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+@font-face{font-family:LaozhuangBrush;src:url('/assets/fonts/ma-shan-zheng/laozhuang-title.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+.bs-page .bs-brand{display:inline-flex;align-items:center;gap:8px;font-family:LaozhuangBrush,"Songti SC",serif;font-weight:400;font-size:34px;letter-spacing:0;color:#38241d;padding-right:0;white-space:nowrap;line-height:1.2}
+.bs-page .bs-brand::after{display:none}
+.bs-brand-seal{display:inline-block;width:23px;height:35px;object-fit:contain;flex-shrink:0}
+.bs-brand .bs-brand-seal{width:15px;height:24px}
+.bs-page .bs-home-hero{position:relative;isolation:isolate;overflow:hidden;min-height:430px;padding:100px 24px 100px;background:#faf7f1}
+.bs-hero-art{position:absolute;z-index:-1;pointer-events:none;left:0;top:0;width:var(--crop-width);height:100%;overflow:hidden;opacity:.36;filter:saturate(.4);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 38%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 38%,transparent 100%)}
+.bs-hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(#faf7f1,transparent 18%,transparent 76%,#faf7f1)}
+.bs-hero-art img{position:absolute;left:0;top:calc(-1 * var(--crop-top));width:var(--image-width);max-width:none;height:auto}
+.bs-hero-art-right{left:auto;right:0;height:430px;opacity:.4;mask-image:linear-gradient(90deg,transparent,#000 42%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 42%,#000 88%,transparent)}
+.bs-hero-art-right::after{background:linear-gradient(#faf7f1,transparent 15%,transparent 85%,#faf7f1)}
+@media(max-width:1000px){.bs-hero-art-right{opacity:.25;right:-65px}}
+@media(max-width:700px){.bs-hero-art.bs-hero-art-right{left:auto;right:-130px;opacity:.15}}
+.bs-page .bs-home-hero h1{display:flex;justify-content:center;align-items:center;gap:14px;font:400 76px/1.15 LaozhuangBrush,"Songti SC",serif;letter-spacing:0;color:#38241d;margin:0 0 15px}
+.bs-page .bs-home-hero>p{font:400 19px/1.8 "Songti SC","SimSun",serif;letter-spacing:.16em;color:#89766a;margin:0 0 34px}
+.bs-page .bs-search-home{max-width:650px;box-shadow:0 4px 20px #38241d08}
+.bs-page .bs-search-home input{background:#fffdf8;border-color:#cfc0ae;border-right:0}
+.bs-page .bs-search-home button{background:#a54432;border-color:#a54432;width:100px}
+.bs-page .bs-search-home button:hover{background:#873a2b}
+@media(max-width:700px){.bs-page .bs-home-hero{padding:78px 8px 90px;min-height:360px}.bs-page .bs-home-hero h1{font-size:clamp(40px,9vw,62px);gap:9px}.bs-home-hero .bs-brand-seal{width:19px;height:29px}.bs-page .bs-home-hero>p{font-size:16px;letter-spacing:.08em}.bs-hero-art{left:-170px;opacity:.23}.bs-page .bs-brand{font-size:28px;gap:5px}.bs-brand .bs-brand-seal{width:12px;height:20px}.bs-page .bs-search-home button{width:76px}}

@@ -1,0 +1,210 @@
+{
+  "bookGroupId": "xusuan-zalu",
+  "items": [
+    {
+      "enabled": true,
+      "dataStatus": "confirmed",
+      "isbn": null,
+      "author": "观复道人",
+      "publisher": null,
+      "publishYear": null,
+      "publishDate": null,
+      "listPrice": null,
+      "classification": null,
+      "binding": "线装",
+      "condition": "七品",
+      "price": null,
+      "status": "out-of-stock",
+      "listedAt": null,
+      "bookGroupId": "xusuan-zalu",
+      "era": "清早期（1645-1735）",
+      "copyEra": "不详",
+      "searchKeywords": [
+        "续算杂录"
+      ],
+      "images": [
+        {
+          "id": "cover",
+          "src": "assets/images/bookstore/xusuan-cover.jpg",
+          "alt": "古籍封面",
+          "placeholder": false
+        },
+        {
+          "id": "detail-01",
+          "src": "assets/images/bookstore/xusuan-interior.png",
+          "alt": "手抄本图片",
+          "placeholder": false
+        }
+      ],
+      "conditionParagraphs": [],
+      "versionParagraphs": [],
+      "features": {
+        "comments": false,
+        "purchase": false,
+        "showPrice": true,
+        "imageViewer": false,
+        "shopLink": false
+      },
+      "detailHeading": "书籍简介",
+      "copyScope": "public-fragment-catalog",
+      "id": "xusuan-hermitage-12",
+      "sellerId": "hermitage",
+      "title": "《续算杂录》第一至二卷（手抄本）",
+      "edition": "抄写本",
+      "extent": "第一、二卷",
+      "summary": "残抄旧录，涉及命籍、禳补及地方俗仪等内容，未见全本著录。",
+      "metadata": [
+        {
+          "id": "author",
+          "label": "作者",
+          "valueRef": "author"
+        },
+        {
+          "id": "era",
+          "label": "年代",
+          "valueRef": "era"
+        },
+        {
+          "id": "paper",
+          "label": "纸张",
+          "valueRef": "paper"
+        },
+        {
+          "id": "volumes",
+          "label": "册数",
+          "valueRef": "volumeCount"
+        },
+        {
+          "id": "list-price",
+          "label": "定价",
+          "valueRef": "listPriceText"
+        },
+        {
+          "id": "binding",
+          "label": "装帧",
+          "valueRef": "binding"
+        },
+        {
+          "id": "edition",
+          "label": "刻印方式",
+          "valueRef": "edition"
+        }
+      ],
+      "resultFieldIds": [
+        "author",
+        "edition",
+        "era"
+      ],
+      "stockNote": "该商品目前无货，历史书目资料仅供查阅。",
+      "description": [
+        "品相：七品。本件为纸本手抄残册，两册全，涉及各类禳解法及具体仪式符箓。有部分书角有磨损情况，其他完好。"
+      ],
+      "resultFieldLabels": {
+        "author": "作者",
+        "edition": "版本",
+        "era": "年代"
+      },
+      "priceText": "面议",
+      "listPriceText": "面议",
+      "paper": "白棉纸",
+      "volumeCount": "2册"
+    },
+    {
+      "enabled": true,
+      "dataStatus": "confirmed",
+      "isbn": null,
+      "author": "观复道人",
+      "publisher": "不详",
+      "publishYear": null,
+      "publishDate": null,
+      "listPrice": null,
+      "classification": null,
+      "binding": "散页",
+      "condition": null,
+      "price": null,
+      "status": "out-of-stock",
+      "listedAt": null,
+      "bookGroupId": "xusuan-zalu",
+      "era": "民国",
+      "copyEra": "不详",
+      "searchKeywords": [
+        "续算杂录"
+      ],
+      "images": [
+        {
+          "id": "interior-preview",
+          "src": "assets/images/bookstore/page-placeholder.svg",
+          "alt": "散页内页预览",
+          "placeholder": true,
+          "watermark": "商家暂不提供阅览"
+        }
+      ],
+      "conditionParagraphs": [],
+      "versionParagraphs": [],
+      "features": {
+        "comments": false,
+        "purchase": false,
+        "showPrice": true,
+        "imageViewer": false,
+        "shopLink": false
+      },
+      "detailHeading": "书籍简介",
+      "copyScope": "public-fragment-catalog",
+      "id": "xusuan-yulinzhai-05",
+      "sellerId": "yulinzhai",
+      "title": "《续算杂录》散页",
+      "edition": "油印",
+      "extent": "散页",
+      "summary": "旧本油印残页。书目提要中涉及民间“寄岁”之说，原文未公开。",
+      "metadata": [
+        {
+          "id": "author",
+          "label": "作者",
+          "valueRef": "author"
+        },
+        {
+          "id": "era",
+          "label": "年代",
+          "valueRef": "era"
+        },
+        {
+          "id": "publisher",
+          "label": "出版社",
+          "valueRef": "publisher"
+        },
+        {
+          "id": "list-price",
+          "label": "定价",
+          "valueRef": "listPriceText"
+        },
+        {
+          "id": "binding",
+          "label": "装帧",
+          "valueRef": "binding"
+        },
+        {
+          "id": "edition",
+          "label": "刻印方式",
+          "valueRef": "edition"
+        }
+      ],
+      "resultFieldIds": [
+        "author",
+        "edition",
+        "era"
+      ],
+      "stockNote": "该商品目前无货。",
+      "description": [
+        "《续算杂录》油印残页，原本来源不详。所存内容涉及*地方延寿、寄岁旧俗*。因残页前后缺失，尚无法确定与其他抄本之间的篇目对应关系。",
+        "内页资料暂不提供公开阅览。"
+      ],
+      "resultFieldLabels": {
+        "author": "作者",
+        "edition": "版本",
+        "era": "年代"
+      },
+      "priceText": "面议",
+      "listPriceText": "面议"
+    }
+  ]
+}

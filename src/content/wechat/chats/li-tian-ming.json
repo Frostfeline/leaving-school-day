@@ -1,0 +1,202 @@
+{
+  "attachments": [
+    {
+      "id": "police-notice",
+      "src": "assets/images/wechat/police-notice.png"
+    }
+  ],
+  "messages": [
+    {
+      "id": "litianming-2022-07-13-01",
+      "senderId": "linchen",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "text",
+      "text": "这个是真的吗。"
+    },
+    {
+      "id": "litianming-2022-07-13-02",
+      "senderId": "linchen",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "image",
+      "text": "情况通报",
+      "attachmentId": "police-notice"
+    },
+    {
+      "id": "litianming-2022-07-13-03",
+      "senderId": "linchen",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "text",
+      "text": "我姐一直不告诉我。我查到了这个，那个人是不是罗尧？"
+    },
+    {
+      "id": "litianming-2022-07-13-04",
+      "senderId": "litianming",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "text",
+      "text": "……"
+    },
+    {
+      "id": "litianming-2022-07-13-05",
+      "senderId": "linchen",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "text",
+      "text": "天明你肯定知道对不对？"
+    },
+    {
+      "id": "litianming-2022-07-13-06",
+      "senderId": "litianming",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "text",
+      "text": "是。"
+    },
+    {
+      "id": "litianming-2022-07-13-07",
+      "senderId": "litianming",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "text",
+      "text": "小琛哥你刚出院，不要冲动"
+    },
+    {
+      "id": "litianming-2022-07-13-08",
+      "senderId": "litianming",
+      "timestamp": "2021-07-13T18:32:00+08:00",
+      "type": "call",
+      "text": "通话时长 02:01:47"
+    },
+    {
+      "id": "litianming-2022-08-03-01",
+      "senderId": "litianming",
+      "timestamp": "2022-08-03T20:14:00+08:00",
+      "type": "link",
+      "text": "回忆留声",
+      "routeId": "memory-archive",
+      "linkLabel": "回忆留声"
+    },
+    {
+      "id": "litianming-2022-08-03-02",
+      "senderId": "litianming",
+      "timestamp": "2022-08-03T20:14:00+08:00",
+      "type": "text",
+      "text": "你旧手机里的聊天记录找计院朋友帮忙导到这个网站了，不过涉及你的隐私，也没有整理。"
+    },
+    {
+      "id": "litianming-2022-08-03-03",
+      "senderId": "linchen",
+      "timestamp": "2022-08-03T20:14:00+08:00",
+      "type": "text",
+      "text": "谢谢，我给他发火锅费。"
+    },
+    {
+      "id": "litianming-2022-08-03-04",
+      "senderId": "litianming",
+      "timestamp": "2022-08-03T20:14:00+08:00",
+      "type": "text",
+      "text": "不用不用，是我室友，他是学校义修队的。"
+    },
+    {
+      "id": "litianming-2022-08-03-05",
+      "senderId": "linchen",
+      "timestamp": "2022-08-03T20:14:00+08:00",
+      "type": "text",
+      "text": "不说的话，我也可以去问小常你们寝室剩下那个计院室友是谁。"
+    },
+    {
+      "id": "litianming-2022-08-03-06",
+      "senderId": "litianming",
+      "timestamp": "2022-08-03T20:14:00+08:00",
+      "type": "text",
+      "text": "好吧好吧，那你转我，我给他"
+    },
+    {
+      "id": "litianming-2024-07-23-01",
+      "senderId": "litianming",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "我这次回青城观里，有个师兄说他翻到了一些罗尧师兄的旧照片，让我来问问你需要不？"
+    },
+    {
+      "id": "litianming-2024-07-23-02",
+      "senderId": "linchen",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "当然！代我感谢他。"
+    },
+    {
+      "id": "litianming-2024-07-23-03",
+      "senderId": "litianming",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "他说不用谢。"
+    },
+    {
+      "id": "litianming-2024-07-23-04",
+      "senderId": "litianming",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "罗尧哥师门的道长都很喜欢你，说下次再来C市欢迎去找他们玩。"
+    },
+    {
+      "id": "litianming-2024-07-23-05",
+      "senderId": "litianming",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "但是我猜你可能不想去山里，就没说什么。"
+    },
+    {
+      "id": "litianming-2024-07-23-06",
+      "senderId": "linchen",
+      "timestamp": "2024-07-23T15:46:00+08:00",
+      "type": "text",
+      "text": "没事。"
+    },
+    {
+      "id": "litianming-2025-01-15-01",
+      "senderId": "litianming",
+      "timestamp": "2025-01-15T12:21:00+08:00",
+      "type": "text",
+      "text": "学生会要办新年活动，小琛哥要不要赠票？"
+    },
+    {
+      "id": "litianming-2025-01-15-02",
+      "senderId": "linchen",
+      "timestamp": "2025-01-15T12:21:00+08:00",
+      "type": "text",
+      "text": "可以呀，我就不客气了。"
+    },
+    {
+      "id": "litianming-2025-01-15-03",
+      "senderId": "litianming",
+      "timestamp": "2025-01-15T12:21:00+08:00",
+      "type": "text",
+      "text": "没问题我晚点带给你。"
+    },
+    {
+      "id": "litianming-2025-06-15-01",
+      "senderId": "linchen",
+      "timestamp": "2025-06-15T19:04:00+08:00",
+      "type": "text",
+      "text": "我下周六要回C市，有什么要帮带的？"
+    },
+    {
+      "id": "litianming-2025-06-15-02",
+      "senderId": "litianming",
+      "timestamp": "2025-06-15T19:04:00+08:00",
+      "type": "text",
+      "text": "啊，你去给罗尧哥扫墓。"
+    },
+    {
+      "id": "litianming-2025-06-15-03",
+      "senderId": "litianming",
+      "timestamp": "2025-06-15T19:04:00+08:00",
+      "type": "text",
+      "text": "暂时没有，帮我带个问候吧。这次回去记得吃我推荐的那家芋儿鸡"
+    },
+    {
+      "id": "litianming-2025-06-15-04",
+      "senderId": "linchen",
+      "timestamp": "2025-06-15T19:04:00+08:00",
+      "type": "text",
+      "text": "好^ ^"
+    }
+  ]
+}

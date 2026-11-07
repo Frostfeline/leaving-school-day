@@ -1,0 +1,49 @@
+[
+  {
+    "id": "linyuan",
+    "label": "姐姐",
+    "avatarId": "linyuan",
+    "kind": "direct",
+    "contentId": "sister"
+  },
+  {
+    "id": "class-group",
+    "label": "2022级法语系2班通知群",
+    "avatarId": "class-group",
+    "kind": "group",
+    "contentId": "class-group",
+    "groupAvatarIds": [
+      "class-sender",
+      "class-monitor",
+      "class-chenweiwei",
+      "class-liumengning"
+    ]
+  },
+  {
+    "id": "university-service",
+    "label": "东澜大学服务号",
+    "avatarId": "university-service",
+    "kind": "service",
+    "contentId": "university-service"
+  },
+  {
+    "id": "flea-market",
+    "label": "DLU跳蚤市场③群",
+    "avatarId": "flea-market",
+    "kind": "group",
+    "contentId": "flea-market",
+    "groupAvatarIds": [
+      "market-sender",
+      "market-ruomu",
+      "market-luna",
+      "market-sugar"
+    ]
+  },
+  {
+    "id": "litianming",
+    "label": "李天明",
+    "avatarId": "litianming",
+    "kind": "direct",
+    "contentId": "li-tian-ming"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "authors": [
+    {
+      "id": "historical-reader",
+      "name": "历史读者",
+      "avatar": "assets/images/article/historical-reader.jpeg"
+    },
+    {
+      "id": "account-author",
+      "accountId": "qingdengzhi"
+    },
+    {
+      "id": "lushui-zhipan",
+      "name": "渌水之畔",
+      "avatar": "assets/images/article/lushui-zhipan.jpeg"
+    },
+    {
+      "id": "chunshan-jiumeng",
+      "name": "春山旧梦",
+      "avatar": "assets/images/article/chunshan-jiumeng.jpeg"
+    },
+    {
+      "id": "doushabao",
+      "name": "一只普通豆沙包",
+      "avatar": "assets/images/article/doushabao.jpeg"
+    }
+  ],
+  "items": [
+    {
+      "id": "blocked-comment",
+      "authorId": "historical-reader",
+      "content": "该评论涉嫌违反相关法律法规已屏蔽",
+      "timestamp": null,
+      "status": "blocked",
+      "replyTo": null
+    },
+    {
+      "id": "chunshan-comment",
+      "authorId": "chunshan-jiumeng",
+      "content": "我外婆以前每年都会去拜北斗。她其实也说不清楚那些经文是什么意思，就是希望一家人平平安安。现在想想，这些习俗能流传下来，可能也是因为大家都有舍不得的人吧。",
+      "timestamp": null,
+      "status": "visible",
+      "replyTo": null
+    },
+    {
+      "id": "doushabao-comment",
+      "authorId": "doushabao",
+      "content": "作者您好，想请教一下，这些地方流传的民俗抄本一般在哪里能找到？之前想查一些旧资料，搜出来的全是算命广告，连原始出处都没有。",
+      "timestamp": null,
+      "status": "visible",
+      "replyTo": null
+    },
+    {
+      "id": "author-reply",
+      "authorId": "account-author",
+      "content": "Hermitage会员内部资料，想要了解更多，可私信领取。",
+      "timestamp": null,
+      "status": "visible",
+      "replyTo": "doushabao-comment"
+    },
+    {
+      "id": "lushui-comment",
+      "authorId": "lushui-zhipan",
+      "content": "如果是寻找旧书和文献资料，可以直接联系Hermitage店铺，店里没有所谓的会员制度，请勿轻信他人。",
+      "timestamp": null,
+      "status": "visible",
+      "replyTo": "doushabao-comment"
+    }
+  ]
+}

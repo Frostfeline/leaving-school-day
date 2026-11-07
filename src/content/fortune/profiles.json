@@ -1,0 +1,27 @@
+{
+  "people": [
+    {
+      "id": "linchen",
+      "characterId": "linchen",
+      "correctHourId": "you",
+      "birthDateRef": "linchenBirthday"
+    },
+    {
+      "id": "luoyao",
+      "characterId": "luoyao",
+      "correctHourId": "chen",
+      "birthDateRef": "luoyaoBirthday"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "main-pair",
+      "members": [
+        "linchen",
+        "luoyao"
+      ],
+      "allowSwappedOrder": true,
+      "resultId": "main-match"
+    }
+  ]
+}

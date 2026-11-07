@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1.0.0",
+  "title": "回忆留声",
+  "subtitle": "私人聊天记录档案",
+  "description": "旧手机损坏后，根据电脑中的聊天备份整理的私人档案。",
+  "ownerId": "linchen",
+  "participantIds": [
+    "luoyao",
+    "linchen"
+  ],
+  "dates": {
+    "anniversary": "2020-12-18",
+    "linchenBirthday": "1997-05-22",
+    "luoyaoBirthday": "1993-05-08"
+  },
+  "sources": [
+    {
+      "id": "LD-003",
+      "label": "原有确认资料"
+    },
+    {
+      "id": "new-draft",
+      "label": "新增待审核草稿"
+    }
+  ]
+}

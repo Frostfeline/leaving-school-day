@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "archiveId": "commission-2021",
+  "title": "历史委托档案NF-S-029",
+  "heading": "【委托内容摘录】",
+  "recordIdRef": "verification.recordId",
+  "fields": [
+    {
+      "label": "委托人",
+      "characterRef": "luoyao",
+      "text": "罗尧"
+    },
+    {
+      "label": "记录人",
+      "text": "首藤"
+    },
+    {
+      "label": "委托成立日期",
+      "text": "2021年6月21日"
+    }
+  ],
+  "messages": [
+    {
+      "messageId": "commission-2021-01",
+      "speakerId": "luoyao",
+      "text": "图书馆的书我今天就留在这里。后面的事呢？",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-02",
+      "speakerId": "owner",
+      "text": "依照之前商定的方式留契。但有一点需要再次提醒你，留契不等于归籍。",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-03",
+      "speakerId": "luoyao",
+      "text": "我知道。最后还是得由他自己选择。",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-04",
+      "speakerId": "owner",
+      "text": "是的，任何人都不能替他完成。",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-05",
+      "speakerId": "luoyao",
+      "text": "那就等他自己决定吧。",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-06",
+      "speakerId": "owner",
+      "text": "还有什么需要交代的吗？",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-07",
+      "speakerId": "luoyao",
+      "text": "没有了。谢谢您。",
+      "reviewStatus": "confirmed"
+    },
+    {
+      "messageId": "commission-2021-08",
+      "speakerId": "luoyao",
+      "text": "如果以后他真的追查到了这里，来问这些事……希望您能好好告诉他。",
+      "reviewStatus": "confirmed"
+    }
+  ],
+  "requireEnd": true,
+  "reviewStatus": "confirmed"
+}

@@ -1,0 +1,41 @@
+{
+  "name":"莲蓬论坛",
+  "description":"民俗异闻",
+  "headerBackground":"assets/lianpeng/forum-header.svg",
+  "snapshotLabel":"历史帖子快照",
+  "logo":"assets/lianpeng/lotus-mark.svg",
+  "logoAlt":"莲蓬论坛标志",
+  "closedAt":null,
+  "closedNotice":"本站已停止运营，目前仅保留历史内容供浏览。",
+  "navigationLabel":"论坛导航",
+  "navigation":[{"id":"home","label":"论坛首页"},{"id":"forum","label":"论坛"},{"id":"boards","label":"版块"}],
+  "accountActions":[{"id":"login","label":"登录"},{"id":"register","label":"注册"}],
+  "threadActions":[{"id":"new-thread","label":"发新帖"},{"id":"reply","label":"发表回复"}],
+  "labels":{
+    "author":"楼主：{name}",
+    "postedAt":"发帖时间：{time}",
+    "views":"浏览：{count}",
+    "replies":"回复：{count}",
+    "starter":"楼主",
+    "floor":"{floor}楼",
+    "jump":"跳转楼层",
+    "registered":"注册时间：{value}",
+    "level":"用户等级：{value}",
+    "postCount":"发帖：{value}",
+    "avatar":"{name}的默认头像",
+    "footer":"莲蓬论坛 · 历史内容只读快照",
+    "notFound":"未找到该历史帖子。"
+  },
+  "quickReply":{
+    "title":"快速回复",
+    "placeholder":"本站已关闭，无法回复。",
+    "openLabel":"查看回复功能关闭提示",
+    "submit":"发表回复"
+  },
+  "closedDialog":{
+    "title":"本站已经正式关闭",
+    "paragraphs":["论坛已停止发帖、回复与注册。","当前仅保留历史快照供浏览。"],
+    "confirm":"我知道了",
+    "close":"关闭提示"
+  }
+}

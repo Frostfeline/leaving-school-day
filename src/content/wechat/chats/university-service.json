@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "id": "service-placeholder-1",
+      "senderId": "university-service",
+      "timestamp": "2025-06-20T08:00:00+08:00",
+      "type": "text",
+      "text": "【图书馆档案系统】林琛 同学，您的学位论文归档审批已通过。"
+    }
+  ],
+  "dateReview": {
+    "status": "confirmed",
+    "date": "2025-06-20",
+    "basis": "作者本轮明确改为2025年；原有08:00时间沿用，不编造新时间。"
+  }
+}

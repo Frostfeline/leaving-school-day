@@ -1,0 +1,123 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {readFileSync,mkdirSync} from 'node:fs';
+import {validateArchiveFiles} from './validate-memory-archive.mjs';
+import {validateArchive,normalizeArchiveProgress,placeArchiveItem} from './memory-archive-model.mjs';
+const data=validateArchiveFiles(),ui=data.ui,pairs=data.puzzle.pairs,KEY='leaving-school-day:state:v1';
+assert.equal(data.chats.groups.length,7);
+assert.equal(data.chats.messages.filter(m=>m.timestamp==='2021-06-30'&&m.chatGroupId==='M02-3').length,3);
+assert.deepEqual(data['archive-meta'].dates,{anniversary:'2020-12-18',linchenBirthday:'1997-05-22',luoyaoBirthday:'1993-05-08'});
+for(const mutation of [d=>d.chats.messages.push(d.chats.messages[0]),d=>d.puzzle.pairs[0].attachmentId='missing',d=>d.puzzle.pairs[0].chatGroupId='missing',d=>d.puzzle.pairs[0].attachmentId=d.puzzle.pairs[1].attachmentId,d=>d.chats.messages[0].speakerId='missing',d=>d.chats.messages[0].sourceId='missing',d=>d.attachments.items[0].images[0].src='../../private.png',d=>d['archive-meta'].schemaVersion=2]){const copy=structuredClone(data);mutation(copy);assert.throws(()=>validateArchive(copy));}
+const migrated=normalizeArchiveProgress({matchedPairIds:['removed','P01']},data.puzzle);
+assert.equal(migrated.orderedCount,1);assert.equal(migrated.matchedCount,1);
+let test=normalizeArchiveProgress(null,data.puzzle);
+for(const [i,p] of pairs.entries()){test=placeArchiveItem(test,data.puzzle,'timelineSlots',i,p.chatGroupId);test=placeArchiveItem(test,data.puzzle,'attachmentSlots',i,p.attachmentId);}
+assert(test.archivePuzzleCompleted);
+test=placeArchiveItem(test,data.puzzle,'timelineSlots',1,pairs[0].chatGroupId);
+assert.deepEqual(test.timelineSlots.slice(0,2),[pairs[1].chatGroupId,pairs[0].chatGroupId]);
+assert.equal(test.orderedCount,5);assert.equal(test.matchedCount,5);
+test=placeArchiveItem(test,data.puzzle,'attachmentSlots',1,pairs[0].attachmentId);
+assert.equal(test.matchedCount,7);assert.equal(test.archivePuzzleCompleted,false);
+const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE || (process.platform==='win32'?'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe':undefined),headless:true});mkdirSync('test-results',{recursive:true});const errors=[];
+const accept=p=>p.once('dialog',d=>d.accept());
+async function selectAttachment(page,id){await page.locator('.ma-file[data-attachment-id="'+id+'"]').click();await page.getByRole('button',{name:ui.select,exact:true}).click();}
+try{
+ for(const port of (process.env.TEST_PORT?[Number(process.env.TEST_PORT)]:[5173,4173])){
+  const c=await browser.newContext({viewport:{width:1440,height:900}});c.on('page',p=>{p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)errors.push(r.url())})});const page=await c.newPage();const base=process.env.TEST_BASE_URL || `http://127.0.0.1:${port}/`;await page.goto(base+'#/memory-archive');
+  await page.waitForURL('**/#/game/wechat/linyuan');
+  assert.equal(await page.locator('[data-chat-id=litianming]').count(),0);
+  assert.equal(await page.locator('[data-chat-id=luoyao]').count(),0);
+  await page.locator('.wc-search').fill('天明');
+  await page.locator('[data-contact-id=litianming]').click();
+  await page.locator('.wc-heading').filter({hasText:'天明'}).waitFor();
+  await page.locator('.wc-search').fill('');
+  await page.locator('[data-chat-id=litianming]').waitFor();
+  await page.reload();
+  await page.locator('[data-chat-id=litianming]').waitFor();
+  await page.getByText('2021年7月13日 18:32',{exact:true}).scrollIntoViewIfNeeded();
+  await page.getByText('通话时长 02:01:47',{exact:true}).scrollIntoViewIfNeeded();
+  await page.getByText('你旧手机里的聊天记录找计院朋友帮忙导到这个网站了，不过涉及你的隐私，也没有整理。',{exact:true}).waitFor();
+  await page.getByText('好吧好吧，那你转我，我给他',{exact:true}).waitFor();
+  const notice=page.locator('[data-message-id=litianming-2022-07-13-02]');
+  assert.equal(await notice.locator('.wc-bubble').innerText(),'');
+  const thumbnail=notice.getByAltText('情况通报',{exact:true});
+  await thumbnail.evaluate(image=>image.decode());
+  assert((await thumbnail.getAttribute('src')).endsWith('/police-notice.png'));
+  await notice.getByRole('button').click();
+  const preview=page.getByRole('dialog',{name:'情况通报',exact:true});
+  assert(await preview.isVisible());
+  await preview.getByAltText('情况通报',{exact:true}).evaluate(image=>image.decode());
+  await page.keyboard.press('Escape');
+  await preview.waitFor({state:'hidden'});
+  const [memory]=await Promise.all([page.waitForEvent('popup'),page.locator('.wc-link-card').click()]);
+  await memory.locator('.ma-chat-group').first().waitFor();
+  const archiveUrl=memory.url();
+  assert.equal(await memory.locator('.ma-chat-group').count(),1);
+  assert.equal(await memory.locator('.ma-chat-group').getAttribute('data-group-id'),'M01-1');
+  assert.equal(await memory.locator('.ma-header').innerText(),data['archive-meta'].title);
+  assert.equal(await memory.locator('.ma-page a').count(),0);
+  assert.equal(await memory.locator('.ma-description,.ma-toolbar input,.ma-months select,.ma-chat-message button').count(),0);
+  await memory.locator('[data-archive-group=M02-3]').click();
+  const june=memory.locator('[data-group-id=M02-3]');
+  assert.equal(await june.locator('h3').count(),1);
+  assert.deepEqual(await june.locator('.ma-chat-bubble').allTextContents(),data.chats.messages.filter(m=>m.chatGroupId==='M02-3').map(m=>m.text));
+  await memory.locator('.ma-chat-feed').evaluate(feed=>feed.scrollTop=feed.scrollHeight);
+  assert.equal(await memory.locator('.ma-chat-group').count(),1);
+  await memory.locator('[data-archive-group=movie-ticket]').click();
+  const confession=memory.locator('.ma-chat-bubble').filter({hasText:'其实昨天才是我们的表白纪念日。'});
+  await confession.waitFor();
+  assert.equal(await confession.locator('strong').count(),0);
+  assert.equal(await memory.locator('[data-archive-group=movie-ticket]').getAttribute('aria-current'),'true');
+  assert.equal(await memory.locator('.ma-pair .ma-chat-card').count(),0);
+  assert.equal(memory.url(),archiveUrl);
+  await memory.close();
+  await page.locator('.wc-heading').filter({hasText:'天明'}).waitFor();
+  for(const q of ['天明','李天明']){
+    await page.goto(base+'#/search?q='+encodeURIComponent(q));
+    await page.locator('[data-contact-id=litianming]').click();
+    await page.locator('.wc-heading').filter({hasText:'天明'}).waitFor();
+  }
+  await page.goto(base+'#/memory-archive?chat=litianming&source=litianming-2022-08-03-01');
+  assert.equal((await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY)).archive.orderedCount,0);
+  const bookstore=await c.newPage();await bookstore.goto(base+'#/bookstore');await bookstore.locator('.bs-member-nav button').click();await bookstore.locator('[name=username]').fill('罗尧');await bookstore.locator('[name=password]').fill(data['archive-meta'].dates.anniversary.replaceAll('-',''));await bookstore.locator('.bs-login-dialog button[type=submit]').click();await bookstore.locator('[data-thread-id=hermitage-history]').click();await bookstore.locator('.bs-mail-letter').first().waitFor();await bookstore.close();
+  await page.getByRole('tab',{name:ui.tabs.chats,exact:true}).click();
+  const dateSource=id=>page.locator('[data-archive-group="'+id+'"]');
+  const dateSlot=i=>page.locator('[data-timeline-slot="'+i+'"]');
+  const attachmentSlot=i=>page.locator('[data-attachment-slot="'+i+'"]');
+  assert.notDeepEqual(await page.locator('[data-archive-group]').evaluateAll(items=>items.map(e=>e.dataset.archiveGroup)),pairs.map(p=>p.chatGroupId));
+  assert.equal(await page.getByRole('button',{name:ui.instructions,exact:true}).count(),0);
+  await page.getByText(ui.help,{exact:true}).waitFor();
+  assert(await page.locator('.ma-work-info').isHidden());
+  await dateSource(pairs[1].chatGroupId).dblclick();
+  assert((await dateSlot(0).innerText()).includes('2020年12月19日'));
+  await dateSource(pairs[0].chatGroupId).click();await dateSlot(1).click();
+  await dateSlot(1).dragTo(dateSlot(0));
+  assert((await dateSlot(0).innerText()).includes('2020年9月18日'));
+  for(const [i,pair] of pairs.entries()){if(i<2)continue;await dateSource(pair.chatGroupId).click();await dateSlot(i).click();}
+  await page.getByRole('button',{name:ui.viewProgress,exact:true}).click();
+  await page.getByText('已整理 7 / 7 份时间线，已关联 0 / 7 份附件。',{exact:true}).waitFor();
+  await page.getByRole('tab',{name:ui.tabs.attachments,exact:true}).click();
+  const images=page.locator('.ma-file');
+  assert.notDeepEqual(await images.evaluateAll(items=>items.map(e=>e.dataset.attachmentId)),pairs.map(p=>p.attachmentId));
+  assert((await images.allTextContents()).every(text=>!text));
+  await page.locator('.ma-file[data-attachment-id=movie-ticket]').dragTo(attachmentSlot(0));
+  await selectAttachment(page,'checkup-2020');await attachmentSlot(1).click();
+  await attachmentSlot(1).dragTo(attachmentSlot(0));
+  assert.equal(await attachmentSlot(0).getAttribute('aria-label'),'复查报告');
+  for(const [i,pair] of pairs.entries()){if(i<2)continue;await selectAttachment(page,pair.attachmentId);await attachmentSlot(i).click();}
+  await page.getByText(ui.complete,{exact:true}).waitFor();
+  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','PASSWORD：20201218']);
+  await page.reload();await page.getByText(ui.complete,{exact:true}).waitFor();
+  await page.getByRole('button',{name:ui.viewProgress,exact:true}).click();
+  await page.getByText('已整理 7 / 7 份时间线，已关联 7 / 7 份附件。',{exact:true}).waitFor();
+  await attachmentSlot(0).click();await page.locator('.ma-image-dialog img').evaluate(image=>image.decode());await page.keyboard.press('Escape');
+  accept(page);await page.locator('[data-pair-id=P01] .ma-unlink').last().click();
+  await page.getByText('已整理 7 / 7 份时间线，已关联 6 / 7 份附件。',{exact:true}).waitFor();
+  assert.equal(await page.getByText('PASSWORD：20201218',{exact:true}).count(),0);
+  await selectAttachment(page,'checkup-2020');await attachmentSlot(0).click();
+  await page.getByText(ui.complete,{exact:true}).waitFor();
+  assert.equal(await page.locator('.ma-page a').count(),0);
+  await page.goto(base+'#/memory-archive?chat=litianming&source=litianming-2022-08-03-01');await page.setViewportSize({width:390,height:844});await page.locator('.ma-page').waitFor();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));accept(page);await page.getByRole('button',{name:ui.reset,exact:true}).click();await page.getByText('已整理 0 / 7 份时间线，已关联 0 / 7 份附件。',{exact:true}).waitFor();await page.screenshot({path:`test-results/memory-archive-${port}-390.png`,fullPage:true});await c.close();console.log('PASS',port,'both friend searches, archive link, merged June dates, isolated date groups and puzzle navigation, free bookstore login, shuffled sources, all seven timeline slots and matches, drag and click swaps, undo, image previews, persisted state, no outbound links, mobile');
+ }
+ assert.deepEqual(errors,[]);console.log('PASS schema/references/IDs/version/date checks, removed pair filtering; no browser/resource errors');
+}finally{await browser.close();}

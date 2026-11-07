@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "dialogueId": "hermitage-2025",
+  "reviewStatus": "confirmed",
+  "date": "2025-06-25",
+  "threadId": "hermitage-history",
+  "accountId": "luoyao-bookstore",
+  "entryNodeId": "H25_START",
+  "messageIntervalMs": 2800,
+  "completionEvents": [
+    "hermitage2025Completed"
+  ],
+  "nodes": [
+    {
+      "nodeId": "H25_START",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "h25-start-01",
+          "speakerId": "linchen",
+          "text": "宁先生，您好。冒昧打扰，我想问问四年前罗尧的事。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-02",
+          "speakerId": "ning",
+          "text": "您好。是之前找《续算杂录》的那位罗先生吗？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-03",
+          "speakerId": "linchen",
+          "text": "对。我叫林琛，是他的恋人。抱歉用了他的账号联系您。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-04",
+          "speakerId": "ning",
+          "text": "原来如此。罗先生现在还好吗？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-05",
+          "speakerId": "linchen",
+          "text": "他四年前去世了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-06",
+          "speakerId": "ning",
+          "text": "很抱歉。我不知道这件事。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-08",
+          "speakerId": "linchen",
+          "text": "没关系。我也是最近才知道他当年在找什么。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-12",
+          "speakerId": "linchen",
+          "text": "所以想问问您，后来你们找到的《续算杂录》，包含完整的借命仪式吗？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-07",
+          "speakerId": "ning",
+          "text": "后来确实找到了一部分相关资料。但后续的正式委托，是罗先生和店主单独签订的，由店主亲自负责。我不清楚全部经过。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-09",
+          "speakerId": "ning",
+          "text": "不过，罗先生当时来店里，是我接待的，所以还有些印象。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-10",
+          "speakerId": "ning",
+          "text": "我研究这些旧籍很多年了。来打听寄岁、借命之类资料的人，也见过一些，但像罗先生那样问得仔细的，确实不多。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-11",
+          "speakerId": "ning",
+          "text": "我们当时拿到的资料很杂。有些抄本已经残缺不全，有些则只有其他卷册转译成英文的版本，想互相核对并不容易。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-13",
+          "speakerId": "ning",
+          "text": "即便如此，他还是想尽可能找到更多版本相互参照。那几个晚上，他和店主几乎没怎么休息，一直在核对资料。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-15",
+          "speakerId": "linchen",
+          "text": "嗯，尧哥做事一直很认真的。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-14",
+          "speakerId": "ning",
+          "text": "休息的时候，我也和罗先生聊过几句。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-17",
+          "speakerId": "ning",
+          "text": "怎么说呢……他那时候几乎顾不上考虑自己要付出些什么，最在意的，反而是那个人以后还能不能正常生活。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-23",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-16",
+          "speakerId": "linchen",
+          "text": "您大概已经猜到那个人是谁了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-18",
+          "speakerId": "linchen",
+          "text": "我今天毕业了。当年因为身体不好休学过，后来才重新回学校。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-19",
+          "speakerId": "ning",
+          "text": "那真是件好事。恭喜毕业，林先生。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-20",
+          "speakerId": "linchen",
+          "text": "谢谢您。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25_start-v21-22",
+          "speakerId": "linchen",
+          "text": "如果我不再追查这些异常，照常处理学校的借阅记录、办完离校手续，那份契约也会随之完成，对吗？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-21",
+          "speakerId": "ning",
+          "text": "虽然我不清楚仪式的全部细节，但就结果而言，您理解得没错。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-22",
+          "speakerId": "ning",
+          "text": "林先生，恕我多说一句。我想，您能好好生活，就是他最希望看到的结果。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-start-24",
+          "speakerId": "ning",
+          "text": "不过，既然您特意找到了这里，想必还有自己的打算吧。",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "H25_CHOICE",
+      "legacyMessages": []
+    },
+    {
+      "nodeId": "H25_CHOICE",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "h25-choice-b",
+          "speakerId": "linchen",
+          "text": "是的，我还有一件小事没有弄明白",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "H25_B_INQUIRY"
+    },
+    {
+      "nodeId": "H25_B_INQUIRY",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "h25-b-01",
+          "speakerId": "ning",
+          "text": "您请说。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-b-02",
+          "speakerId": "linchen",
+          "text": "是学校的一笔旧借阅记录。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-b-03",
+          "speakerId": "linchen",
+          "text": "四年前，尧哥借过一本书，现在却要由我承担这笔借阅责任。我查过记录，时间正好是2021年。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-b-06",
+          "speakerId": "linchen",
+          "text": "我想知道，这件事和他当年的委托，还有所谓的“归籍”，究竟是什么关系。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-b-08",
+          "speakerId": "linchen",
+          "text": "如果您也不了解具体情况，我能联系Hermitage真正的店主吗？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-b-04",
+          "speakerId": "ning",
+          "text": "当然可以，我替您转达一下。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25_b_inquiry-v21-07",
+          "speakerId": "linchen",
+          "text": "好的，麻烦您了。",
+          "reviewStatus": "confirmed",
+          "delayMs": 0
+        }
+      ],
+      "nextNodeId": "H25_B_PAUSE",
+      "legacyMessages": [
+        {
+          "messageId": "h25-b-05",
+          "speakerId": "ning",
+          "text": "罗先生当年的委托有些特殊，后续的记录不属于普通旧书交易，是由店主亲自负责的。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-b-07",
+          "speakerId": "ning",
+          "text": "当然可以，我先替您转达一下。",
+          "reviewStatus": "confirmed"
+        }
+      ]
+    },
+    {
+      "nodeId": "H25_B_PAUSE",
+      "nodeType": "pause",
+      "text": "",
+      "durationMs": 15000,
+      "nextNodeId": "H25_B_VERIFICATION"
+    },
+    {
+      "nodeId": "H25_B_VERIFICATION",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "h25-verify-01",
+          "speakerId": "ning",
+          "text": "林先生，店主同意了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-verify-03",
+          "speakerId": "ning",
+          "text": "不过按照店里的保密要求，还需要先核对几项信息。麻烦您通过左侧的新私聊与店主联系。",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "H25_B_SYSTEM_ENTRY",
+      "legacyMessages": [
+        {
+          "messageId": "h25-verify-02",
+          "speakerId": "linchen",
+          "text": "什么信息？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-verify-04",
+          "speakerId": "linchen",
+          "text": "好的，非常感谢。",
+          "reviewStatus": "confirmed"
+        }
+      ]
+    },
+    {
+      "nodeId": "H25_B_SYSTEM_ENTRY",
+      "nodeType": "system",
+      "messages": [
+        {
+          "speakerId": "ning",
+          "text": "希望您能找到想要的答案。",
+          "messageId": "h25-verify-05",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "h25-system-entry",
+          "speakerId": "system",
+          "text": "■■■向你发来了一条站内信，点击跳转核验",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "H25_B_COMPLETE"
+    },
+    {
+      "nodeId": "H25_B_COMPLETE",
+      "nodeType": "action",
+      "actionId": "grant-private-commission"
+    }
+  ],
+  "triggerConfig": {
+    "requiredFlags": [
+      "sisterConfrontation3Completed",
+      "sisterManuscriptViewed"
+    ]
+  },
+  "openingMessageId": "h25-start-01",
+  "manualPlayerMessages": true,
+  "npcDelayMultiplier": 1.35
+}

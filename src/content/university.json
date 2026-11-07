@@ -1,0 +1,19 @@
+{
+  "name": "东澜大学",
+  "englishName": "DONGLAN UNIVERSITY",
+  "serviceName": "东澜大学服务号",
+  "platformName": "统一身份认证平台",
+  "systemName": "OA办公系统",
+  "motto": "东澜校园",
+  "heroCaption": "",
+  "emblem": "assets/images/oa/donglan-emblem-256.webp",
+  "emblemAlt": "东澜大学校徽",
+  "campusImage": "assets/images/oa/campus-main.png",
+  "campusAlt": "东澜大学校园建筑",
+  "navigation": [
+    "学校首页",
+    "服务指南",
+    "联系我们"
+  ],
+  "copyright": "东澜大学 · 统一身份认证平台（游戏虚构页面）"
+}

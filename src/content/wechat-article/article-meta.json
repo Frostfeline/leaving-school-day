@@ -1,0 +1,21 @@
+{
+  "id": "borrow-life",
+  "title": "借命、拜北斗、还受生债：古人真的认为寿命可以“借”吗？",
+  "accountId": "qingdengzhi",
+  "publishedAt": null,
+  "keywords": [
+    "借命",
+    "拜北斗",
+    "受生债"
+  ],
+  "routeId": "wechat-article-borrow-life",
+  "summary": "从命籍、寿算、拜斗延寿与受生债，辨析古籍记载和民间“借命”传闻。",
+  "excludedExactQueries": [
+    "寄岁"
+  ],
+  "banner": {
+    "src": "assets/images/article/qingdengzhi-banner.jpeg",
+    "alt": "青瓦屋檐前的黄色花枝",
+    "aspectRatio": "3 / 1"
+  }
+}

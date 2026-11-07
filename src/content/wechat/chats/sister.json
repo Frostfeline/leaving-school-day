@@ -1,0 +1,25 @@
+{
+  "messages": [
+    {
+      "id": "sister-placeholder-1",
+      "senderId": "linyuan",
+      "timestamp": "2025-06-25T09:00:00+08:00",
+      "type": "text",
+      "text": "小琛，你的*离校手续*是不是还没办完？"
+    },
+    {
+      "id": "sister-placeholder-2",
+      "senderId": "linyuan",
+      "timestamp": "2025-06-25T09:01:00+08:00",
+      "type": "text",
+      "text": "周末还要去看小尧，我中午来接你，记得早点处理完毕噢。"
+    },
+    {
+      "id": "sister-placeholder-3",
+      "senderId": "linchen",
+      "timestamp": "2025-06-25T09:02:00+08:00",
+      "type": "text",
+      "text": "毕业证和学位证书都领到了！好像还有一个结清证明，我去看看*班级群通知*。"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "messages": [
+    {
+      "id": "market-placeholder-1",
+      "senderId": "market-sender",
+      "timestamp": "2025-06-25T07:35:00+08:00",
+      "type": "text",
+      "text": "今晚七点半在情人坡音乐节出摊，要预订玉米肠淀粉肠火鸡面可提前私我，量大从优"
+    },
+    {
+      "id": "market-ruomu-buy",
+      "senderId": "market-ruomu",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "收两包好欢螺"
+    },
+    {
+      "id": "market-luna-answer",
+      "senderId": "market-luna",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "我有"
+    },
+    {
+      "id": "market-mention-smell",
+      "senderId": "market-sender",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "@天东有若木 常司烛你大早上吃螺蛳粉要熏死谁岂可修"
+    },
+    {
+      "id": "market-roommate",
+      "senderId": "market-ruomu",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "@本周末有事不出摊下周预订可私聊 我室友 你想闻都闻不到"
+    },
+    {
+      "id": "market-recycle",
+      "senderId": "market-calpis",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "收废品的大叔今天会来，毕业季有需要的同学可以来诚园门口~"
+    },
+    {
+      "id": "market-bookstore-link",
+      "senderId": "market-sender",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "有些书回收更划算，可以去少抓鱼和小谷咪那些小程序卖，*老庄旧书网*最近在维护不是很好用。"
+    },
+    {
+      "id": "market-recycle-sausage",
+      "senderId": "market-sender",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "学长学姐们如果有嫌麻烦懒得搬书的可以让我上门帮忙回收，免费送烤肠！"
+    },
+    {
+      "id": "market-where",
+      "senderId": "market-sea",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "在哪找？"
+    },
+    {
+      "id": "market-use-search",
+      "senderId": "market-sender",
+      "timestamp": "2025-06-25T08:18:00+08:00",
+      "type": "text",
+      "text": "善用左上角*搜一搜*谢谢。"
+    },
+    {
+      "id": "market-insecticide",
+      "senderId": "market-po",
+      "timestamp": "2025-06-25T09:01:00+08:00",
+      "type": "text",
+      "text": "出杀虫剂10元一瓶"
+    },
+    {
+      "id": "market-airport",
+      "senderId": "market-sugar",
+      "timestamp": "2025-06-25T09:01:00+08:00",
+      "type": "text",
+      "text": "蹲周六早上机场拼车"
+    }
+  ],
+  "showHistoryEnd": true
+}

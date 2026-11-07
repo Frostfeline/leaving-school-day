@@ -1,0 +1,10 @@
+{
+  "close": "关闭",
+  "loading": "正在加载PDF……",
+  "failed": "PDF加载失败，请关闭后重新打开。",
+  "pages": "共 {count} 页",
+  "page": "第 {number} 页",
+  "zoom": "缩放",
+  "fit": "适合宽度",
+  "document": "PDF正文"
+}

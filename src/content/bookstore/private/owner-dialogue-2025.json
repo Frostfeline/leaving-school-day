@@ -1,0 +1,1300 @@
+{
+  "schemaVersion": 1,
+  "dialogueId": "hermitage-owner-private-2025",
+  "reviewStatus": "draft",
+  "date": "2025-06-25",
+  "entryNodeId": "OWNER_INTRO",
+  "messageIntervalMs": 2400,
+  "nodes": [
+    {
+      "nodeId": "OWNER_INTRO",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "owner-intro-01",
+          "speakerId": "owner",
+          "text": "林琛，你好。我是Hermitage的店主，茂已经把你的来意告诉我了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-02",
+          "speakerId": "linchen",
+          "text": "您好。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-03",
+          "speakerId": "owner",
+          "text": "四年前，我接手过罗尧的一项委托。有些东西，至今还保存在店里。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-04",
+          "speakerId": "linchen",
+          "text": "是《续算杂录》？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-05",
+          "speakerId": "owner",
+          "text": "《续算杂录》是本店的藏品。那些抄本只是他当时查找的资料，并不是委托本身。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-07",
+          "speakerId": "owner",
+          "text": "在回答你的问题之前，我想先确认一件事。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-09",
+          "speakerId": "owner",
+          "text": "你已经知道2021年6月25日发生了什么，对吗？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-06",
+          "speakerId": "linchen",
+          "text": "我知道他那天因为山洪意外去世了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-08",
+          "speakerId": "linchen",
+          "text": "但现在我也明白了，就算没有那场山洪，他恐怕也不会再回来……是他为我借了命。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-11",
+          "speakerId": "owner",
+          "text": "是的。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-13",
+          "speakerId": "owner",
+          "text": "他回去，不仅因为那里是他的故乡，也为了见从前的师兄弟，把该交代的事情交代清楚。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner-intro-15",
+          "speakerId": "owner",
+          "text": "毕竟那个时候，谁也无法向他保证，这件事一定会成功。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_intro-v21-13",
+          "speakerId": "owner",
+          "text": "我这里还留着当年的一部分委托记录。如果你愿意，可以先看看。",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "OWNER_ARCHIVE_GATE",
+      "legacyMessages": [
+        {
+          "messageId": "owner-intro-10",
+          "speakerId": "linchen",
+          "text": "她说，他是为了另一种叫「易命」的法子回去的。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-intro-12",
+          "speakerId": "linchen",
+          "text": "他早就知道自己可能回不来了？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-intro-14",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-archive-system",
+          "speakerId": "system",
+          "text": "店主向您开放了历史档案。",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "nodeId": "OWNER_ARCHIVE_GATE",
+      "nodeType": "archive",
+      "nextNodeId": "OWNER_AFTER_ARCHIVE",
+      "requiredArchiveId": "commission-2021"
+    },
+    {
+      "nodeId": "OWNER_AFTER_ARCHIVE",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "owner_after_archive-final-01",
+          "speakerId": "linchen",
+          "text": "我看完了。所以学校一直没有收到归还的书，是因为它还在您这里？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-02",
+          "speakerId": "owner",
+          "text": "对。那本书至今仍然封存在Hermitage。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-03",
+          "speakerId": "linchen",
+          "text": "可他为什么非得用学校的书？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-04",
+          "speakerId": "owner",
+          "text": "你或许听说过「阳契」。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-05",
+          "speakerId": "linchen",
+          "text": "没有。我以为那都是小说要素之类。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-06",
+          "speakerId": "owner",
+          "text": "简单来说，就是为那些无法用寻常方式记录的事情，在世间留下一份凭证。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-07",
+          "speakerId": "owner",
+          "text": "当年罗尧找到的法子，完整的秘仪叫作*「寄寿留契」*。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-08",
+          "speakerId": "owner",
+          "text": "**罗尧四年前就用自己的余寿替你借了命，等到你姐姐续满的年岁到期，如果你到时已经亲自归籍，整个秘仪就会完整生效。等你活到和他离开时一样的年纪，罗尧那份寿命便会接续到你身上。**为此，他还得在阳世留下一份契据。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-09",
+          "speakerId": "owner",
+          "text": "最后选中了那本大学馆藏书，只是在情急之下就地取材，让留契能够迅速完成。这本书已经有明确的借阅记录，谁借走、何时谁应当归还，最后由谁负责，只要书没有归还，这件事情就不会轻易从东澜大学图书馆的记录里消失。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-10",
+          "speakerId": "linchen",
+          "text": "所以我学校里的那条欠费记录……就是那份阳契留在世间的痕迹。那{amountYuan}元呢？难道还清就可以了？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-11",
+          "speakerId": "owner",
+          "text": "钱本身并没有什么特别的意义，那是图书馆对于未归还馆藏的处理金额。真正重要的是你以自己的名义，确认愿意承担这笔责任。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-12",
+          "speakerId": "linchen",
+          "text": "这就是*「归籍」*。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-13",
+          "speakerId": "owner",
+          "text": "对。这本书只是凭证。你的名字出现在记录上，并不意味着归籍已经完成，必须由你亲自作出确认。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-14",
+          "speakerId": "linchen",
+          "text": "可这些事我以前完全不知道。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-15",
+          "speakerId": "owner",
+          "text": "罗尧当时也想过，如果你始终不知道这些事情该怎么办，如果你最后查清了当年的真相又会发生什么。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-16",
+          "speakerId": "owner",
+          "text": "最后他说，那也没关系。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-17",
+          "speakerId": "owner",
+          "text": "如果你顺利地完成了归籍仪式，本身就是完成他心愿的最好设想。他原本就没打算让你为了知道这些事，再去承担什么。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-18",
+          "speakerId": "owner",
+          "text": "如果你最后找到了这里，我会如他所托将所知的一切告知于你。你能够活下去是罗尧此生唯一执着的事，希望你能原谅他的自私。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-19",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-20",
+          "speakerId": "owner",
+          "text": "林琛，四年前所有的真相，你已经知道了。至于这份凭证最后要怎样处理，现在由你决定。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_after_archive-final-21",
+          "speakerId": "owner",
+          "text": "你打算怎么处理那笔借阅记录？",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "OWNER_FINAL_CHOICE",
+      "legacyMessages": [
+        {
+          "messageId": "owner-after-01",
+          "speakerId": "linchen",
+          "text": "我看完了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-02",
+          "speakerId": "linchen",
+          "text": "档案里说的那本书，是东澜大学图书馆的书吗？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-03",
+          "speakerId": "owner",
+          "text": "是。馆藏编码{collectionCode}，就是四年前罗尧带来的那一本。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-04",
+          "speakerId": "linchen",
+          "text": "所以学校一直没有收到归还的书，是因为它还在您这里？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-05",
+          "speakerId": "owner",
+          "text": "对。那本书至今仍然封存在Hermitage。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-06",
+          "speakerId": "linchen",
+          "text": "可他为什么非得用学校的书？又为什么把责任留给我？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-07",
+          "speakerId": "owner",
+          "text": "你应该听说过「阳契」。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-08",
+          "speakerId": "linchen",
+          "text": "没有。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-09",
+          "speakerId": "owner",
+          "text": "简单来说，就是为那些无法用寻常方式记录的事情，在世间留下一份凭证。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-10",
+          "speakerId": "owner",
+          "text": "当年罗尧找到的法子，叫作「寄寿留契」。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-11",
+          "speakerId": "owner",
+          "text": "你姐姐借出了自己的年岁，暂时替你渡过那场劫难。罗尧后来又以自己的余生，为你续上了后面的路。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-12",
+          "speakerId": "owner",
+          "text": "但这些事情，还需要一份留在阳世的契据。他最后选中了那本大学馆藏书。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-13",
+          "speakerId": "linchen",
+          "text": "为什么是它？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-14",
+          "speakerId": "owner",
+          "text": "因为这本书已经有明确的借阅记录。谁借走，何时应当归还，最后由谁负责，都要记在账上。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-15",
+          "speakerId": "owner",
+          "text": "只要书没有归还，这笔事情就不会轻易从记录里消失。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-16",
+          "speakerId": "linchen",
+          "text": "所以我学校里的那条欠费记录……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-17",
+          "speakerId": "owner",
+          "text": "就是那份阳契留在世间的痕迹。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-18",
+          "speakerId": "linchen",
+          "text": "可原来的借阅人明明是罗尧。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-19",
+          "speakerId": "owner",
+          "text": "是。但现在需要对这件事作出确认的人，是你。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-20",
+          "speakerId": "linchen",
+          "text": "那{amountYuan}元呢？难道还清就可以了？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-21",
+          "speakerId": "owner",
+          "text": "钱本身并没有什么特别的意义。那是图书馆对于未归还馆藏的处理金额。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-22",
+          "speakerId": "owner",
+          "text": "真正重要的，是你以自己的名义，确认愿意承担这笔责任。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-23",
+          "speakerId": "linchen",
+          "text": "归籍？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-24",
+          "speakerId": "owner",
+          "text": "对。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-25",
+          "speakerId": "owner",
+          "text": "这本书只是凭证。你的名字出现在记录上，并不意味着归籍已经完成。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-26",
+          "speakerId": "owner",
+          "text": "必须由你亲自作出确认。林鸢不能代替你，罗尧也不能。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-27",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-28",
+          "speakerId": "linchen",
+          "text": "可这些事，我以前完全不知道。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-29",
+          "speakerId": "owner",
+          "text": "我知道。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-30",
+          "speakerId": "owner",
+          "text": "罗尧当时也想过，如果你始终不知道这些事情，该怎么办。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-31",
+          "speakerId": "linchen",
+          "text": "他怎么说？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-32",
+          "speakerId": "owner",
+          "text": "他说，那也没关系。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-33",
+          "speakerId": "owner",
+          "text": "他原本就没打算让你为了知道这些事，再去承担什么。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-34",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-35",
+          "speakerId": "owner",
+          "text": "林琛，你活下来的这几年，不是那本书给你的。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-36",
+          "speakerId": "owner",
+          "text": "书只负责留下凭证。真正将时间交给你的人，你已经知道了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-37",
+          "speakerId": "owner",
+          "text": "至于这份凭证最后要怎样处理，现在由你决定。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-38",
+          "speakerId": "owner",
+          "text": "现在，你打算怎么处理那笔借阅记录？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-after-39",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "nodeId": "OWNER_FINAL_CHOICE",
+      "nodeType": "choice",
+      "options": [
+        {
+          "id": "OWNER_OPTION_A",
+          "messageId": "owner-choice-a",
+          "speakerId": "linchen",
+          "text": "我会结清那笔欠款的，我不想辜负尧哥为我所做的一切。",
+          "nextNodeId": "OWNER_BRANCH_A",
+          "reviewStatus": "draft",
+          "legacyText": "我明白了。我会以自己的名义，把这件事了结。"
+        },
+        {
+          "id": "OWNER_OPTION_B",
+          "messageId": "owner-choice-b",
+          "speakerId": "linchen",
+          "text": "我不会责怪尧哥。但，我不想归籍了。",
+          "nextNodeId": "OWNER_BRANCH_B",
+          "reviewStatus": "draft",
+          "legacyText": "我还不想结清。我想先亲眼看看他留下的东西。"
+        },
+        {
+          "id": "OWNER_OPTION_C",
+          "messageId": "owner-choice-c",
+          "speakerId": "linchen",
+          "text": "店主先生，我还不想结清。那本留存在Hermitage的图书馆藏书，我可以来亲自拿走吗？",
+          "nextNodeId": "OWNER_BRANCH_C",
+          "reviewStatus": "draft",
+          "legacyText": "我不想归籍了。其他的办法，我也不想再找了。"
+        }
+      ]
+    },
+    {
+      "nodeId": "OWNER_BRANCH_A",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "owner_branch_a-final-01",
+          "speakerId": "owner",
+          "text": "好。那就按照学校的正常流程处理吧。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_a-final-02",
+          "speakerId": "linchen",
+          "text": "谢谢你，店主先生。我知道尧哥的性格，感谢Hermitage为他做了这么多。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_a-final-03",
+          "speakerId": "owner",
+          "text": "不必客气。祝你未来一切顺利。",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "OWNER_END_A",
+      "legacyMessages": [
+        {
+          "messageId": "owner-a-01",
+          "speakerId": "owner",
+          "text": "好。那就按照学校的正常流程处理吧。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-a-02",
+          "speakerId": "owner",
+          "text": "最后的确认，需要你自己完成。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-a-03",
+          "speakerId": "linchen",
+          "text": "我知道。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-a-04",
+          "speakerId": "owner",
+          "text": "罗尧把这件事留给你，并不是要你必须选择哪一种结果。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-a-05",
+          "speakerId": "owner",
+          "text": "既然你已经决定了，就照自己的意思去做吧。",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "nodeId": "OWNER_END_A",
+      "nodeType": "action",
+      "actionId": "informed-settlement"
+    },
+    {
+      "nodeId": "OWNER_BRANCH_B",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "owner_branch_b-final-01",
+          "speakerId": "owner",
+          "text": "林琛，你可以不用这么快做出决定。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-02",
+          "speakerId": "linchen",
+          "text": "我知道。其实这些年，我一直觉得自己已经慢慢接受他的离开了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-03",
+          "speakerId": "linchen",
+          "text": "我重新上了学，认识了新的朋友，也有了以后想做的事情，只是偶尔会想他，会给他不再登录的聊天窗口发消息，每年也会去C市扫墓。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-04",
+          "speakerId": "linchen",
+          "text": "可是今天知道了这些，我突然觉得，之前那些日子好像全都不一样了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-05",
+          "speakerId": "owner",
+          "text": "……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-06",
+          "speakerId": "linchen",
+          "text": "我一直以为他只是出了意外。我甚至想过，如果那时候我没有住院，会不会还能见到他最后一面；或者我和他一起回C市，就会拦住他在暴雨天上山，就不会有意外发生。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-07",
+          "speakerId": "linchen",
+          "text": "现在您却告诉我，他本来就是为了救我才死的，他回C市，只是为了道别。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-08",
+          "speakerId": "linchen",
+          "text": "那他为什么不问问我的想法？我又不是一定会答应。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-09",
+          "speakerId": "owner",
+          "text": "罗尧当时很害怕。害怕来不及，也害怕最后找到了办法，却没能把你留下来。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-11",
+          "speakerId": "owner",
+          "text": "他比任何人都希望你能继续活下去。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-12",
+          "speakerId": "linchen",
+          "text": "那这算什么由我自己决定呢？",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-13",
+          "speakerId": "linchen",
+          "text": "如果我接受了，我该怎么面对他为了我去死这件事？可如果我不接受，他付出的那些又算什么？我甚至没办法告诉他，我其实不想让他这样做。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-14",
+          "speakerId": "owner",
+          "text": "林琛，罗尧的选择并不意味着你欠他一条命。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-15",
+          "speakerId": "linchen",
+          "text": "可是我很难不这么想。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-16",
+          "speakerId": "linchen",
+          "text": "您知道吗，我今天毕业了。今天上午，我还想走出校园后给他发消息，说我终于毕业了。我和他相识后的大部分时光都在东澜大学度过，这原是我最快乐、最怀念的地方。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-17",
+          "speakerId": "linchen",
+          "text": "可我现在不知道该怎么怀念了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-18",
+          "speakerId": "owner",
+          "text": "……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-19",
+          "speakerId": "owner",
+          "text": "如果你愿意，可以先回去休息。今天不一定要把所有事情解决。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-20",
+          "speakerId": "linchen",
+          "text": "谢谢您。但是我不想再承受这份不应得的遗产了。人各有命，算尽则死，已然不应存在的我继续活下去，这本就是扭曲生命的谬误。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-21",
+          "speakerId": "owner",
+          "text": "那归籍的事情……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-22",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-23",
+          "speakerId": "linchen",
+          "text": "我做不到。对不起。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-24",
+          "speakerId": "owner",
+          "text": "你不用向我道歉。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_b-final-25",
+          "speakerId": "linchen",
+          "text": "嗯，谢谢你告诉我这些。",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "OWNER_END_B",
+      "legacyMessages": [
+        {
+          "messageId": "owner-b-01",
+          "speakerId": "owner",
+          "text": "我明白了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-02",
+          "speakerId": "owner",
+          "text": "那本书一直保管在Hermitage。如果你愿意，可以亲自来一趟。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-03",
+          "speakerId": "linchen",
+          "text": "我可以看看吗？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-04",
+          "speakerId": "owner",
+          "text": "可以。另外，他还留下了一份与你有关的旧材料，我想也应该交给你。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-05",
+          "speakerId": "linchen",
+          "text": "是什么？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-06",
+          "speakerId": "owner",
+          "text": "一份合婚帖。具体内容，等你来了再看吧。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-07",
+          "speakerId": "linchen",
+          "text": "好。我想过来看看。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-08",
+          "speakerId": "owner",
+          "text": "不过，有个日期需要先告诉你。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-09",
+          "speakerId": "owner",
+          "text": "罗尧去世时二十八岁，你当时二十四岁。你们的实际年龄并不只相差整整四年。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-10",
+          "speakerId": "owner",
+          "text": "算上出生日期，还有十四天。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-11",
+          "speakerId": "linchen",
+          "text": "十四天……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-12",
+          "speakerId": "owner",
+          "text": "2025年7月9日，你就会走到他当年离开时的实际年龄。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-13",
+          "speakerId": "owner",
+          "text": "这是当年委托中特别注明的日期，也是目前约定的商议期限。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-14",
+          "speakerId": "linchen",
+          "text": "我知道了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-15",
+          "speakerId": "owner",
+          "text": "你不必现在就做最后的决定。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-16",
+          "speakerId": "owner",
+          "text": "如果决定过来，提前告诉我一声就好。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-b-system",
+          "speakerId": "system",
+          "text": "Hermitage 向您发出了私人到访邀请。",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "nodeId": "OWNER_END_B",
+      "nodeType": "action",
+      "actionId": "begin-be"
+    },
+    {
+      "nodeId": "OWNER_BRANCH_C",
+      "nodeType": "messages",
+      "messages": [
+        {
+          "messageId": "owner_branch_c-final-01",
+          "speakerId": "owner",
+          "text": "当然可以。但我之前也说过，这本书并没有除了留契之外的意义。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-02",
+          "speakerId": "linchen",
+          "text": "我知道。店主先生，我只是注意到关于「寄寿留契」的一件事。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-03",
+          "speakerId": "linchen",
+          "text": "尧哥去世时二十八岁，我当时二十四岁。但我们的实际年龄并不只相差整整四年。尧哥是5月8日出生的，我是5月22日。宁先生说过，寄岁不是按虚岁，也不能只看周岁的整数，需要精确到出生年月日。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-04",
+          "speakerId": "linchen",
+          "text": "如果我对仪式理解正确，姐姐给我寄岁的时间，应当并不是四年整年。因为直到2025年7月9日，我才会走到他当年离开时的实际年龄，真正完成仪式闭环。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-05",
+          "speakerId": "owner",
+          "text": "……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-06",
+          "speakerId": "linchen",
+          "text": "十四天。我现在还有十四天的时间，再想办法，再做决定。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-07",
+          "speakerId": "owner",
+          "text": "林琛，人死不能复生。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-08",
+          "speakerId": "linchen",
+          "text": "店主先生，您放心，我不会做出僭越生命的事情。我明白尧哥的性格，感谢Hermitage为他做了这么多。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-09",
+          "speakerId": "owner",
+          "text": "不必客气。这是一份等价交换的委托，罗尧也付出了相应的报酬。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-10",
+          "speakerId": "linchen",
+          "text": "我可以问问是什么吗？Hermitage的委托报酬，应当不是单纯用金钱就可以付清吧。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-11",
+          "speakerId": "owner",
+          "text": "这倒也不全是……林琛，你或许知道罗尧有一把家传的桃木剑。那柄剑原本并没有什么奇特之处，直到五年前。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-12",
+          "speakerId": "linchen",
+          "text": "五年前我才刚刚认识尧哥。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-13",
+          "speakerId": "owner",
+          "text": "没错。五年前你们的相识过程我不清楚，但这件事的结果是，*罗尧经历了一次和你萍水相逢的人生，又回到了那个分岔口避开了与你擦肩而过的命运*。在那场不存在于你记忆的人生中，你没过多久就因病去世了，而罗尧和你只是一面之缘、毫无关系的陌生人。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-14",
+          "speakerId": "linchen",
+          "text": "这不可能！现实里我真正和他相识，这不是幻觉！而且尧哥从来没有给我提起过……",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-15",
+          "speakerId": "owner",
+          "text": "首先肯定一点：现在我们所处即是真实。如你所说，这件事罗尧也一直当做是一场幻象，是担心你病情做的噩梦。*但是他精神深处残存的污染与桃木剑上沾上的廷达罗斯猎犬气息证实了他的经历绝非虚假。任何穿梭过时间乱流的人，没有直接疯掉已经是奇迹。*",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-16",
+          "speakerId": "owner",
+          "text": "这件事是茂发现的，但他已经没有时间和机会给罗尧进行精神治疗——那时他已经决定举行「寄寿留契」仪式了。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-17",
+          "speakerId": "linchen",
+          "text": "宁先生也并不是普通的店员啊。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-18",
+          "speakerId": "owner",
+          "text": "他是很出色的除魅师。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-19",
+          "speakerId": "linchen",
+          "text": "店主先生，我能来Hermitage见见您和宁先生吗？其实刚才的话我并没有听太懂，我想了解更多的事。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-20",
+          "speakerId": "owner",
+          "text": "当然可以，Hermitage始终欢迎和它有缘分的客人。",
+          "reviewStatus": "confirmed"
+        },
+        {
+          "messageId": "owner_branch_c-final-21",
+          "speakerId": "owner",
+          "text": "决定过来时，提前告诉我一声就好。",
+          "reviewStatus": "confirmed"
+        }
+      ],
+      "nextNodeId": "OWNER_END_C",
+      "legacyMessages": [
+        {
+          "messageId": "owner-c-01",
+          "speakerId": "owner",
+          "text": "林琛，你可以不用这么快做出决定。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-02",
+          "speakerId": "linchen",
+          "text": "我知道。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-03",
+          "speakerId": "linchen",
+          "text": "其实这些年，我一直觉得自己已经慢慢接受他的离开了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-04",
+          "speakerId": "linchen",
+          "text": "我重新上了学，认识了新的朋友，也有了以后想做的事情。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-05",
+          "speakerId": "linchen",
+          "text": "我只是偶尔会想他。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-06",
+          "speakerId": "linchen",
+          "text": "可是今天知道了这些，我突然觉得，之前那些日子好像全都不一样了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-07",
+          "speakerId": "owner",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-08",
+          "speakerId": "linchen",
+          "text": "我一直以为他只是出了意外。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-09",
+          "speakerId": "linchen",
+          "text": "我甚至想过，如果那时候我没有住院，如果他没有为了照顾我那么辛苦，他会不会就不用回去了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-10",
+          "speakerId": "linchen",
+          "text": "现在您却告诉我，他本来就是为了救我才回去的。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-11",
+          "speakerId": "linchen",
+          "text": "他早就知道可能会死。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-12",
+          "speakerId": "owner",
+          "text": "是。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-13",
+          "speakerId": "linchen",
+          "text": "那他为什么不问问我？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-14",
+          "speakerId": "linchen",
+          "text": "就算我那时候病得很重，他至少可以告诉我吧。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-15",
+          "speakerId": "linchen",
+          "text": "我又不是一定会答应。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-16",
+          "speakerId": "owner",
+          "text": "罗尧当时很害怕。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-17",
+          "speakerId": "linchen",
+          "text": "害怕什么？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-18",
+          "speakerId": "owner",
+          "text": "害怕来不及。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-19",
+          "speakerId": "owner",
+          "text": "也害怕最后找到了办法，却没能把你留下来。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-20",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-25",
+          "speakerId": "owner",
+          "text": "他比任何人都希望你能继续活下去。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-26",
+          "speakerId": "linchen",
+          "text": "那这算什么由我自己决定呢？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-27",
+          "speakerId": "linchen",
+          "text": "如果我接受了，我该怎么面对他为了我去死这件事？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-28",
+          "speakerId": "linchen",
+          "text": "可如果我不接受，他付出的那些又算什么？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-29",
+          "speakerId": "linchen",
+          "text": "我甚至没办法告诉他，我其实不想让他这样做。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-30",
+          "speakerId": "owner",
+          "text": "林先生，罗尧的选择并不意味着你欠他一条命。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-31",
+          "speakerId": "owner",
+          "text": "他也不曾要求你偿还。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-32",
+          "speakerId": "linchen",
+          "text": "我知道。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-33",
+          "speakerId": "linchen",
+          "text": "可是我没办法不这么想。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-34",
+          "speakerId": "system",
+          "text": "【短暂沉默】",
+          "reviewStatus": "draft",
+          "delayMs": 1200
+        },
+        {
+          "messageId": "owner-c-35",
+          "speakerId": "linchen",
+          "text": "您知道吗，我今天毕业了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-36",
+          "speakerId": "linchen",
+          "text": "四年前，他还跟我说过，晚一点毕业也没关系。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-37",
+          "speakerId": "linchen",
+          "text": "我那时候特别不高兴，觉得凭什么只有我要比别人晚。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-38",
+          "speakerId": "linchen",
+          "text": "后来我真的回学校了，身体也慢慢好了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-39",
+          "speakerId": "linchen",
+          "text": "今天上午，我还给他发消息，说我终于毕业了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-40",
+          "speakerId": "linchen",
+          "text": "我本来真的很高兴。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-41",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-42",
+          "speakerId": "linchen",
+          "text": "可我现在不知道该怎么高兴了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-43",
+          "speakerId": "owner",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-44",
+          "speakerId": "owner",
+          "text": "如果你愿意，可以先回去休息。今天不一定要把所有事情解决。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-45",
+          "speakerId": "linchen",
+          "text": "谢谢您。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-46",
+          "speakerId": "linchen",
+          "text": "但是我不想再继续找了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-47",
+          "speakerId": "linchen",
+          "text": "那本书、那些记录，还有其他的办法，我都不想再看了。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-48",
+          "speakerId": "owner",
+          "text": "那归籍的事情呢？",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-49",
+          "speakerId": "linchen",
+          "text": "……",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-50",
+          "speakerId": "linchen",
+          "text": "我做不到。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-51",
+          "speakerId": "linchen",
+          "text": "对不起。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-52",
+          "speakerId": "owner",
+          "text": "你不用向我道歉。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-53",
+          "speakerId": "linchen",
+          "text": "嗯。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-54",
+          "speakerId": "linchen",
+          "text": "谢谢您告诉我这些。",
+          "reviewStatus": "draft"
+        },
+        {
+          "messageId": "owner-c-55",
+          "speakerId": "system",
+          "text": "【对话结束】",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "nodeId": "OWNER_END_C",
+      "nodeType": "action",
+      "actionId": "grant-invitation"
+    }
+  ],
+  "manualPlayerMessages": true,
+  "npcDelayMultiplier": 1.3
+}

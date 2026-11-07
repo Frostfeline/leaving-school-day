@@ -1,0 +1,106 @@
+{
+  "messages": [
+    {
+      "id": "class-placeholder-1",
+      "senderId": "class-sender",
+      "timestamp": "2025-06-23T08:42:00+08:00",
+      "type": "text",
+      "text": "@所有人 各位同学，学校毕业离校系统现已开放，请大家于6月27日前完成离校手续办理。办理方式为：*登录学校统一身份认证OA平台*进入毕业离校模块，按要求完成各项费用结清审核。涉及图书归还、水电费用、饭卡余额未退等事项的，联系对应部门处理。",
+      "inlineLinks": [
+        {
+          "id": "class-oa-link",
+          "text": "登录学校统一身份认证OA平台",
+          "routeId": "oa-login"
+        }
+      ]
+    },
+    {
+      "id": "class-placeholder-3",
+      "senderId": "class-sender",
+      "timestamp": "2025-06-23T08:42:00+08:00",
+      "type": "file",
+      "text": "东澜大学2025届离校人员信息登记表.pdf",
+      "attachmentId": "class-leaving-registration-pdf"
+    },
+    {
+      "id": "class-placeholder-2",
+      "senderId": "class-sender",
+      "timestamp": "2025-06-23T08:42:00+08:00",
+      "type": "text",
+      "text": "同学们核对一下离校人员信息登记表，有问题随时私信我哈"
+    },
+    {
+      "id": "class-check-archive",
+      "senderId": "class-monitor",
+      "timestamp": "2025-06-23T08:42:00+08:00",
+      "type": "text",
+      "text": "收到！大家记得及时核对登记表，尤其是*学籍号*对应的学位论文归档情况。"
+    },
+    {
+      "id": "class-question-slip",
+      "senderId": "class-zhangyi",
+      "timestamp": "2025-06-23T08:42:00+08:00",
+      "type": "text",
+      "text": "老师，这个是全部办完以后才能有离校确认单吗？"
+    },
+    {
+      "id": "class-answer-slip",
+      "senderId": "class-sender",
+      "timestamp": "2025-06-23T08:42:00+08:00",
+      "type": "text",
+      "text": "对，系统里所有项目都结清之后，才可以生成电子离校单。"
+    },
+    {
+      "id": "class-meal-refund",
+      "senderId": "class-liumengning",
+      "timestamp": "2025-06-23T10:55:00+08:00",
+      "type": "text",
+      "text": "现在财务处这边饭卡退费人比较多，大家可以下午再来~"
+    },
+    {
+      "id": "class-pay-online",
+      "senderId": "class-monitor",
+      "timestamp": "2025-06-23T10:55:00+08:00",
+      "type": "text",
+      "text": "找不到的未归还图书可以直接线上缴费了，不用线下跑一趟图书馆"
+    },
+    {
+      "id": "class-remind-diploma",
+      "senderId": "class-sender",
+      "timestamp": "2025-06-24T16:18:00+08:00",
+      "type": "text",
+      "text": "@所有人\n提醒：请还没领毕业证学位证和生成离校单的同学尽快。"
+    },
+    {
+      "id": "class-subsidy",
+      "senderId": "class-sender",
+      "timestamp": "2025-06-24T16:18:00+08:00",
+      "type": "text",
+      "text": "另外大家还有两个月的600元补助没发，所以7月份绑定银行卡的状态要正常哦"
+    },
+    {
+      "id": "class-monitor-received",
+      "senderId": "class-monitor",
+      "timestamp": "2025-06-24T16:18:00+08:00",
+      "type": "text",
+      "text": "收到"
+    },
+    {
+      "id": "class-chen-received",
+      "senderId": "class-chenweiwei",
+      "timestamp": "2025-06-24T16:18:00+08:00",
+      "type": "text",
+      "text": "收到"
+    }
+  ],
+  "showHistoryEnd": true,
+  "attachments": [
+    {
+      "id": "class-leaving-registration-pdf",
+      "fileName": "东澜大学2025届离校人员信息登记表.pdf",
+      "src": "assets/documents/东澜大学2025届离校人员信息登记表.pdf",
+      "placeholder": false,
+      "mediaType": "application/pdf"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+import {chromium} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});const context=await browser.newContext({viewport:{width:1440,height:900},permissions:['clipboard-read','clipboard-write']});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+try{
+ await page.goto('http://127.0.0.1:5173/#/dev/bookstore-editor');await page.getByRole('heading',{name:'旧书网本地文案编辑器',exact:true}).waitFor();
+ await page.getByLabel('书名',{exact:true}).fill('【开发测试】编辑器样书');await page.getByLabel('ISBN',{exact:true}).fill('9780000000003');await page.getByLabel('旧书售价',{exact:true}).fill('45.5');await page.getByLabel('启用商品',{exact:true}).check();
+ await page.getByRole('button',{name:'校验并预览',exact:true}).click();await page.getByText('校验通过，预览已更新。',{exact:true}).waitFor();await page.getByRole('button',{name:'预览商品',exact:true}).click();await page.locator('.bse-preview').getByRole('heading',{name:'【开发测试】编辑器样书',exact:true}).waitFor();
+ // Ordinary field edits update the preview without an extra Apply click.
+ await page.getByLabel('书名',{exact:true}).fill('【开发测试】即时更新样书');await page.locator('.bse-preview').getByRole('heading',{name:'【开发测试】即时更新样书',exact:true}).waitFor();
+ const countBefore=JSON.parse(readFileSync('src/content/bookstore/messages.json','utf8')).items.length;await page.getByRole('button',{name:'新增留言',exact:true}).click();await page.getByLabel('留言正文',{exact:true}).fill('【开发测试】新增留言内容。');await page.getByLabel('完整日期时间（未确认可留空）',{exact:true}).fill('2021-02-01T10:00:00+08:00');await page.getByRole('button',{name:'预览历史留言',exact:true}).click();await page.locator('.bse-preview').getByText('【开发测试】新增留言内容。',{exact:true}).waitFor();assert.equal(await page.locator('.bse-preview .bs-public-message').count(),countBefore+1);
+ await page.getByLabel('选择导出文件',{exact:false}).selectOption('messages');const download=page.waitForEvent('download');await page.getByRole('button',{name:'导出JSON',exact:true}).click();const file=await download;await file.saveAs('test-results/bookstore-export-messages.json');const data=JSON.parse(readFileSync('test-results/bookstore-export-messages.json','utf8'));assert(data.items.some(m=>m.text==='【开发测试】新增留言内容。'));
+ await page.getByRole('button',{name:'复制JSON',exact:true}).click();await page.getByText('已复制JSON。',{exact:true}).waitFor();assert(JSON.parse(await page.evaluate(()=>navigator.clipboard.readText())).items.length===countBefore+1);
+ await page.getByRole('button',{name:'删除留言',exact:true}).click();await page.getByRole('button',{name:'预览历史留言',exact:true}).click();await page.waitForFunction(n=>document.querySelectorAll('.bse-preview .bs-public-message').length===n,countBefore);
+ await page.getByLabel('站内路径',{exact:true}).first().fill('assets/images/bookstore/not-found.svg');await page.getByRole('button',{name:'校验并预览',exact:true}).click();await page.getByRole('status').filter({hasText:'图片不存在'}).waitFor();
+ await page.getByLabel('站内路径',{exact:true}).first().fill('assets/images/bookstore/cover-placeholder.svg');await page.getByRole('button',{name:'校验并预览',exact:true}).click();await page.getByText('校验通过，预览已更新。',{exact:true}).waitFor();await page.screenshot({path:'test-results/bookstore-editor-1440.png',fullPage:false});assert.deepEqual(errors,[]);
+ console.log('PASS dev editor: product/name/ISBN/price, immediate preview, add/edit/delete messages, downloadable valid JSON, clipboard JSON, missing-image validation, no page errors');
+}finally{await browser.close();}
