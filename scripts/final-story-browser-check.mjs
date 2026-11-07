@@ -236,7 +236,7 @@ try {
       await cast.waitFor();
       await p.clock.runFor(50);
       const roll=cast.locator('.te-cast-roll');
-      assert.equal(await roll.locator('.te-cast-name').last().textContent(),'常思烛');
+      assert.equal(await roll.locator('.te-cast-name').last().textContent(),'常司烛');
       assert.equal(await cast.locator('.te-cast-closing').count(),0);
       const duration=await roll.evaluate(e=>{const a=e.getAnimations()[0];const duration=a.effect.getTiming().duration;a.finish();return duration;});
       assert(duration>40000);
