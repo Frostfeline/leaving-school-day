@@ -32,17 +32,6 @@ export function getGameState(): GameState {
   try { return decodeGameState(JSON.parse(localStorage.getItem(KEY) || 'null')); } catch { return empty(); }
 }
 function decodeGameState(data:any):GameState {
-      if(data&&data.version===1&&!data.bookstorePasswordRevision){
-       const s=data.sisterConfrontation3;
-       const unanswered=!Object.keys(s?.selectedOptions??{}).length&&!Object.keys(data.sisterConfrontation3SelectedOptions??{}).length;
-       if(!data.ending&&!s?.completedAt&&unanswered&&!normalizeArchiveProgress(data.archive,archivePuzzle).archivePuzzleCompleted&&(s?.startedAt!=null||data.ningHistoryReadCompleted||data.sisterConfrontation3Queued)){
-        data.sisterConfrontation3=emptyConfrontation();data.ningReadMessageIds=[];data.ningHistoryReadCompleted=false;
-        data.sisterConfrontation3Queued=false;data.sisterConfrontation3Started=false;data.sisterConfrontation3Completed=false;
-        data.sisterConfrontation3NodeId=null;data.sisterConfrontation3SelectedOptions={};data.sisterManuscriptViewed=false;data.hermitageFollowupAvailable=false;
-        data.bookstoreMember={accountId:null,selectedThreadId:null,readThreadIds:[]};
-       }
-       data.bookstorePasswordRevision=1;
-      }
     if (!data || data.version!==1 || typeof data.authenticated!=='boolean') throw Error('state header: missing save, unsupported version or authenticated type');
     if (data.auth && (!/^\d{6}$/.test(data.auth.code) || typeof data.auth.studentId!=='string' || (data.auth.expiresAt!==null && !Number.isFinite(data.auth.expiresAt)) || !Number.isFinite(data.auth.issuedAt))) throw Error('auth: invalid code, studentId, expiresAt or issuedAt');
     if(!Array.isArray(data.issuedCodes))data.issuedCodes=data.auth?[data.auth]:[];

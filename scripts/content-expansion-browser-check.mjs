@@ -24,9 +24,12 @@ try{
  await page.locator('.wa-article-body strong').getByText('算尽则死',{exact:true}).waitFor();
  const accounts=page.locator('.wa-article-body p').filter({hasText:'有名籍，有账目。有欠负，亦有偿还。'});
  assert.equal(await accounts.count(),1);assert.equal(await accounts.locator('strong').count(),0);
- const rule=page.locator('.wa-article-body strong').filter({hasText:'从字面来讲，'});
- assert.equal(await rule.innerText(),'从字面来讲，借命往往带有更改命簿、逆天而行的意味，但仍旧需要遵循一套特定规则，要求受命者在命数接续之日，恰好与借命者当时的实足年龄相等。');
- assert.equal(await rule.locator('em').count(),2);
+ const rule=page.locator('.wa-article-body strong').filter({hasText:'要求受命者在命数接续之日'});
+ assert.equal(await rule.innerText(),'要求受命者在命数接续之日，恰好与借命者当时的实足年龄相等。');
+ assert.equal(await rule.locator('em').count(),0);
+ await page.goto(base+'#/wechat/article/donglan-admission-2017');
+ await page.getByRole('heading',{name:'东澜大学2020年审核制、硕博连读博士研究生（第一批）拟录取公示',exact:true}).waitFor();
+ assert(!(await page.locator('.wa-article').innerText()).includes('2017年'));
  await page.goto(base+'#/game/wechat/linyuan');await page.locator('.wc-window').waitFor();
  for(const [id,file,name] of [['changsizhu','chang-si-zhu','常司烛'],['huosisi','huo-si-si','霍思斯']]){
   assert.equal(await page.locator(`[data-chat-id=${id}]`).count(),0);
