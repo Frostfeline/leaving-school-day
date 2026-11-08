@@ -12,6 +12,16 @@ export function showPdfPreview(parent:HTMLElement,attachment:{fileName:string;sr
  for(const [value,label] of [['fit',ui.fit],['0.75','75%'],['1','100%'],['1.25','125%'],['1.5','150%'],['2','200%']]){const o=el('option','',label);o.value=value;zoom.append(o);}
  bar.append(name,pages,zoom,close);const body=el('div','game-pdf-body');body.setAttribute('aria-label',ui.document);const status=el('p','game-pdf-status',ui.loading);status.setAttribute('role','status');body.append(status);dialog.append(bar,body);parent.append(dialog);
  let disposed=false,revision=0,task:any,pdf:any,engine:any;const renders:any[]=[];
+ const preview=attachment.src.endsWith('东澜大学2025届离校人员信息登记表.pdf')?'assets/documents/leaving-registration-preview.png':null;
+ let imageMode=false;
+ function renderImage(){
+  if(disposed||!preview)return;imageMode=true;revision++;for(const r of renders)r.cancel();renders.length=0;
+  const image=el('img');image.src=import.meta.env.BASE_URL+preview;image.alt=attachment.fileName;
+  image.style.display='block';image.style.margin='0 auto';image.style.background='white';
+  image.style.width=zoom.value==='fit'?'100%':(595*Number(zoom.value))+'px';image.style.maxWidth='none';image.style.height='auto';
+  image.onerror=()=>body.replaceChildren(el('p','game-pdf-status',ui.failed));
+  body.replaceChildren(image);pages.textContent=ui.pages.replace('{count}','1');zoom.disabled=false;
+ }
  const cleanup=()=>{if(disposed)return;disposed=true;revision++;for(const r of renders)r.cancel();void task?.destroy();dialog.remove();parent.removeEventListener('screen-dispose',onDispose);trigger.focus({preventScroll:true});for(const p of positions){p.el.scrollTop=p.top;p.el.scrollLeft=p.left;}window.scrollTo(win.x,win.y);};
  const onDispose=()=>{if(dialog.open)dialog.close();cleanup();};parent.addEventListener('screen-dispose',onDispose);dialog.addEventListener('close',cleanup,{once:true});dialog.showModal();close.focus({preventScroll:true});
  async function render(){
@@ -24,9 +34,10 @@ export function showPdfPreview(parent:HTMLElement,attachment:{fileName:string;sr
    const layer=el('div','textLayer');sheet.append(canvas,layer);body.append(sheet);
    const rendering=page.render({canvasContext:canvas.getContext('2d')!,viewport,transform:ratio===1?undefined:[ratio,0,0,ratio,0,0]});renders.push(rendering);await rendering.promise;if(disposed||current!==revision)return;
    const text=new engine.TextLayer({textContentSource:await page.getTextContent(),container:layer,viewport});renders.push(text);await text.render();
-  }}catch(error){if(!disposed&&current===revision){console.error('PDF_RENDER_FAILED',error);body.replaceChildren(el('p','game-pdf-status',ui.failed));}}
+  }}catch(error){if(!disposed&&current===revision){if(preview)renderImage();else{console.error('PDF_RENDER_FAILED',error);body.replaceChildren(el('p','game-pdf-status',ui.failed));}}}
   finally{if(!disposed&&current===revision)zoom.disabled=false;}
  }
- zoom.onchange=()=>void render();zoom.disabled=true;
- void(async()=>{try{const moduleUrl=new URL(import.meta.env.BASE_URL+'assets/vendor/pdfjs/pdf.mjs',location.href).href;engine=await import(/* @vite-ignore */moduleUrl);if(disposed)return;engine.GlobalWorkerOptions.workerSrc=import.meta.env.BASE_URL+'assets/vendor/pdfjs/pdf.worker.mjs';task=engine.getDocument({url:import.meta.env.BASE_URL+attachment.src});pdf=await task.promise;if(disposed)return;pages.textContent=ui.pages.replace('{count}',String(pdf.numPages));await render();}catch(error){if(!disposed){console.error('PDF_LOAD_FAILED',error);status.textContent=ui.failed;}}})();
+ zoom.onchange=()=>imageMode?renderImage():void render();zoom.disabled=true;
+ if(preview&&(matchMedia('(pointer: coarse)').matches||typeof (Promise as any).withResolvers!=='function')){renderImage();return;}
+ void(async()=>{try{const moduleUrl=new URL(import.meta.env.BASE_URL+'assets/vendor/pdfjs/pdf.mjs',location.href).href;engine=await import(/* @vite-ignore */moduleUrl);if(disposed)return;engine.GlobalWorkerOptions.workerSrc=import.meta.env.BASE_URL+'assets/vendor/pdfjs/pdf.worker.mjs';task=engine.getDocument({url:import.meta.env.BASE_URL+attachment.src});pdf=await task.promise;if(disposed)return;pages.textContent=ui.pages.replace('{count}',String(pdf.numPages));await render();}catch(error){if(!disposed){if(preview)renderImage();else{console.error('PDF_LOAD_FAILED',error);status.textContent=ui.failed;}}}})();
 }
