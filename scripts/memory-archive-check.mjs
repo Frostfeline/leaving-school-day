@@ -61,7 +61,7 @@ try{
   assert.equal(await memory.locator('.ma-header').innerText(),data['archive-meta'].title);
   assert.equal(await memory.locator('.ma-page a').count(),0);
   assert.equal(await memory.locator('[data-archive-group=final-20210628]').count(),0);
-  assert.equal(await memory.getByText('PASSWORD：20201218',{exact:true}).count(),0);
+  assert.equal(await memory.getByText('PASSWORD：Y20201218C',{exact:true}).count(),0);
   await memory.locator('[data-archive-group=C01]').click();
   await memory.getByText('你直接登我账号买吧，余额还多。',{exact:true}).locator('xpath=self::strong').waitFor();
   assert.equal(await memory.getByText('所有密码都改成纪念日了。',{exact:true}).count(),0);
@@ -88,7 +88,7 @@ try{
   }
   await page.goto(base+'#/memory-archive?chat=litianming&source=litianming-2022-08-03-01');
   assert.equal((await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY)).archive.orderedCount,0);
-  const bookstore=await c.newPage();await bookstore.goto(base+'#/bookstore');await bookstore.locator('.bs-member-nav button').click();await bookstore.locator('[name=username]').fill('罗尧');await bookstore.locator('[name=password]').fill(data['archive-meta'].dates.anniversary.replaceAll('-',''));await bookstore.locator('.bs-login-dialog button[type=submit]').click();await bookstore.locator('[data-thread-id=hermitage-history]').click();await bookstore.locator('.bs-mail-letter').first().waitFor();await bookstore.close();
+  const bookstore=await c.newPage();await bookstore.goto(base+'#/bookstore');await bookstore.locator('.bs-member-nav button').click();await bookstore.locator('[name=username]').fill('罗尧');await bookstore.locator('[name=password]').fill(JSON.parse(readFileSync('src/content/bookstore/accounts.json','utf8')).accounts[0].password);await bookstore.locator('.bs-login-dialog button[type=submit]').click();await bookstore.locator('[data-thread-id=hermitage-history]').click();await bookstore.locator('.bs-mail-letter').first().waitFor();await bookstore.close();
   await page.getByRole('tab',{name:ui.tabs.chats,exact:true}).click();
   const dateSource=id=>page.locator('[data-archive-group="'+id+'"]');
   const dateSlot=i=>page.locator('[data-timeline-slot="'+i+'"]');
@@ -116,7 +116,7 @@ try{
   assert.equal(await attachmentSlot(0).getAttribute('aria-label'),'复查报告');
   for(const [i,pair] of pairs.entries()){if(i<2)continue;await selectAttachment(page,pair.attachmentId);await attachmentSlot(i).click();}
   await page.getByText(ui.complete,{exact:true}).waitFor();
-  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','可查看最后一份聊天记录和附件索引','PASSWORD：20201218']);
+  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','可查看最后一份聊天记录和附件索引','PASSWORD：Y20201218C']);
   assert.equal(await page.locator('.ma-complete strong').count(),2);
   await page.getByRole('tab',{name:ui.tabs.chats,exact:true}).click();
   assert.notEqual(await page.locator('.ma-chat-group').getAttribute('data-group-id'),'final-20210628');
@@ -136,7 +136,7 @@ try{
   await attachmentSlot(0).click();await page.locator('.ma-image-dialog img').evaluate(image=>image.decode());await page.keyboard.press('Escape');
   accept(page);await page.locator('[data-pair-id=P01] .ma-unlink').last().click();
   await page.getByText('已整理 7 / 7 份时间线，已关联 6 / 7 份附件。',{exact:true}).waitFor();
-  assert.equal(await page.getByText('PASSWORD：20201218',{exact:true}).count(),0);
+  assert.equal(await page.getByText('PASSWORD：Y20201218C',{exact:true}).count(),0);
   await selectAttachment(page,'checkup-2020');await attachmentSlot(0).click();
   await page.getByText(ui.complete,{exact:true}).waitFor();
   assert.equal(await page.locator('.ma-page a').count(),0);
