@@ -21,7 +21,7 @@ export function validateArchive(bundle){
  const pairs=bundle.puzzle.pairs;unique(pairs,'puzzle.pairs');if(!pairs.length)fail('puzzle.pairs','至少需要一组关联');const usedChats=new Set(),usedAttachments=new Set();
  for(const p of pairs){if(!groups.has(p.chatGroupId)||!attachments.has(p.attachmentId)||usedChats.has(p.chatGroupId)||usedAttachments.has(p.attachmentId))fail('puzzle.'+p.id,'无效或重复配对引用');usedChats.add(p.chatGroupId);usedAttachments.add(p.attachmentId);}
  if(bundle.chats.groups.some(g=>g.requiresCompletion&&usedChats.has(g.id)))fail('puzzle.pairs','奖励记录不能参与配对');
- if([...attachments].some(id=>!usedAttachments.has(id)&&!bundle.chats.messages.some(m=>m.attachmentRefs.includes(id))))fail('puzzle.pairs','附件关联有遗漏');
+ if([...attachments].some(id=>!usedAttachments.has(id)&&!bundle.attachments.items.find(a=>a.id===id).requiresCompletion&&!bundle.chats.messages.some(m=>m.attachmentRefs.includes(id))))fail('puzzle.pairs','附件关联有遗漏');
  if(!Array.isArray(bundle.puzzle.summary))fail('puzzle.summary','必须为段落数组');bundle.puzzle.summary.forEach(p=>text(p,'puzzle.summary'));
  const checkText=(value,p)=>{if(typeof value==='string')text(value,p);else if(value&&typeof value==='object')for(const [k,v]of Object.entries(value)){if(k!=='schemaVersion')checkText(v,p+'.'+k);}else fail(p,'需要界面文字');};checkText(bundle.ui,'ui');
  for(const key of ['readonly','backChat','search','organize','progress','tray','slot','success','wrong','complete','completeText','reset','resetConfirm','close','previous','next','date','placeholder','storageError','editor','tabs','review'])if(!bundle.ui[key])fail('ui.'+key,'缺少必填文案');

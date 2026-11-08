@@ -2,6 +2,8 @@ import {confrontationBundle} from './sister-confrontation-content';
 import presentation from '../content/wechat/presentation.json';
 import hidden from '../content/wechat/hidden-contact.json';
 import liTianMing from '../content/wechat/chats/li-tian-ming.json';
+import changSiZhu from '../content/wechat/chats/chang-si-zhu.json';
+import huoSiSi from '../content/wechat/chats/huo-si-si.json';
 import luoYao from '../content/wechat/chats/luo-yao.json';
 import university from '../content/university.json';
 import oa from '../content/oa-login.json';
@@ -17,7 +19,7 @@ import reminder from '../content/wechat/sister-reminder-2.json';
 import {matchesSearch} from './search-normalize';
 export interface ChatMessage { id: string; senderId: string; timestamp: string; type: string; text: string; linkLabel?: string; routeId?: string;attachmentId?:string;inlineLinks?:Array<{id:string;text:string;routeId:string}> }
 export interface Character {wechatId?:string;wechatNickname?:string;relationship?:string; name?: string; nameRef?: string; chatNameRef?: string; remark?:string; avatar: string }
-export const chatMessages: Record<string, { messages: ChatMessage[]; attachments?: Array<{id:string;src?:string|null}> }> = { 'li-tian-ming':liTianMing, 'luo-yao':luoYao, sister, 'class-group': classGroup, 'university-service': service, 'flea-market': market };
+export const chatMessages: Record<string, { messages: ChatMessage[]; attachments?: Array<{id:string;src?:string|null}> }> = { 'chang-si-zhu':changSiZhu,'huo-si-si':huoSiSi,'li-tian-ming':liTianMing, 'luo-yao':luoYao, sister, 'class-group': classGroup, 'university-service': service, 'flea-market': market };
 export const characterData: Record<string, Character> = characters;
 chats.find(c=>c.id==='university-service')!.label=university.serviceName;
 characterData['university-service'].name=university.serviceName;
@@ -62,16 +64,17 @@ export function contactName(id:string){return characterData[id]?.remark || chara
 export function searchableChats(){return [...chats,{...hidden,label:contactName(hidden.avatarId)}];}
 export function visibleChats(search='') {
  const query=search.trim();
- if(query)return searchableChats().filter(chat=>matchesSearch(query,[chat.label,characterName(chat.avatarId),characterData[chat.avatarId].wechatNickname??'']));
+ if(query)return searchableChats().filter(chat=>matchesSearch(query,['changsizhu','huosisi'].includes(chat.id)?[characterData[chat.avatarId].remark??'',characterData[chat.avatarId].wechatNickname??'']:[chat.label,characterName(chat.avatarId),characterData[chat.avatarId].wechatNickname??'']));
  const state=getGameState();
  return searchableChats().filter(chat=>{
+  if(['changsizhu','huosisi'].includes(chat.id))return state.discoveredFriendIds.includes(chat.id);
   if(chat.id===hidden.id)return state.addedLuoYao;
   if(chat.id==='litianming')return state.addedLiTianMing;
   return true;
  });
 }
 export function searchChatMessages(query:string){
- return searchableChats().flatMap(chat=>sortedMessages(chat.contentId).filter(message=>matchesSearch(query,[message.text,message.linkLabel??''])).map(message=>({chat,message})));
+ return searchableChats().filter(chat=>!['changsizhu','huosisi'].includes(chat.id)||getGameState().discoveredFriendIds.includes(chat.id)).flatMap(chat=>sortedMessages(chat.contentId).filter(message=>matchesSearch(query,[message.text,message.linkLabel??''])).map(message=>({chat,message})));
 }
 
 /** Story-time display only. Authentication IDs, validity and saved runtime times remain unchanged. */

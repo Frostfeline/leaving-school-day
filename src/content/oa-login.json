@@ -21,5 +21,6 @@
   "messageTemplate": "您正在登录东澜大学统一身份认证平台，验证码为 {code}。请勿向他人泄露。",
   "storageFailure": "无法保存游戏状态，请允许本站使用浏览器本地存储后重试。",
   "noticesHeading": "通知公告",
-  "developmentNote": ""
+  "developmentNote": "",
+  "unboundStudent": "该编码非您绑定的学籍号，请核实。"
 }

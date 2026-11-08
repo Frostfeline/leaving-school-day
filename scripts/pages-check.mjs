@@ -111,7 +111,7 @@ try {
   persistent=await chromium.launchPersistentContext(profile,launch);monitor(persistent);
   savedPage=await persistent.newPage();await savedPage.goto(base+'#/oa/login');assert.equal(await savedPage.locator('#oa-student').inputValue(),'202210300522');await persistent.close();
   console.log('PASS local progress after reload and actual browser close/reopen');
-  for(const script of ['memory-archive-check','sister-confrontation-browser-check','final-story-browser-check']){
+  for(const script of ['content-expansion-browser-check','memory-archive-check','sister-confrontation-browser-check','final-story-browser-check']){
     await new Promise((resolve,reject)=>{
       const child=spawn(process.execPath,['scripts/'+script+'.mjs'],{stdio:'inherit',env:{...process.env,TEST_PORT:String(port),TEST_BASE_URL:base,TEST_PRODUCTION:'1'}});
       const timer=setTimeout(()=>{child.kill();reject(Error(script+' timed out'));},240000);

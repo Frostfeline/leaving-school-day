@@ -90,7 +90,7 @@ try {
     assert.equal(await p.locator('[data-owner-option]').count(),0);
     await p.getByRole('link',{name:data.ui.openArchive,exact:true}).click();
     await p.getByRole('heading',{name:data.archive.title,exact:true}).waitFor();
-    assert.deepEqual(await p.locator('.private-fields dd').allTextContents(),['罗尧','首藤','2021年6月21日']);
+    assert.deepEqual(await p.locator('.private-fields dd').allTextContents(),['罗尧','首藤','2021年6月22日']);
     assert.deepEqual(await p.locator('[data-archive-message-id] p').allTextContents(),data.archive.messages.map(m=>m.text));
     assert.deepEqual(await p.locator('[data-archive-message-id] strong').allTextContents(),data.archive.messages.map(m=>m.speakerId==='owner'?'■■■':'罗尧'));
     const back=p.getByRole('button',{name:data.ui.backOwner,exact:true});

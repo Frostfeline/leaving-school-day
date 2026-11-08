@@ -16,14 +16,14 @@
     },
     {
       "label": "委托成立日期",
-      "text": "2021年6月21日"
+      "text": "2021年6月22日"
     }
   ],
   "messages": [
     {
       "messageId": "commission-2021-01",
       "speakerId": "luoyao",
-      "text": "图书馆的书我今天就留在这里。后面的事呢？",
+      "text": "明天我会启程回C市，交代完之后，我就立刻举行仪式。多拖一日林鸢就要多寄一日，夜长梦多，小琛不能再等了。图书馆的书我今天就留在这里。后面的事呢？",
       "reviewStatus": "confirmed"
     },
     {
@@ -53,7 +53,7 @@
     {
       "messageId": "commission-2021-06",
       "speakerId": "owner",
-      "text": "还有什么需要交代的吗？",
+      "text": "还有什么要我以后转达给林琛的吗？",
       "reviewStatus": "confirmed"
     },
     {

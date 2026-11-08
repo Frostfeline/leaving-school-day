@@ -45,5 +45,19 @@
     "avatarId": "litianming",
     "kind": "direct",
     "contentId": "li-tian-ming"
+  },
+  {
+    "id": "changsizhu",
+    "label": "哲学系 常司烛",
+    "avatarId": "changsizhu",
+    "kind": "direct",
+    "contentId": "chang-si-zhu"
+  },
+  {
+    "id": "huosisi",
+    "label": "英语系 霍思斯",
+    "avatarId": "huosisi",
+    "kind": "direct",
+    "contentId": "huo-si-si"
   }
 ]

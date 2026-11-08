@@ -31,7 +31,7 @@
     "name": "罗尧",
     "avatar": "assets/images/avatars/wechat-luoyao.jpg",
     "remark": "尧哥",
-    "wechatId": "luoyao0508",
+    "wechatId": "ly19930508",
     "relationship": "friend"
   },
   "class-monitor": {
@@ -80,5 +80,19 @@
     "remark": "李天明",
     "relationship": "friend",
     "avatar": "assets/images/avatars/wechat-litianming.jpg"
+  },
+  "changsizhu": {
+    "name": "常司烛",
+    "wechatNickname": "天东有若木",
+    "remark": "哲学系 常司烛",
+    "relationship": "friend",
+    "avatar": "assets/images/avatars/wechat-market-ruomu.jpeg"
+  },
+  "huosisi": {
+    "name": "霍思斯",
+    "wechatNickname": "本周末有事不出摊下周预订可私聊",
+    "remark": "英语系 霍思斯",
+    "relationship": "friend",
+    "avatar": "assets/images/avatars/wechat-market-sender.jpg"
   }
 }

@@ -71,7 +71,7 @@ export function MemoryArchiveScreen(options:{bundle?:ArchiveBundle;preview?:bool
   tabs.querySelectorAll<HTMLElement>('button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===tab)));browser.replaceChildren();
   if(tab==='attachments'){
    const grid=el('div','ma-gallery');
-   for(const a of scramble(data.attachments.items,true)){
+   for(const a of scramble(data.attachments.items.filter(a=>!a.requiresCompletion||progress.archivePuzzleCompleted),true)){
     const b=button('',()=>previewAttachment(a.id),'ma-file');const image=el('img');
     image.src=import.meta.env.BASE_URL+a.images[0].src;image.alt=a.images[0].alt;
     image.onerror=()=>{image.onerror=null;image.src=import.meta.env.BASE_URL+'assets/images/memoryArchive/document-placeholder.svg';};

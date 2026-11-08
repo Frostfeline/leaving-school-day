@@ -19,6 +19,7 @@ export function PrivateCommissionScreen(route:string,go:(to:string)=>void,login:
   for(const q of b.verification.questions){
    const question=el('section','private-verification-question');
    question.append(el('h2','',q.label),el('p','private-riddle',q.riddleText),el('p','',q.promptText));
+   if(q.description)question.append(el('p','',q.description));
    const fields=el('div','private-verification-fields');
    for(const {unit} of verificationFields(q)){
     const field=el('label'),input=el('input');

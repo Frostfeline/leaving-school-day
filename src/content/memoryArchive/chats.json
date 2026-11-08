@@ -379,6 +379,18 @@
       "attachmentRefs": []
     },
     {
+      "id": "v3-birthday-28",
+      "chatGroupId": "C02",
+      "timestamp": "2021-05-08",
+      "speakerId": "linchen",
+      "type": "text",
+      "text": "28岁生日快乐！",
+      "sourceId": "LD-003",
+      "reviewStatus": "confirmed",
+      "searchable": true,
+      "attachmentRefs": []
+    },
+    {
       "id": "v2-c02-01",
       "chatGroupId": "C02",
       "timestamp": "2021-05-08",

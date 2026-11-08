@@ -182,6 +182,26 @@
       ],
       "fields": [],
       "sections": []
+    },
+    {
+      "id": "discharge-20210630",
+      "title": "出院证明",
+      "category": "医疗文件",
+      "date": "2021-06-30",
+      "summary": "出院证明书",
+      "sourceId": "LD-003",
+      "reviewStatus": "confirmed",
+      "requiresCompletion": true,
+      "images": [
+        {
+          "id": "discharge-page",
+          "src": "assets/images/memoryArchive/discharge-certificate-web.webp",
+          "alt": "出院证明书",
+          "placeholder": false
+        }
+      ],
+      "fields": [],
+      "sections": []
     }
   ]
 }

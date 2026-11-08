@@ -1,0 +1,46 @@
+{
+  "messages": [
+    {
+      "id": "huosisi-2023-12-18-1",
+      "senderId": "linchen",
+      "timestamp": "2023-12-18T17:28:00+08:00",
+      "type": "text",
+      "text": "思斯，想要两根玉米肠，还有吗？"
+    },
+    {
+      "id": "huosisi-2023-12-18-2",
+      "senderId": "huosisi",
+      "timestamp": "2023-12-18T17:28:00+08:00",
+      "type": "text",
+      "text": "那必须有"
+    },
+    {
+      "id": "huosisi-2024-04-26-1",
+      "senderId": "huosisi",
+      "timestamp": "2024-04-26T19:12:00+08:00",
+      "type": "text",
+      "text": "今天清仓大促五折优惠，要不要来点开花肠"
+    },
+    {
+      "id": "huosisi-2024-04-26-2",
+      "senderId": "linchen",
+      "timestamp": "2024-04-26T19:12:00+08:00",
+      "type": "text",
+      "text": "那要1吧"
+    },
+    {
+      "id": "huosisi-2024-04-26-3",
+      "senderId": "huosisi",
+      "timestamp": "2024-04-26T19:12:00+08:00",
+      "type": "text",
+      "text": "谢谢惠顾"
+    },
+    {
+      "id": "huosisi-2025-05-16-1",
+      "senderId": "huosisi",
+      "timestamp": "2025-05-16T16:08:00+08:00",
+      "type": "text",
+      "text": "新品上架，我会做鸡蛋汉堡了"
+    }
+  ]
+}

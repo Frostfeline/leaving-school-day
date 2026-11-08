@@ -9,7 +9,7 @@ export function IntroScreen(startGame: () => void, endingActions?:{restart:()=>v
   panel.id = 'intro-panel';
   panel.tabIndex = 0;
   panel.dataset.section = intro.preface.id;
-  panel.append(...intro.preface.paragraphs.map(p => el('p', '', p)));
+  panel.append(...intro.preface.paragraphs.map((text,index) => {const p=el('p','',text);p.style.textIndent='2em';if(intro.preface.breakBefore.includes(index))p.style.paddingBlockStart='1lh';return p;}));
   section.append(panel);
   const footer = el('footer', 'actions');
   const start = el('button', 'start', endingActions?intro.actions.restart:intro.actions.start);
@@ -35,7 +35,7 @@ export function IntroScreen(startGame: () => void, endingActions?:{restart:()=>v
         const note=el('section','intro-afterword');
         note.id='intro-afterword';
         note.hidden=true;
-        note.append(el('h2','',intro.afterword.title),...intro.afterword.paragraphs.map(text=>el('p','',text)));
+        note.append(el('h2','',intro.afterword.title),...intro.afterword.paragraphs.map((text,index)=>{const p=el('p','',text);if(intro.afterword.breakBefore.includes(index))p.style.paddingBlockStart='1lh';return p;}));
         afterword.onclick=()=>{
           note.hidden=!note.hidden;
           afterword.setAttribute('aria-expanded',String(!note.hidden));

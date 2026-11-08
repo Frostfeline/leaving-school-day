@@ -2,8 +2,14 @@ import {el} from './dom';
 
 // Render the author's small Markdown subset as text nodes. No raw HTML or remote resources.
 export function appendArticleInline(parent:HTMLElement,text:string){
- const parts=text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
- for(const part of parts)parent.append(part.startsWith('**')&&part.endsWith('**')?el('strong','',part.slice(2,-2)):part.startsWith('*')&&part.endsWith('*')?el('em','',part.slice(1,-1)):document.createTextNode(part));
+ const pattern=/\*\*(.+?)\*\*(?!\*)|\*([^*]+)\*/g;let start=0;
+ for(const match of text.matchAll(pattern)){
+  parent.append(document.createTextNode(text.slice(start,match.index)));
+  const node=el(match[1]!==undefined?'strong':'em');
+  if(match[1]!==undefined)appendArticleInline(node,match[1]);else node.textContent=match[2];
+  parent.append(node);start=match.index!+match[0].length;
+ }
+ parent.append(document.createTextNode(text.slice(start)));
 }
 export function articleMarkdown(markdown:string){
  const body=el('div','wa-article-body');

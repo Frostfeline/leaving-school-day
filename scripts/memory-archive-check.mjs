@@ -107,6 +107,7 @@ try{
   await page.getByText('已整理 7 / 7 份时间线，已关联 0 / 7 份附件。',{exact:true}).waitFor();
   await page.getByRole('tab',{name:ui.tabs.attachments,exact:true}).click();
   const images=page.locator('.ma-file');
+  assert.equal(await page.locator('.ma-file[data-attachment-id=discharge-20210630]').count(),0);
   assert.notDeepEqual(await images.evaluateAll(items=>items.map(e=>e.dataset.attachmentId)),pairs.map(p=>p.attachmentId));
   assert((await images.allTextContents()).every(text=>!text));
   await page.locator('.ma-file[data-attachment-id=movie-ticket]').dragTo(attachmentSlot(0));
@@ -115,7 +116,7 @@ try{
   assert.equal(await attachmentSlot(0).getAttribute('aria-label'),'复查报告');
   for(const [i,pair] of pairs.entries()){if(i<2)continue;await selectAttachment(page,pair.attachmentId);await attachmentSlot(i).click();}
   await page.getByText(ui.complete,{exact:true}).waitFor();
-  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','可查看最后一份聊天记录','PASSWORD：20201218']);
+  assert.deepEqual(await page.locator('.ma-complete p').allTextContents(),['7份附件已与对应聊天关联，已完成所有时间线梳理。','可查看最后一份聊天记录和附件索引','PASSWORD：20201218']);
   assert.equal(await page.locator('.ma-complete strong').count(),2);
   await page.getByRole('tab',{name:ui.tabs.chats,exact:true}).click();
   assert.notEqual(await page.locator('.ma-chat-group').getAttribute('data-group-id'),'final-20210628');
@@ -126,6 +127,10 @@ try{
   assert.equal(await page.locator('.ma-pair').count(),7);
   await page.getByRole('tab',{name:ui.tabs.attachments,exact:true}).click();
   await page.reload();await page.getByText(ui.complete,{exact:true}).waitFor();
+  const discharge=page.locator('.ma-file[data-attachment-id=discharge-20210630]');
+  await discharge.click();await page.locator('.ma-image-dialog img').evaluate(image=>image.decode());
+  assert.equal(await page.locator('.ma-image-dialog .ma-image-select').count(),0);
+  await page.keyboard.press('Escape');assert.equal(await page.locator('.ma-file').count(),8);
   await page.getByRole('button',{name:ui.viewProgress,exact:true}).click();
   await page.getByText('已整理 7 / 7 份时间线，已关联 7 / 7 份附件。',{exact:true}).waitFor();
   await attachmentSlot(0).click();await page.locator('.ma-image-dialog img').evaluate(image=>image.decode());await page.keyboard.press('Escape');
