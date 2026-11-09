@@ -12,7 +12,7 @@
     {
       "questionId": "one",
       "label": "其一",
-      "riddleText": "借者未归，还者无借。",
+      "riddleText": "此仪所改命籍，凡几人？",
       "promptText": "完成仪式，共涉及修改几个人的命籍？",
       "answer": "3",
       "evidenceRefs": [
@@ -25,7 +25,7 @@
       "questionId": "two",
       "label": "其二",
       "riddleText": "一人寄岁，一人借命。",
-      "promptText": "寄岁所补的年寿，至借命开始共多少年岁？",
+      "promptText": "",
       "evidenceRefs": [
         "memory-archive",
         "hermitage-history"
@@ -46,7 +46,7 @@
     {
       "questionId": "three",
       "label": "其三",
-      "riddleText": "阳契已显受命者之名，阴契却仍未归籍。",
+      "riddleText": "契上虽载其名，仍未属归籍。",
       "promptText": "借命除受命者本人外，有几个人可以代他完成归籍？",
       "answer": "0",
       "evidenceRefs": [
@@ -60,5 +60,6 @@
     "相关历史记录已开放。"
   ],
   "failureMessage": "核验未通过，请重新核对委托信息。",
-  "nextRoute": "#/bookstore/private/owner"
+  "nextRoute": "#/bookstore/private/owner",
+  "missingReadingHint": "你似乎还有一些资料没有查看。*搜一搜*某些陌生的*高亮关键词*，或许能帮助你理解相关民俗说法。"
 }

@@ -1,3 +1,4 @@
+import {markResearchOpened} from '../state/game-state';
 import {el} from '../utils/dom';
 import {forumSite as ui,forumUsers,forumThread as thread,forumRoute,forumRouteId,forumTime,forumQuote,type ForumBlock} from '../utils/forum-content';
 import {routes,routeUrl} from '../utils/routes';
@@ -6,6 +7,7 @@ import '../styles/forum-header.css';
 
 export function ForumSnapshotScreen(route:string,navigate?:(route:string)=>void){
  const page=el('main','forum-page');const wrap=el('div','forum-wrap');page.append(wrap);let disposed=false;
+ requestAnimationFrame(()=>{if(page.isConnected)markResearchOpened('jisui-2016');});
  const image=(src:string,alt:string,className:string)=>{const img=el('img',className);img.src=import.meta.env.BASE_URL+src;img.alt=alt;return img;};
  const dialog=el('dialog','forum-closed-dialog');dialog.setAttribute('aria-labelledby','forum-closed-title');
  const dialogHead=el('header','forum-dialog-head');const dialogTitle=el('h2','',ui.closedDialog.title);dialogTitle.id='forum-closed-title';const close=el('button','forum-dialog-close','×');close.type='button';close.setAttribute('aria-label',ui.closedDialog.close);close.onclick=()=>dialog.close();dialogHead.append(dialogTitle,close);

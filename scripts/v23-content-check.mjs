@@ -15,7 +15,7 @@ const segment=mail.filter(m=>m.id.startsWith('hermitage-20210611-v23-'));
 assert.equal(segment.length,9);assert.deepEqual(segment.map(m=>m.senderId),['hermitage','luoyao-bookstore','hermitage','hermitage','luoyao-bookstore','hermitage','luoyao-bookstore','hermitage','luoyao-bookstore']);
 assert.equal(segment[2].text,'……');assert.equal(segment[8].text,'明白了。');
 const group=read('bookstore/mail-threads').groups.find(g=>g.id==='hermitage-20210611');assert.deepEqual(group.messageIds.slice(3,12),segment.map(m=>m.id));
-const q=read('bookstore/private/verification').questions[1];assert.equal(q.promptText,'寄岁所补的年寿，至借命开始共多少年岁？');assert.deepEqual(q.answerParts,[{answer:'4',unit:'年'},{answer:'14',unit:'天'}]);
+const q=read('bookstore/private/verification').questions[1];assert.equal(q.promptText,'');assert.deepEqual(q.answerParts,[{answer:'4',unit:'年'},{answer:'14',unit:'天'}]);
 const owner=read('bookstore/private/owner-dialogue-2025').nodes.find(n=>n.nodeId==='OWNER_AFTER_ARCHIVE').messages;
 assert.equal(owner.filter(m=>m.text.startsWith('在许多古老的信仰里')).length,1);
 assert.equal(owner.filter(m=>m.text.startsWith('*罗尧四年前')&&m.text.endsWith('契据。*')).length,1);

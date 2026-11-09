@@ -15,10 +15,12 @@ export function PrivateCommissionScreen(route:string,go:(to:string)=>void,login:
  if(!privateAccess(s)){denied();return host;}
  if(route==='#/bookstore/private-commission'){
   host.classList.add('bs-private-paper');host.append(el('h1','',b.verification.title),...b.verification.description.map(p=>el('p','',p)));
+  if(!['borrow-life','jisui-2016'].every(id=>s.openedResearchIds.includes(id))){const hint=el('aside','private-reading-hint',b.verification.missingReadingHint);hint.setAttribute('role','note');host.append(hint);}
   const form=el('form','private-verification');form.noValidate=true;const inputs:HTMLInputElement[]=[];const status=el('p');status.setAttribute('role','status');
   for(const q of b.verification.questions){
    const question=el('section','private-verification-question');
-   question.append(el('h2','',q.label),el('p','private-riddle',q.riddleText),el('p','',q.promptText));
+   question.append(el('h2','',q.label),el('p','private-riddle',q.riddleText));
+   if(q.promptText)question.append(el('p','',q.promptText));
    if(q.description)question.append(el('p','',q.description));
    const fields=el('div','private-verification-fields');
    for(const {unit} of verificationFields(q)){

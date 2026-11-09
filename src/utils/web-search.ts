@@ -3,7 +3,7 @@ import {getBookstoreContent,bookRoute,type Book} from './bookstore-content';
 import {matchesSearch,normalizeIsbn,normalizeSearch} from './search-normalize';
 import {forumThread,forumSite,forumRoute} from './forum-content';
 import {fortuneSite,FORTUNE_ROUTE} from './fortune-content';
-import {searchableArticles,type SearchableArticle} from './wechat-article-content';
+import {articleMarkdown,searchableArticles,type SearchableArticle} from './wechat-article-content';
 import {fictionNovels,fictionSite,fictionSearchTitle,fictionRoute,type Novel} from './fiction-content';
 export interface SearchEntry {id:string;kind:string;novelId?:string;bookId?:string;threadId?:string;articleId?:string;title?:string;titleRef?:string;source?:string;sourceRef?:string;summary?:string;keywords:string[];routeId?:string;paragraphs?:string[];badge?:string}
 export interface WebResult {entry:SearchEntry;novel?:Novel;book?:Book;article?:SearchableArticle;title:string;source:string;summary:string}
@@ -21,8 +21,10 @@ export function searchWeb(query:string){
  if(!normalized)return [];
  return (index.entries as SearchEntry[]).map(resolveWebEntry).filter((r):r is WebResult=>!!r).filter(r=>{
   if(r.article?.exactQuery)return normalized===normalizeSearch(r.article.exactQuery);
-  if(r.article?.excludedExactQueries?.some(word=>normalizeSearch(word)===normalized))return false;
-  return matchesSearch(query,[r.title,r.source,...r.entry.keywords,...(r.novel?.searchKeywords??[]),...(r.article?.keywords??[]),...(r.book?.searchKeywords??[])]) || (!!r.book?.isbn && normalizeIsbn(query)===normalizeIsbn(r.book.isbn));
+  const aliases=index.queryAliases as Record<string,string>;const expanded=query.split(/\s+/).map(word=>aliases[normalizeSearch(word)]??word).join(' ');
+  if(r.article?.excludedExactQueries?.some(word=>[normalized,normalizeSearch(expanded)].includes(normalizeSearch(word))))return false;
+  const body=r.article?.id==='borrow-life'?articleMarkdown:r.entry.kind==='forum-thread'?forumThread.posts.flatMap(p=>p.content.filter((c):c is string=>typeof c==='string')).join(' '):(r.entry.paragraphs??[]).join(' ');
+  return matchesSearch(expanded,[r.title,r.source,r.summary,body,...r.entry.keywords,...(r.novel?.searchKeywords??[]),...(r.article?.keywords??[]),...(r.book?.searchKeywords??[])]) || (!!r.book?.isbn && normalizeIsbn(query)===normalizeIsbn(r.book.isbn));
  });
 }
 export function webEntry(id:string){const entry=(index.entries as SearchEntry[]).find(e=>e.id===id);return entry?resolveWebEntry(entry):undefined;}

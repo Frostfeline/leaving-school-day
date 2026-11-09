@@ -13,3 +13,5 @@
 .bs-private .bs-stable-chat-footer:has([data-owner-option]){height:auto;flex-basis:auto;max-height:36%;}
 
 .bs-mail-ending-link{display:inline-block;padding:8px 12px;color:var(--bs-brand);text-decoration:underline;text-underline-offset:3px}
+
+.private-reading-hint{position:static;background:#f3f6f1;border:1px solid #dce4d7;border-radius:12px;padding:12px 16px;margin:16px 0;max-width:680px;font-size:14px;line-height:1.8;overflow-wrap:anywhere;color:#53604c}

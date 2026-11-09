@@ -1,3 +1,4 @@
+import {markResearchOpened} from '../state/game-state';
 import {el} from '../utils/dom';
 import {articleAccount as account,articleMeta as meta,articleComments as comments,articleUI as ui,articleMarkdown as markdown,admissionNotice} from '../utils/wechat-article-content';
 import {articleMarkdown,appendArticleInline} from '../utils/article-markdown';
@@ -19,6 +20,7 @@ function articlePage(title:string,onBack:()=>void){
 
 export function WeChatArticleScreen(onBack?:()=>void,embedded=false){
  const {page,article}=articlePage(meta.title,onBack??(()=>{location.hash='/game/'+config.initialModule+'/'+config.initialConversationId;}));
+ requestAnimationFrame(()=>{if(page.isConnected)markResearchOpened('borrow-life');});
  let disposed=false;
  const dialog=el('dialog','wa-account-dialog');dialog.setAttribute('aria-labelledby','wa-cancelled-title');const title=el('h2','',account.cancelledTitle);title.id='wa-cancelled-title';const confirm=el('button','',ui.confirm);confirm.type='button';confirm.onclick=()=>dialog.close();dialog.append(title,el('p','',account.cancelledText),confirm);page.append(dialog);
  let trigger:HTMLElement|undefined;let windowTop=0;let positions:{node:HTMLElement;top:number;left:number}[]=[];
